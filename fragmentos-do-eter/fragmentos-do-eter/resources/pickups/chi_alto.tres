@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Chi" load_steps=3 format=3 uid="uid://tmv03w47s6ag"]
+
+[ext_resource type="Texture2D" uid="uid://bnafgx2cbnix3" path="res://assets/itens/pickups/Coin_Gems/spr_coin_roj.png" id="1_ucjxt"]
+[ext_resource type="Script" path="res://scenes/chi.gd" id="2_ylfys"]
+
+[resource]
+script = ExtResource("2_ylfys")
+XP = 6.0
+title = ""
+icon = ExtResource("1_ucjxt")
+description = "Chi de nivel mais alto"
+horframe = 4
+scale = 1

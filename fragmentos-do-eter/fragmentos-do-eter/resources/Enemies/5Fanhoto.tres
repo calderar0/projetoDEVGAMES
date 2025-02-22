@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://ujwrtuwyp8jd"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_iv7xr"]
+[ext_resource type="Resource" uid="uid://carj24spnpso5" path="res://resources/pickups/chi_medio.tres" id="2_r01or"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_3qwth"]
+[ext_resource type="Texture2D" uid="uid://bw2sgifi716e" path="res://assets/enemies/Animated insect enemy assets/MantisMove.png" id="4_d4mkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggqe7"]
+atlas = ExtResource("4_d4mkg")
+region = Rect2(-11, -8, 44, 45)
+
+[resource]
+script = ExtResource("3_3qwth")
+title = "Corrupted Mantis"
+texture = ExtResource("4_d4mkg")
+hframe = 4
+vframe = 4
+scalesx = 2.5
+scalesy = 2.5
+flip = false
+velxd = 1
+velxe = 2
+health = 8.0
+damage = 5.0
+drops = Array[ExtResource("1_iv7xr")]([ExtResource("2_r01or")])
+coll_rad = 10
+coll_height = 20
+about = "A slender insectoid creature with a greenish exoskeleton. Its small, glowing eyes emit a menacing gaze. Sharp, serrated claws reflect its aggressive nature."
+icon = SubResource("AtlasTexture_ggqe7")

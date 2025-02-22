@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=4 format=3 uid="uid://bf0fg5yhapeew"]
+
+[ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="1_s1ulw"]
+[ext_resource type="Script" path="res://scenes/DamagingArea.gd" id="2_uq7e8"]
+[ext_resource type="Script" path="res://scenes/Upgrade.gd" id="3_dxdiu"]
+
+[resource]
+script = ExtResource("2_uq7e8")
+angular_speed = 10.0
+area = 0.4
+damage = 10.0
+cooldown = 1.0
+speed = 0.0
+projeto_node = ExtResource("1_s1ulw")
+upgrades = Array[ExtResource("3_dxdiu")]([])
+maxframes = 0
+title = ""
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

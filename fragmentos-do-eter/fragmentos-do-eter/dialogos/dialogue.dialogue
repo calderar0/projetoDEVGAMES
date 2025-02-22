@@ -1,0 +1,30 @@
+~ start
+Hei Mao: Oh, little lady finally you're here!
+Bai Hua: HeiHei? What's happening, where we are? And wait.[wait=1].[wait=1].[wait=1], [wave]YOU'RE TALKING?[/wave]
+Hei Mao: Calm down little lady, we need you to focus! Do you remember what happened?
+- Yes => END
+- No => cutscene
+~ cutscene
+
+~ noCutscene
+Hei Mao: Oh great, I don't have time to explain, in short, you'll have to fight.
+Bai Hua: What? What are you talking about? Where are we? Why I'm here? Why do you know how to talk??
+Hei Mao: Sorry little lady, I was supposed to explain this better for you...
+Hei Mao: Right now we are running out of time. He is going to take control of everything if we don't hurry.
+Bai Hua: He? Who is he? What are you talking about?
+Hei Mao: Sorry... Let me tell you a little of what is happening.
+Hei Mao: I've been looking for someone capable to fight [wave]Xuan Zhi[/wave], I've traveled different planets and dimensions for thousand and thousand years trying to find someone but I've failed...
+Hei Mao: I went to Earth without any expectations, but I've found you! You have the purest soul that I've ever seen, you're a smart little lady and a strong one too.
+Hei Mao: Sorry to put you in this type of situation but I didn't have any choice...
+Bai Hua: HeiHei, I'm scared, please top this...
+Hei Mao: Hear me little lady, You'll have to be really strong from here on. I know that this is very strange and scary but the destiny of the universe is in your hands.
+Hei Mao: I don't have much time lasting, here take this.
+Hei Mao: It will help you to get stronger and if you take good care of him it will become stronger with you.
+Hei Mao: I'll open your meridians too, so you'll be able to grow and learn how to use your natural powers.
+Bai Hua: Wait, what are you doing? What do you mean by natural powers?
+Hei Mao: Oh, he is coming, I'll try to stop him as much as possible, so please, little lady, train, grow and become stronger, I'm counting on you.
+Hei Mao: And little lady, thanks... Thanks for taking care of me all this time, Hope I can see you one more time...
+Bai Hua: HeiHei? Heihei!
+Bai Hua: Sob sob, sob sob...
+Bai Hua: Ok HeiHei, I'll become stronger, I'll find you, wait for me.
+=> END

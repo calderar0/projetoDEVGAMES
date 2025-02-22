@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmger4cya5ifk"]
+
+[ext_resource type="Script" path="res://scenes/pickups.gd" id="1_8mq41"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pa887"]
+
+[node name="Pickups" type="Area2D" groups=["Pickups"]]
+collision_layer = 4
+script = ExtResource("1_8mq41")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pa887")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

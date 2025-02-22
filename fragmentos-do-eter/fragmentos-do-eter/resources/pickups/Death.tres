@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Death" load_steps=3 format=3 uid="uid://ckdirkv4dbd4"]
+
+[ext_resource type="Texture2D" uid="uid://bs340eqfklkjf" path="res://assets/itens/pickups/pessego.png" id="1_kn8rr"]
+[ext_resource type="Script" path="res://scenes/Death.gd" id="2_jkrd2"]
+
+[resource]
+script = ExtResource("2_jkrd2")
+title = "Death"
+icon = ExtResource("1_kn8rr")
+description = "Destroys every enemy"
+horframe = 1
+scales = 1.4
+weight = 2.0

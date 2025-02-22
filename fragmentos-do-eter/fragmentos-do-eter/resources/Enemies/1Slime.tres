@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://btqafok2ewqg6"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_inkho"]
+[ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_b777k"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_m7d5s"]
+[ext_resource type="Texture2D" uid="uid://ctxqlt7cikldh" path="res://assets/enemies/slimes/Slime1/Walk/Slime1_Walk_full.png" id="4_w554r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrack"]
+atlas = ExtResource("4_w554r")
+region = Rect2(205, 16, 34, 30)
+
+[resource]
+script = ExtResource("3_m7d5s")
+title = "Slime Moss"
+texture = ExtResource("4_w554r")
+hframe = 8
+vframe = 4
+scalesx = 1.3
+scalesy = 1.3
+flip = false
+velxd = 3
+velxe = 2
+health = 2.0
+damage = 1.0
+drops = Array[ExtResource("1_inkho")]([ExtResource("2_b777k")])
+coll_rad = 10
+coll_height = 20
+about = "A gelatinous creature with a bluish-green hue, featuring a translucent, rounded body that resembles a living droplet. Its large, bright eyes give it an innocent look, but they hide a hint of mischief. It has a strong connection to nature and moisture."
+icon = SubResource("AtlasTexture_vrack")

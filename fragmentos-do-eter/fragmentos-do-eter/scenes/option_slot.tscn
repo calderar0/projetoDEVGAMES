@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://btma86f6ulc7"]
+
+[ext_resource type="Texture2D" uid="uid://djlto0sr3u551" path="res://assets/weapons/RPG_ARSENAL_V1.1/Icons_background/staffs/rpg_icons_71.png" id="1_h4mj8"]
+[ext_resource type="Script" path="res://scenes/option_slot.gd" id="2_mupbs"]
+[ext_resource type="Texture2D" uid="uid://yt3bi803mtxx" path="res://assets/GUI.png" id="3_vfosc"]
+
+[node name="OptionSlot" type="TextureButton"]
+custom_minimum_size = Vector2(315, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+texture_normal = ExtResource("1_h4mj8")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_mupbs")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 55.0
+offset_top = 8.0
+offset_right = 95.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.466667)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+
+[node name="Description" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 116.0
+offset_top = 8.0
+offset_right = 298.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.466667)
+horizontal_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(315, 40)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_vfosc")
+region_rect = Rect2(48.8043, 95.9992, 30.3665, 32.3633)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 4
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

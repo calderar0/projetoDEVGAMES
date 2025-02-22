@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=7 format=3 uid="uid://0a1rew5an4pg"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_ymk8r"]
+[ext_resource type="Resource" uid="uid://carj24spnpso5" path="res://resources/pickups/chi_medio.tres" id="2_xlcgv"]
+[ext_resource type="Resource" uid="uid://tmv03w47s6ag" path="res://resources/pickups/chi_alto.tres" id="3_mxkvj"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_p1652"]
+[ext_resource type="Texture2D" uid="uid://c5mj5f8ej14l4" path="res://assets/enemies/marcoaurelio(planta)/Plant3/Walk/Plant3_Walk_full.png" id="4_b065u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmtdn"]
+atlas = ExtResource("4_b065u")
+region = Rect2(-17, 1, 74, 62)
+
+[resource]
+script = ExtResource("3_p1652")
+title = "Purple Carnivore"
+texture = ExtResource("4_b065u")
+hframe = 6
+vframe = 4
+scalesx = 2.0
+scalesy = 2.0
+flip = false
+velxd = 3
+velxe = 2
+health = 12.0
+damage = 6.0
+drops = Array[ExtResource("1_ymk8r")]([ExtResource("2_xlcgv"), ExtResource("3_mxkvj")])
+coll_rad = 10
+coll_height = 20
+about = "A predatory plant with vibrant purple petals and a mouth full of sharp teeth. It has poison in its flexible stem, which allows for quick movements, making it an unpredictable threat."
+icon = SubResource("AtlasTexture_xmtdn")

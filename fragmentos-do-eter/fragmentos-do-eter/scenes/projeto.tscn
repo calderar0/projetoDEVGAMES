@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://fy743fav5pcv"]
+
+[ext_resource type="Script" path="res://scenes/projeto.gd" id="1_gr7rd"]
+[ext_resource type="Texture2D" uid="uid://dcxm4btiplqi6" path="res://assets/weapons/Design sem nome.png" id="2_65vjf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eru0i"]
+resource_local_to_scene = true
+radius = 8.0
+
+[sub_resource type="Gradient" id="Gradient_8i3u6"]
+offsets = PackedFloat32Array(0.0600707, 0.39576, 0.660777, 1)
+colors = PackedColorArray(1, 1, 1, 0.54902, 1, 1, 1, 0.490196, 0, 0.133333, 1, 0.490196, 0.464618, 0.668013, 0.859877, 0.545508)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pqrfq"]
+gradient = SubResource("Gradient_8i3u6")
+
+[sub_resource type="Curve" id="Curve_x48mf"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.984771, 0.0219779), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kpksj"]
+curve = SubResource("Curve_x48mf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t10oi"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 8.0
+initial_velocity_min = -10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_kpksj")
+color_ramp = SubResource("GradientTexture1D_pqrfq")
+turbulence_enabled = true
+turbulence_noise_speed = Vector3(0, 1, 0)
+turbulence_influence_max = 0.288
+
+[node name="Projeto" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_gr7rd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_65vjf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_eru0i")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_t10oi")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

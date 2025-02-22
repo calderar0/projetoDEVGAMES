@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=7 format=3 uid="uid://cfiom33uxkors"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_3djbl"]
+[ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_8wej2"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_aw5d3"]
+[ext_resource type="Texture2D" uid="uid://mt4lt1gyr4la" path="res://assets/enemies/ToxicFrog/PurpleBlue/ToxicFrogPurpleBlue_Hop.png" id="3_2rde0"]
+[ext_resource type="Resource" uid="uid://carj24spnpso5" path="res://resources/pickups/chi_medio.tres" id="3_5oegi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8ki4"]
+atlas = ExtResource("3_2rde0")
+region = Rect2(-16, 8, 56, 32)
+
+[resource]
+script = ExtResource("2_aw5d3")
+title = "Lethal Frog"
+texture = ExtResource("3_2rde0")
+hframe = 7
+vframe = 1
+scalesx = 1.5
+scalesy = 1.5
+flip = false
+velxd = 0
+velxe = 0
+health = 6.0
+damage = 4.0
+drops = Array[ExtResource("1_3djbl")]([ExtResource("2_8wej2"), ExtResource("3_5oegi")])
+coll_rad = 10
+coll_height = 20
+about = "A poisonous purple-skinned amphibian with bright blue spots, a sign of its lethal toxicity. Its black, empty eyes stalk its prey before attacking, damaging the player."
+icon = SubResource("AtlasTexture_q8ki4")

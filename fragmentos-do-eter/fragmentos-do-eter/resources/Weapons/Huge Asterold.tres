@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=6 format=3 uid="uid://by0q2jko33qh5"]
+
+[ext_resource type="Texture2D" uid="uid://dyn31x5wud3qv" path="res://assets/UI/icones/Spells/fire_spell_2.png" id="1_yhcua"]
+[ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_e0drh"]
+[ext_resource type="Script" path="res://scenes/CircularWeapon.gd" id="3_ql3px"]
+[ext_resource type="Texture2D" uid="uid://0f60wlr588v2" path="res://assets/weapons/Fire Effect 1/Firebolt SpriteSheet2.PNG" id="4_128rf"]
+[ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_ulyiu"]
+
+[resource]
+script = ExtResource("3_ql3px")
+angular_speed = 270
+radius = 75
+amount = 7
+damage = 10.0
+cooldown = 2.0
+speed = 0.0
+projeto_node = ExtResource("2_e0drh")
+upgrades = Array[ExtResource("4_ulyiu")]([])
+maxframes = 0
+title = "Huge Asterold"
+icon = ExtResource("1_yhcua")
+texture = ExtResource("4_128rf")
+escala = 1.0
+horframe = 4
+verframe = 1
+maxframe = 0

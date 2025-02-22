@@ -1,0 +1,1213 @@
+[gd_scene load_steps=63 format=3 uid="uid://bk4lce7b8agyt"]
+
+[ext_resource type="Texture2D" uid="uid://b8id671o2tpwy" path="res://Menus/arquivos/fundo menu.jpeg" id="1_jsagm"]
+[ext_resource type="Script" path="res://Menus/menu_p.gd" id="2_50r3a"]
+[ext_resource type="Texture2D" uid="uid://bj40ej0ysu220" path="res://Menus/arquivos/logoingles.png" id="3_45cpv"]
+[ext_resource type="PackedScene" uid="uid://bnhbujtug3cmf" path="res://upgrade.tscn" id="3_axgre"]
+[ext_resource type="Texture2D" uid="uid://mqd5l5837vf8" path="res://assets/UI/IconsShadow-160.png" id="4_vxb63"]
+[ext_resource type="Texture2D" uid="uid://5qeqgd8ru8px" path="res://Menus/arquivos/botoes/botao34.png" id="5_8os5h"]
+[ext_resource type="FontFile" uid="uid://c2c13h554bhsa" path="res://Menus/arquivos/fonte/DungeonFont.ttf" id="5_g1nih"]
+[ext_resource type="Texture2D" uid="uid://blbkbcvco50k8" path="res://Menus/arquivos/chão.png" id="5_sbt3o"]
+[ext_resource type="Script" path="res://fechar.gd" id="6_0bfjo"]
+[ext_resource type="Texture2D" uid="uid://3vbibgl2lf4v" path="res://Menus/arquivos/bai hua sem fundo.png" id="6_j5n56"]
+[ext_resource type="Texture2D" uid="uid://dibvnh7iwcc36" path="res://Menus/arquivos/pedra1.png" id="6_mqimu"]
+[ext_resource type="Texture2D" uid="uid://b7d0qaadcgusm" path="res://assets/UI/IconsShadow-64.png" id="7_tfhuv"]
+[ext_resource type="Texture2D" uid="uid://06lfygpflkg8" path="res://Menus/arquivos/botoes/botao3.png" id="8_dc0sd"]
+[ext_resource type="Texture2D" uid="uid://dc83oac012wd0" path="res://Menus/arquivos/pedra.png" id="8_dj4kc"]
+[ext_resource type="Texture2D" uid="uid://cw0rcl4ki2h78" path="res://Menus/arquivos/pedra2.png" id="8_wrb7k"]
+[ext_resource type="Texture2D" uid="uid://bnl1ld130pbet" path="res://Menus/arquivos/gato blur.png" id="12_6wrvh"]
+[ext_resource type="Texture2D" uid="uid://cop2aqtofyx4u" path="res://assets/UI/UI books & more.png" id="12_tdken"]
+[ext_resource type="Script" path="res://Menus/skill_tree.gd" id="15_051u3"]
+[ext_resource type="Script" path="res://scenes/Skill.gd" id="16_hpxqx"]
+[ext_resource type="Texture2D" uid="uid://ba3wg7s2dl8qf" path="res://assets/UI/icones/Buffs/attack_boost.png" id="17_83h2o"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="17_bner5"]
+[ext_resource type="Texture2D" uid="uid://c8i0re6yqfwnf" path="res://assets/UI/icones/Buffs/lucky_boost.png" id="18_frkpt"]
+[ext_resource type="Script" path="res://Menus/enemy_list.gd" id="19_sig4s"]
+[ext_resource type="Script" path="res://Menus/UI_gold.gd" id="19_uu6gk"]
+[ext_resource type="PackedScene" uid="uid://bpv4tlfrp7qlq" path="res://options_menu.tscn" id="25_pj2kn"]
+[ext_resource type="AudioStream" uid="uid://dqdyghge36wex" path="res://assets/sfx/Echoes of the Ether2-audio.mp3" id="27_qms56"]
+
+[sub_resource type="Theme" id="Theme_cydbx"]
+default_font = ExtResource("5_g1nih")
+default_font_size = 22
+/colors/botao = Color(0.670588, 0.211765, 0.737255, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5eynb"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 7.0
+texture = ExtResource("8_dc0sd")
+region_rect = Rect2(137, 22, 302, 112)
+modulate_color = Color(0.82891, 0.82891, 0.82891, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_klcrw"]
+texture = ExtResource("8_dc0sd")
+region_rect = Rect2(137, 163, 302, 112)
+modulate_color = Color(0.820366, 0.820366, 0.820366, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1438"]
+texture = ExtResource("8_dc0sd")
+region_rect = Rect2(137, 22, 302, 112)
+
+[sub_resource type="Animation" id="Animation_letp6"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu/pedra/Pedra:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.23333, 2.36667),
+"transitions": PackedFloat32Array(1, 0.406126, 1),
+"update": 0,
+"values": [Vector2(345, 371), Vector2(300, 426), Vector2(372, 456)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu/pedra/Pedra:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.263877]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Menu/pedra/Pedra2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.13333, 2.13333),
+"transitions": PackedFloat32Array(1, 1, 0.68302),
+"update": 0,
+"values": [Vector2(1634, 369), Vector2(1606, 472), Vector2(1575, 443)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Menu/pedra/Pedra3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.23333, 2.26667),
+"transitions": PackedFloat32Array(1, 1, 0.615572),
+"update": 0,
+"values": [Vector2(706, 755), Vector2(737, 700), Vector2(679, 663)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Menu/pedra/Pedra3:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Menu/pedra/Pedra4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.13333, 2.16667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(180, 711), Vector2(120, 657), Vector2(122, 739)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Menu/pedra/Pedra4:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Menu/pedra/Pedra1:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.9, 2.76667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1208, 614), Vector2(1209, 536), Vector2(1202, 614)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Menu/pedra/Pedra1:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.653072]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Menu/pedra/Pedra5:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.06667, 1.86667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1487, 816), Vector2(1460, 770), Vector2(1507, 699)]
+}
+
+[sub_resource type="Animation" id="Animation_sdam5"]
+resource_name = "pedras"
+length = 3.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu/pedra/Pedra:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.63333, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(365, 465), Vector2(345, 371), Vector2(365, 465)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu/pedra/Pedra:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.13333, 2.63333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.263877, -0.0868054, -0.263877]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Menu/pedra/Pedra2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.66667, 3.43333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1634, 369), Vector2(1638, 469), Vector2(1634, 369)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3w1r7"]
+_data = {
+"RESET": SubResource("Animation_letp6"),
+"pedras": SubResource("Animation_sdam5")
+}
+
+[sub_resource type="Animation" id="Animation_2cnno"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Meteoro/HeiMaoSemFundo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1417, 845)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Meteoro/meteoro2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1441, 860.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Meteoro/BaiHuaSemFundo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(402, 586)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Meteoro/meteoro1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(361, 817.5)]
+}
+
+[sub_resource type="Animation" id="Animation_wmx3c"]
+resource_name = "flutuar"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Meteoro/HeiMaoSemFundo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1417, 845), Vector2(1447.36, 816.822)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Meteoro/meteoro2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1441, 860.5), Vector2(1471.36, 832.322)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Meteoro/BaiHuaSemFundo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 2.04995),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(402, 559.865), Vector2(402, 590.865)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Meteoro/meteoro1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333333, 2.04995),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(361, 791.365), Vector2(361, 822.365)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pvfti"]
+_data = {
+"RESET": SubResource("Animation_2cnno"),
+"flutuar": SubResource("Animation_wmx3c")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7k583"]
+texture = ExtResource("12_tdken")
+region_rect = Rect2(16, 32, 96, 48)
+
+[sub_resource type="Resource" id="Resource_bm501"]
+script = ExtResource("17_bner5")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_ug1bp"]
+script = ExtResource("16_hpxqx")
+name = "might"
+texture = ExtResource("17_83h2o")
+cost = 30
+stats = SubResource("Resource_bm501")
+
+[sub_resource type="Resource" id="Resource_mf7nx"]
+script = ExtResource("17_bner5")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_vatke"]
+script = ExtResource("16_hpxqx")
+name = "might"
+texture = ExtResource("17_83h2o")
+cost = 20
+stats = SubResource("Resource_mf7nx")
+
+[sub_resource type="Resource" id="Resource_tivhu"]
+script = ExtResource("17_bner5")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_cqbn5"]
+script = ExtResource("16_hpxqx")
+name = "Luck"
+texture = ExtResource("18_frkpt")
+cost = 10
+stats = SubResource("Resource_tivhu")
+
+[sub_resource type="Resource" id="Resource_si87b"]
+script = ExtResource("17_bner5")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_ich37"]
+script = ExtResource("16_hpxqx")
+name = "might"
+texture = ExtResource("18_frkpt")
+cost = 20
+stats = SubResource("Resource_si87b")
+
+[sub_resource type="Resource" id="Resource_6isst"]
+script = ExtResource("17_bner5")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_cvqhg"]
+script = ExtResource("16_hpxqx")
+name = "might"
+texture = ExtResource("18_frkpt")
+cost = 30
+stats = SubResource("Resource_6isst")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eekhy"]
+texture = ExtResource("12_tdken")
+region_rect = Rect2(16, 32, 96, 48)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xmqi0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m32rx"]
+texture = ExtResource("12_tdken")
+region_rect = Rect2(721, 17, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsgbl"]
+atlas = ExtResource("4_vxb63")
+region = Rect2(1460, 1290, 120, 140)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wosbt"]
+texture = ExtResource("8_dc0sd")
+region_rect = Rect2(14, 21, 113, 114)
+modulate_color = Color(0.880496, 0.880496, 0.880496, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n18y7"]
+texture = ExtResource("8_dc0sd")
+region_rect = Rect2(14, 162, 113, 114)
+modulate_color = Color(0.819608, 0.819608, 0.819608, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qewpi"]
+texture = ExtResource("8_dc0sd")
+region_rect = Rect2(14, 21, 113, 114)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay0pu"]
+atlas = ExtResource("4_vxb63")
+region = Rect2(1120, 1280, 160, 168)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ipt1"]
+texture = ExtResource("5_8os5h")
+region_rect = Rect2(14, 21, 113, 114)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iypvj"]
+texture = ExtResource("5_8os5h")
+region_rect = Rect2(14, 162, 113, 114)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7e2gw"]
+texture = ExtResource("5_8os5h")
+region_rect = Rect2(14, 21, 113, 114)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6rcn"]
+atlas = ExtResource("7_tfhuv")
+region = Rect2(320, 512, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a7dtg"]
+texture = ExtResource("12_tdken")
+region_rect = Rect2(16, 32, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ossf"]
+atlas = ExtResource("7_tfhuv")
+region = Rect2(68, 136, 56, 44)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7uy2g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Menu Principal" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_cydbx")
+script = ExtResource("2_50r3a")
+metadata/_edit_use_anchors_ = true
+
+[node name="fundo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -8.0
+offset_right = 5.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jsagm")
+expand_mode = 1
+
+[node name="Menu" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="logolimpissima" type="TextureRect" parent="Menu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 527.0
+offset_top = -165.0
+offset_right = 1127.0
+offset_bottom = 435.0
+grow_horizontal = 2
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("3_45cpv")
+
+[node name="CenterContainer" type="CenterContainer" parent="Menu"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -4.0
+offset_right = 1915.0
+offset_bottom = 1077.0
+rotation = -0.000285691
+
+[node name="menu" type="VBoxContainer" parent="Menu"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 726.0
+offset_top = 440.0
+offset_right = 1154.0
+offset_bottom = 943.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="play" type="Button" parent="Menu/menu"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_g1nih")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxTexture_5eynb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_klcrw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p1438")
+text = "Play"
+icon_alignment = 1
+
+[node name="Abilities" type="Button" parent="Menu/menu"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_g1nih")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxTexture_5eynb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_klcrw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p1438")
+text = "Abilities"
+icon_alignment = 1
+
+[node name="album" type="Button" parent="Menu/menu"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_g1nih")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxTexture_5eynb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_klcrw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p1438")
+text = "Album"
+icon_alignment = 1
+
+[node name="Créditos" type="Button" parent="Menu/menu"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("5_g1nih")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/hover = SubResource("StyleBoxTexture_5eynb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_klcrw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p1438")
+text = "Credits"
+icon_alignment = 1
+
+[node name="pedra" type="AnimationPlayer" parent="Menu"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_3w1r7")
+}
+autoplay = "RESET"
+
+[node name="Pedra1" type="Sprite2D" parent="Menu/pedra"]
+visible = false
+position = Vector2(1208, 614)
+rotation = 0.653072
+scale = Vector2(0.458, 0.53)
+texture = ExtResource("6_mqimu")
+flip_h = true
+
+[node name="Pedra2" type="Sprite2D" parent="Menu/pedra"]
+visible = false
+position = Vector2(1634, 369)
+rotation = 0.0155504
+texture = ExtResource("8_dj4kc")
+
+[node name="Pedra" type="Sprite2D" parent="Menu/pedra"]
+visible = false
+position = Vector2(345, 371)
+rotation = -0.263877
+texture = ExtResource("8_dj4kc")
+
+[node name="Pedra4" type="Sprite2D" parent="Menu/pedra"]
+visible = false
+position = Vector2(180, 711)
+scale = Vector2(0.409, 0.56)
+texture = ExtResource("8_wrb7k")
+flip_v = true
+
+[node name="Pedra3" type="Sprite2D" parent="Menu/pedra"]
+visible = false
+position = Vector2(706, 755)
+scale = Vector2(0.5, 0.602)
+texture = ExtResource("6_mqimu")
+flip_h = true
+
+[node name="Pedra5" type="Sprite2D" parent="Menu/pedra"]
+visible = false
+position = Vector2(1487, 816)
+scale = Vector2(0.366, 0.413)
+texture = ExtResource("8_wrb7k")
+flip_h = true
+flip_v = true
+
+[node name="Meteoro" type="AnimationPlayer" parent="Menu"]
+root_node = NodePath("../menu")
+libraries = {
+"": SubResource("AnimationLibrary_pvfti")
+}
+autoplay = "flutuar"
+
+[node name="meteoro2" type="Sprite2D" parent="Menu/Meteoro"]
+visible = false
+position = Vector2(1441, 860.5)
+scale = Vector2(1.26143, 1.33729)
+texture = ExtResource("5_sbt3o")
+flip_h = true
+
+[node name="meteoro1" type="Sprite2D" parent="Menu/Meteoro"]
+visible = false
+position = Vector2(361, 817.5)
+scale = Vector2(1.692, 1.476)
+texture = ExtResource("5_sbt3o")
+
+[node name="BaiHuaSemFundo" type="Sprite2D" parent="Menu/Meteoro"]
+visible = false
+z_index = 1
+position = Vector2(402, 586)
+scale = Vector2(1.462, 1.462)
+texture = ExtResource("6_j5n56")
+
+[node name="HeiMaoSemFundo" type="Sprite2D" parent="Menu/Meteoro"]
+visible = false
+z_index = 2
+position = Vector2(1417, 845)
+scale = Vector2(2.65, 2.65)
+texture = ExtResource("12_6wrvh")
+
+[node name="SkillTree" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.059
+anchor_right = 0.9
+anchor_bottom = 0.948
+offset_left = 0.320007
+offset_top = 0.279995
+offset_right = 8.99988
+offset_bottom = 0.159912
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(769, 448)
+theme_override_styles/panel = SubResource("StyleBoxTexture_7k583")
+script = ExtResource("15_051u3")
+
+[node name="Label2" type="Label" parent="SkillTree"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 304.0
+offset_right = 287.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_font_sizes/font_size = 38
+text = "10G"
+
+[node name="Label3" type="Label" parent="SkillTree"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 304.0
+offset_right = 419.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_font_sizes/font_size = 38
+text = "20G"
+
+[node name="Label4" type="Label" parent="SkillTree"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 304.0
+offset_right = 547.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_font_sizes/font_size = 38
+text = "30G"
+
+[node name="Label5" type="Label" parent="SkillTree"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 424.0
+offset_right = 287.0
+offset_bottom = 463.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_font_sizes/font_size = 38
+text = "10G"
+
+[node name="Label6" type="Label" parent="SkillTree"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 424.0
+offset_right = 419.0
+offset_bottom = 463.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_font_sizes/font_size = 38
+text = "20G"
+
+[node name="Label7" type="Label" parent="SkillTree"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 424.0
+offset_right = 547.0
+offset_bottom = 463.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_font_sizes/font_size = 38
+text = "30G"
+
+[node name="Might" type="Control" parent="SkillTree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = 16.0
+offset_right = 7.5
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="upgrade" parent="SkillTree/Might" instance=ExtResource("3_axgre")]
+layout_mode = 0
+offset_left = -1012.0
+offset_top = -547.0
+offset_right = -860.0
+offset_bottom = -395.0
+skill = SubResource("Resource_ug1bp")
+
+[node name="upgrade2" parent="SkillTree/Might" instance=ExtResource("3_axgre")]
+custom_minimum_size = Vector2(152, 152)
+layout_mode = 0
+offset_left = -760.0
+offset_top = -543.0
+offset_right = -608.0
+offset_bottom = -391.0
+skill = SubResource("Resource_vatke")
+
+[node name="upgrade3" parent="SkillTree/Might" instance=ExtResource("3_axgre")]
+custom_minimum_size = Vector2(152, 152)
+layout_mode = 0
+offset_left = -502.0
+offset_top = -543.0
+offset_right = -350.0
+offset_bottom = -391.0
+skill = SubResource("Resource_ug1bp")
+
+[node name="Luck" type="Control" parent="SkillTree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.5
+offset_top = 208.0
+offset_right = 15.5
+offset_bottom = 248.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="upgrade" parent="SkillTree/Luck" instance=ExtResource("3_axgre")]
+custom_minimum_size = Vector2(152, 152)
+layout_mode = 0
+offset_left = -1024.0
+offset_top = -688.0
+offset_right = -872.0
+offset_bottom = -536.0
+skill = SubResource("Resource_cqbn5")
+
+[node name="upgrade2" parent="SkillTree/Luck" instance=ExtResource("3_axgre")]
+custom_minimum_size = Vector2(152, 152)
+layout_mode = 0
+offset_left = -766.0
+offset_top = -688.0
+offset_right = -614.0
+offset_bottom = -536.0
+skill = SubResource("Resource_ich37")
+
+[node name="upgrade3" parent="SkillTree/Luck" instance=ExtResource("3_axgre")]
+custom_minimum_size = Vector2(152, 152)
+layout_mode = 0
+offset_left = -510.0
+offset_top = -684.0
+offset_right = -358.0
+offset_bottom = -532.0
+skill = SubResource("Resource_cvqhg")
+
+[node name="Label" type="Label" parent="SkillTree"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.031
+anchor_bottom = 0.025
+offset_left = 325.0
+offset_top = 112.0
+offset_right = 414.353
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.443137)
+theme_override_font_sizes/font_size = 42
+text = "Skills"
+horizontal_alignment = 1
+
+[node name="Gold" type="Label" parent="SkillTree"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 161.0
+offset_right = 455.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+vertical_alignment = 1
+script = ExtResource("19_uu6gk")
+
+[node name="Bestiary" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 191.0
+offset_top = 64.0
+offset_right = -192.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(769, 448)
+theme_override_styles/panel = SubResource("StyleBoxTexture_eekhy")
+
+[node name="Label" type="Label" parent="Bestiary"]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 112.0
+offset_right = 462.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.490196)
+theme_override_font_sizes/font_size = 42
+text = "Bestiary"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bestiary"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 209.0
+offset_top = -304.0
+offset_right = 577.0
+offset_bottom = 184.0
+grow_vertical = 2
+pivot_offset = Vector2(176, 280)
+
+[node name="Enemy list" type="VBoxContainer" parent="Bestiary/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+script = ExtResource("19_sig4s")
+
+[node name="Information" type="Panel" parent="Bestiary"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.4
+anchor_right = 0.75
+anchor_bottom = 0.4
+offset_left = -223.75
+offset_top = -304.0
+offset_right = 208.25
+offset_bottom = 296.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xmqi0")
+
+[node name="Texture" type="TextureRect" parent="Bestiary/Information"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 170)
+layout_mode = 0
+offset_left = 104.0
+offset_top = 48.0
+offset_right = 280.0
+offset_bottom = 218.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="Bestiary/Information/Texture"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.136
+anchor_right = 1.136
+anchor_bottom = 1.0
+offset_left = 0.0639992
+offset_right = 0.0639954
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m32rx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Bestiary/Information"]
+custom_minimum_size = Vector2(272, 0)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 240.0
+offset_right = 392.0
+offset_bottom = 592.0
+alignment = 1
+
+[node name="Name" type="Label" parent="Bestiary/Information/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.228454, 0.211885, 0.211885, 1)
+text = "Nome:"
+
+[node name="Health" type="Label" parent="Bestiary/Information/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+text = "Health:
+"
+
+[node name="Damage" type="Label" parent="Bestiary/Information/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+text = "Damage:"
+
+[node name="About" type="Label" parent="Bestiary/Information/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(272, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+text = "About:"
+autowrap_mode = 3
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1880.0
+offset_top = -1048.0
+offset_right = -1745.0
+offset_bottom = -913.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.65, 0.65)
+focus_mode = 0
+theme_override_constants/icon_max_width = 60
+theme_override_icons/icon = SubResource("AtlasTexture_nsgbl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wosbt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n18y7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qewpi")
+icon_alignment = 1
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 32.0
+offset_right = 15.0
+offset_bottom = 167.0
+grow_horizontal = 0
+scale = Vector2(0.65, 0.65)
+focus_mode = 0
+theme_override_constants/icon_max_width = 85
+theme_override_icons/icon = SubResource("AtlasTexture_ay0pu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7ipt1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_iypvj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_7e2gw")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("6_0bfjo")
+
+[node name="Config" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -120.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.65, 0.65)
+focus_mode = 0
+theme_override_constants/icon_max_width = 85
+theme_override_icons/icon = SubResource("AtlasTexture_x6rcn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wosbt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n18y7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qewpi")
+icon_alignment = 1
+expand_icon = true
+
+[node name="musicaMenu" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("27_qms56")
+bus = &"Music"
+parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("25_pj2kn")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Credits" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -768.5
+offset_top = -480.0
+offset_right = 768.5
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_a7dtg")
+
+[node name="Label" type="Label" parent="Credits"]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 112.0
+offset_right = 462.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.490196)
+theme_override_font_sizes/font_size = 42
+text = "Credits"
+
+[node name="Label2" type="Label" parent="Credits"]
+layout_mode = 0
+offset_left = 1088.5
+offset_top = 116.0
+offset_right = 1225.5
+offset_bottom = 159.0
+theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.490196)
+theme_override_font_sizes/font_size = 42
+text = "Credits"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 937.0
+offset_top = 460.0
+offset_right = 1353.0
+offset_bottom = 660.0
+theme_override_colors/font_outline_color = Color(0.227451, 0.211765, 0.211765, 1)
+theme_override_constants/outline_size = 9
+text = "
+
+--- This game was created with dedication and learning throughout the process. We hope you have as much fun playing it as we did developing it. Thanks for playing! ---"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 944.5
+offset_top = 172.0
+offset_right = 1352.5
+offset_bottom = 684.0
+theme_override_colors/default_color = Color(0.227451, 0.211765, 0.211765, 1)
+text = "Special Thanks:
+
+We would like to express our deep gratitude to professors Vanessa Pereira and Fábio Cappabianco for their guidance, knowledge and encouragement throughout the development of this game. Their support was essential to make this project a reality. We also thank everyone who contributed directly or indirectly, offering feedback, ideas and motivation, and the community of developers, whose resources were fundamental to improving our journey."
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 185.0
+offset_top = -316.0
+offset_right = 601.0
+offset_bottom = 196.0
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.227451, 0.211765, 0.211765, 1)
+text = "Development:
+
+- Bianca Valenciani;
+- Felipe Calderaro;
+- Isabella Maria Ribeiro.
+
+Art and Design:
+
+- Bianca Valenciani;
+- Felipe Calderaro;
+- Isabella Maria Ribeiro;
+- Itch io:
+ 		Sscary;
+		Jeevo;
+		Admurin;
+		Mounir Tohami;
+		Vrtxrry;
+		Humblepixe;
+		Bdragon1727;
+		La Red Games;
+		Pimen;
+		Eduardo Scarpato;
+		Rone3190;
+		Atelier Pixerelia;
+		Papoy Core;
+		Leo-red;
+		Humble Pixel;
+		Craftpix Net.
+
+Music and Sound Effects:
+- TopMediai.
+- Itch.io
+
+Tools Used:
+ - Engine: Godot.
+
+"
+
+[node name="Button" type="Button" parent="Credits"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 1288.5
+offset_top = 612.0
+offset_right = 1352.5
+offset_bottom = 664.0
+theme_override_constants/icon_max_width = 50
+theme_override_icons/icon = SubResource("AtlasTexture_1ossf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7uy2g")
+icon_alignment = 1
+
+[connection signal="pressed" from="Menu/menu/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/menu/Abilities" to="." method="_on_abilities_pressed"]
+[connection signal="pressed" from="Menu/menu/album" to="." method="_on_album_pressed"]
+[connection signal="pressed" from="Menu/menu/Créditos" to="." method="_on_créditos_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Close" to="Close" method="_on_pressed"]
+[connection signal="pressed" from="Config" to="." method="_on_config_pressed"]

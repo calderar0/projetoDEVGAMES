@@ -1,0 +1,43 @@
+[gd_scene load_steps=11 format=3 uid="uid://f6jfhogbp3dc"]
+
+[ext_resource type="Texture2D" uid="uid://d4kx8g0gvgc7m" path="res://assets/map/Torch Animated.png" id="1_7wt2u"]
+[ext_resource type="Script" path="res://scenes/destructible.gd" id="2_x6y5e"]
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="3_eabc6"]
+[ext_resource type="Resource" uid="uid://ehq2nblbu6k8" path="res://resources/pickups/roma.tres" id="4_25x8o"]
+[ext_resource type="Resource" uid="uid://ckdirkv4dbd4" path="res://resources/pickups/Death.tres" id="5_qfl1t"]
+[ext_resource type="Resource" uid="uid://8txuk4q0m78e" path="res://resources/pickups/Vaccum.tres" id="6_hin2i"]
+[ext_resource type="Resource" uid="uid://cw85pdytvnp1h" path="res://resources/pickups/Gold.tres" id="7_u1um5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gnjtt"]
+radius = 65.0
+height = 130.0
+
+[sub_resource type="Gradient" id="Gradient_1lmwt"]
+offsets = PackedFloat32Array(0.137681, 0.528986, 0.775362)
+colors = PackedColorArray(1, 1, 1, 1, 0.529412, 0.529412, 0.529412, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2lbn4"]
+gradient = SubResource("Gradient_1lmwt")
+fill = 1
+fill_from = Vector2(0.504951, 0.519802)
+fill_to = Vector2(0.905941, 0.0940594)
+
+[node name="Destructible" type="Sprite2D"]
+texture = ExtResource("1_7wt2u")
+hframes = 4
+vframes = 2
+script = ExtResource("2_x6y5e")
+drops = Array[ExtResource("3_eabc6")]([ExtResource("4_25x8o"), ExtResource("5_qfl1t"), ExtResource("6_hin2i"), ExtResource("7_u1um5")])
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_gnjtt")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1, 3)
+scale = Vector2(4.38281, 3.99219)
+color = Color(0.33274, 0.491548, 0.595041, 1)
+texture = SubResource("GradientTexture2D_2lbn4")

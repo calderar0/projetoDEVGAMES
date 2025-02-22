@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://ogdf34gn0bpj"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_fmxtc"]
+[ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_2bs1f"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_fwlyi"]
+[ext_resource type="Texture2D" uid="uid://cpee4mtiyae7r" path="res://assets/enemies/Animated insect enemy assets/BeetleMove.png" id="4_3bqwy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1epv"]
+atlas = ExtResource("4_3bqwy")
+region = Rect2(-5, 2, 33, 27)
+
+[resource]
+script = ExtResource("3_fwlyi")
+title = "Black Mosquito"
+texture = ExtResource("4_3bqwy")
+hframe = 4
+vframe = 4
+scalesx = 2.3
+scalesy = 1.8
+flip = false
+velxd = 2
+velxe = 1
+health = 6.0
+damage = 3.0
+drops = Array[ExtResource("1_fmxtc")]([ExtResource("2_2bs1f")])
+coll_rad = 10
+coll_height = 20
+about = "A swift and persistent insect with a dark body and white wings. Its glowing yellow eyes are always searching for a target to drain its vital energy."
+icon = SubResource("AtlasTexture_t1epv")

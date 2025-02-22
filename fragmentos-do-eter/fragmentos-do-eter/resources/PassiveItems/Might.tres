@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dcxhypy2wki60"]
+
+[ext_resource type="Texture2D" uid="uid://ba3wg7s2dl8qf" path="res://assets/UI/icones/Buffs/attack_boost.png" id="1_apdnb"]
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_ff7on"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_dbfgi"]
+
+[sub_resource type="Resource" id="Resource_6dm2q"]
+script = ExtResource("3_dbfgi")
+description = "+10% Increased Damage"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.1
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_kp8af"]
+script = ExtResource("3_dbfgi")
+description = "+20% Damage"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_sqr4y"]
+script = ExtResource("3_dbfgi")
+description = "+30% Damage"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.3
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[resource]
+script = ExtResource("1_ff7on")
+upgrades = Array[ExtResource("3_dbfgi")]([SubResource("Resource_6dm2q"), SubResource("Resource_kp8af"), SubResource("Resource_sqr4y")])
+title = "Might"
+icon = ExtResource("1_apdnb")
+texture = ExtResource("1_apdnb")
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

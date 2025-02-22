@@ -1,0 +1,330 @@
+[gd_scene load_steps=15 format=3 uid="uid://bewps1vv2ug4d"]
+
+[ext_resource type="Script" path="res://scenes/spawner.gd" id="1_gegn6"]
+[ext_resource type="PackedScene" uid="uid://bjfj3wvb7ukn6" path="res://scenes/enemy.tscn" id="2_kktn8"]
+[ext_resource type="PackedScene" uid="uid://f6jfhogbp3dc" path="res://scenes/destructible.tscn" id="3_lp4uj"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_pucrq"]
+[ext_resource type="Resource" uid="uid://btqafok2ewqg6" path="res://resources/Enemies/1Slime.tres" id="5_pyl05"]
+[ext_resource type="Resource" uid="uid://76cr7tfjg66y" path="res://resources/Enemies/2Lagartin.tres" id="6_lwke0"]
+[ext_resource type="Resource" uid="uid://ogdf34gn0bpj" path="res://resources/Enemies/3Morquito.tres" id="7_bryjk"]
+[ext_resource type="Resource" uid="uid://cfiom33uxkors" path="res://resources/Enemies/4Sapo.tres" id="8_34frh"]
+[ext_resource type="Resource" uid="uid://ujwrtuwyp8jd" path="res://resources/Enemies/5Fanhoto.tres" id="9_ynqis"]
+[ext_resource type="Resource" uid="uid://b1h4ft4ma2643" path="res://resources/Enemies/7Pedrao.tres" id="10_k7gtn"]
+[ext_resource type="Resource" uid="uid://0a1rew5an4pg" path="res://resources/Enemies/6Planto.tres" id="10_yw5cn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uovsg"]
+size = Vector2(10000, 10000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo0ai"]
+size = Vector2(20000, 10000)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5f7y"]
+radius = 500.0
+
+[node name="Spawner" type="Node2D" node_paths=PackedStringArray("area_anti_spawn")]
+script = ExtResource("1_gegn6")
+enemy = ExtResource("2_kktn8")
+destructible = ExtResource("3_lp4uj")
+area_anti_spawn = NodePath("AreaAntiSpawn")
+enemy_type = Array[ExtResource("3_pucrq")]([ExtResource("5_pyl05"), ExtResource("6_lwke0"), ExtResource("7_bryjk"), ExtResource("8_34frh"), ExtResource("9_ynqis"), ExtResource("10_yw5cn"), ExtResource("10_k7gtn")])
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -74.0
+offset_right = -45.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Minute" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="Label2" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+text = ":"
+
+[node name="Second" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Pattern" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 20.0
+
+[node name="Elite" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 25.0
+
+[node name="Destructible" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 9.0
+
+[node name="Boss" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 420.0
+
+[node name="AreaAntiSpawn" type="Area2D" parent="."]
+visible = false
+position = Vector2(-4826, 2076)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(-4382, -944)
+shape = SubResource("RectangleShape2D_uovsg")
+debug_color = Color(0, 0.6, 0.701961, 0.701961)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(17588, -665)
+shape = SubResource("RectangleShape2D_uovsg")
+debug_color = Color(0, 0.6, 0.701961, 0.701961)
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(17588, -665)
+shape = SubResource("RectangleShape2D_uovsg")
+debug_color = Color(0, 0.6, 0.701961, 0.701961)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(6156, -10401)
+shape = SubResource("RectangleShape2D_mo0ai")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(6156, -10401)
+shape = SubResource("RectangleShape2D_mo0ai")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(6359, 8495)
+shape = SubResource("RectangleShape2D_mo0ai")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(766, -1170)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(989, -656)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(833, -249)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(584, 200)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(663, 3074)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(1376, 3493)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(2326, 3708)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(3378, 3776)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(6738, 3855)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(8186, 3764)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(8899, 3560)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(9600, 3481)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(10324, 3413)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11139, 3311)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11648, 3028)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12236, 2564)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12247, 3118)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12632, 2032)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12881, 573)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12802, -1181)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12564, -1815)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12259, -2211)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11886, -2720)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12418, -2912)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11864, -3489)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12362, -3840)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11661, -4236)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12317, -4790)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12340, -5141)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(12453, -4451)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11242, -4756)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11683, -5073)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(10733, -5016)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(11061, -5321)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(10167, -5242)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(9579, -5412)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(9274, -5457)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(8833, -5457)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(8324, -5570)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(7758, -5706)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(6468, -5536)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(7113, -5808)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(7113, -5808)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(4477, -5661)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(3809, -5661)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(3526, -5740)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(2236, -5683)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(1602, -5559)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(1014, -5367)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(494, -4892)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(392, -4620)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(483, -3172)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(528, -2765)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="AreaAntiSpawn"]
+position = Vector2(336, -2392)
+shape = SubResource("CircleShape2D_j5f7y")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Pattern" to="." method="_on_pattern_timeout"]
+[connection signal="timeout" from="Elite" to="." method="_on_elite_timeout"]
+[connection signal="timeout" from="Destructible" to="." method="_on_destructible_timeout"]
+[connection signal="timeout" from="Boss" to="." method="_on_boss_timeout"]

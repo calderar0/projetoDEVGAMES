@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dlpap1xjsmrfi"]
+
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_e2ntc"]
+[ext_resource type="Texture2D" uid="uid://csgsghybfx7af" path="res://assets/UI/icones/Buffs/regeneration.png" id="1_s4hab"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_mh6a0"]
+
+[sub_resource type="Resource" id="Resource_l7pyj"]
+script = ExtResource("3_mh6a0")
+description = "+0.2 Health/sec"
+max_health = 0.0
+recovery = 0.2
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_n05j0"]
+script = ExtResource("3_mh6a0")
+description = "+0.4 Health/sec"
+max_health = 0.0
+recovery = 0.4
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_ewjsg"]
+script = ExtResource("3_mh6a0")
+description = "+0.6 Health/sec"
+max_health = 0.0
+recovery = 0.6
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[resource]
+script = ExtResource("1_e2ntc")
+upgrades = Array[ExtResource("3_mh6a0")]([SubResource("Resource_l7pyj"), SubResource("Resource_n05j0"), SubResource("Resource_ewjsg")])
+title = "Recovery"
+icon = ExtResource("1_s4hab")
+texture = ExtResource("1_s4hab")
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

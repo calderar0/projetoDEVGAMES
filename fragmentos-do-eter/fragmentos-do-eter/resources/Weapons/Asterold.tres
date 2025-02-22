@@ -1,0 +1,76 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=14 format=3 uid="uid://bedheejgoonn4"]
+
+[ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="1_o3fty"]
+[ext_resource type="Resource" uid="uid://by0q2jko33qh5" path="res://resources/Weapons/Huge Asterold.tres" id="1_v85v6"]
+[ext_resource type="Texture2D" uid="uid://dyn31x5wud3qv" path="res://assets/UI/icones/Spells/fire_spell_2.png" id="2_342mq"]
+[ext_resource type="Script" path="res://scenes/CircularWeapon.gd" id="2_cj4jh"]
+[ext_resource type="Resource" uid="uid://dlpap1xjsmrfi" path="res://resources/PassiveItems/Recovery.tres" id="3_fqqvj"]
+[ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_x4ewy"]
+[ext_resource type="Script" path="res://scenes/CircularUpgrade.gd" id="5_gjqsj"]
+[ext_resource type="Texture2D" uid="uid://0f60wlr588v2" path="res://assets/weapons/Fire Effect 1/Firebolt SpriteSheet2.PNG" id="6_xj4d3"]
+
+[sub_resource type="Resource" id="Resource_mstbl"]
+script = ExtResource("5_gjqsj")
+angular_speed = 0.0
+amount = 1
+dano = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 Projectile"
+
+[sub_resource type="Resource" id="Resource_5qpm8"]
+script = ExtResource("5_gjqsj")
+angular_speed = 90.0
+amount = 0
+dano = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+90 speed"
+
+[sub_resource type="Resource" id="Resource_rnshq"]
+script = ExtResource("5_gjqsj")
+angular_speed = 0.0
+amount = 2
+dano = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 Projectile"
+
+[sub_resource type="Resource" id="Resource_v45u8"]
+script = ExtResource("5_gjqsj")
+angular_speed = 0.0
+amount = 0
+dano = 3.0
+damage = 3.0
+cooldown = 0.0
+description = "+3 Damage"
+
+[sub_resource type="Resource" id="Resource_wjqw4"]
+script = ExtResource("5_gjqsj")
+angular_speed = 0.0
+amount = 1
+dano = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 Projectile"
+
+[resource]
+script = ExtResource("2_cj4jh")
+angular_speed = 90
+radius = 75
+amount = 2
+damage = 2.0
+cooldown = 2.0
+speed = 0.0
+projeto_node = ExtResource("1_o3fty")
+upgrades = Array[ExtResource("4_x4ewy")]([SubResource("Resource_mstbl"), SubResource("Resource_5qpm8"), SubResource("Resource_rnshq"), SubResource("Resource_v45u8"), SubResource("Resource_wjqw4")])
+item_needed = ExtResource("3_fqqvj")
+evolution = ExtResource("1_v85v6")
+maxframes = 0
+title = "Asterold"
+icon = ExtResource("2_342mq")
+texture = ExtResource("6_xj4d3")
+escala = 1.0
+horframe = 4
+verframe = 1
+maxframe = 0

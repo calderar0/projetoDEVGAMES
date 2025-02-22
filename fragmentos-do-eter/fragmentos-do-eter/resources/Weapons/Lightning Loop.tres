@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Lightning" load_steps=6 format=3 uid="uid://ci6ofhpjkpw6j"]
+
+[ext_resource type="Texture2D" uid="uid://djpvajblwwdh0" path="res://assets/UI/icones/Spells/lightning_spell.png" id="1_tnq8f"]
+[ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_vdrk3"]
+[ext_resource type="Script" path="res://scenes/Lightning.gd" id="3_pfdm2"]
+[ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_denk2"]
+[ext_resource type="Texture2D" uid="uid://igwjqqq43rkh" path="res://assets/weapons/Thunder Effect 02/Thunder Strike/Thunderstrike w blur2.PNG" id="4_r73gt"]
+
+[resource]
+script = ExtResource("3_pfdm2")
+amount = 7
+damage = 10.0
+cooldown = 2.0
+speed = 0.0
+projeto_node = ExtResource("2_vdrk3")
+upgrades = Array[ExtResource("4_denk2")]([])
+maxframes = 0
+title = "Lightning Loop"
+icon = ExtResource("1_tnq8f")
+texture = ExtResource("4_r73gt")
+escala = 1.5
+horframe = 9
+verframe = 1
+maxframe = 0

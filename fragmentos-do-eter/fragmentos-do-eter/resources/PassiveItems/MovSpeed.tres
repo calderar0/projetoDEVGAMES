@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://cauwge4png2ch"]
+
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_mv805"]
+[ext_resource type="Texture2D" uid="uid://psu7gh2c6jvi" path="res://assets/UI/icones/Buffs/swiftness.png" id="1_vlp3y"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_kpy20"]
+
+[sub_resource type="Resource" id="Resource_joy6p"]
+script = ExtResource("3_kpy20")
+description = "+15 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 15.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_tki3h"]
+script = ExtResource("3_kpy20")
+description = "+20 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 20.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_epvnf"]
+script = ExtResource("3_kpy20")
+description = "+25 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 25.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[resource]
+script = ExtResource("1_mv805")
+upgrades = Array[ExtResource("3_kpy20")]([SubResource("Resource_joy6p"), SubResource("Resource_tki3h"), SubResource("Resource_epvnf")])
+title = "Movement Speed"
+icon = ExtResource("1_vlp3y")
+texture = ExtResource("1_vlp3y")
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

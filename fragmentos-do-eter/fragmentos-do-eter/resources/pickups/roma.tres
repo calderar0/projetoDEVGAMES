@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Health" load_steps=3 format=3 uid="uid://ehq2nblbu6k8"]
+
+[ext_resource type="Texture2D" uid="uid://casug77etriea" path="res://assets/itens/pickups/roma.png" id="1_vegvw"]
+[ext_resource type="Script" path="res://scenes/Health.gd" id="2_nrce3"]
+
+[resource]
+script = ExtResource("2_nrce3")
+amount = 20
+title = "Roma"
+icon = ExtResource("1_vegvw")
+description = "+20 Health"
+horframe = 1
+scales = 1.4
+weight = 5.0

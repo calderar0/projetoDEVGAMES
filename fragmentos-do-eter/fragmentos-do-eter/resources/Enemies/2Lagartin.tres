@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://76cr7tfjg66y"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_so2lc"]
+[ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_x2cut"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_60u3a"]
+[ext_resource type="Texture2D" uid="uid://b0ohrnrit38w0" path="res://assets/enemies/Animated insect enemy assets/MaggotWalk.png" id="4_htl2u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6s07"]
+atlas = ExtResource("4_htl2u")
+region = Rect2(-1, 12, 25, 26)
+
+[resource]
+script = ExtResource("3_60u3a")
+title = "Venomous Larva"
+texture = ExtResource("4_htl2u")
+hframe = 4
+vframe = 4
+scalesx = 2.0
+scalesy = 2.5
+flip = false
+velxd = 2
+velxe = 1
+health = 4.0
+damage = 2.0
+drops = Array[ExtResource("1_so2lc")]([ExtResource("2_x2cut")])
+coll_rad = 10
+coll_height = 20
+about = "A crawling creature with a segmented body in earthy tones. Its mouth contains a corrosive venom capable of weakening its enemies. Agile and treacherous, it moves silently. Its toxin-resistant body allows it to survive in hostile environments, making it a persistent threat to any unsuspecting adventurer."
+icon = SubResource("AtlasTexture_t6s07")

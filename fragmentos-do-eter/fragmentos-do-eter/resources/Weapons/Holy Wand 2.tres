@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SingleShot" load_steps=6 format=3 uid="uid://wjre54otrltl"]
+
+[ext_resource type="Texture2D" uid="uid://b1c4l2hkkh6nk" path="res://assets/UI/icones/Spells/ice_spell.png" id="1_7vvba"]
+[ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="1_x00k1"]
+[ext_resource type="Script" path="res://scenes/SingleShot.gd" id="2_4mpi2"]
+[ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_lytuy"]
+[ext_resource type="Texture2D" uid="uid://ceqfn15vh163w" path="res://assets/weapons/Ice Effect 01/Ice Effect 01/Ice VFX 1/IceVFX 1 Repeatable.png" id="4_ofq17"]
+
+[resource]
+script = ExtResource("2_4mpi2")
+damage = 12.0
+cooldown = 0.1
+speed = 500.0
+projeto_node = ExtResource("1_x00k1")
+upgrades = Array[ExtResource("4_lytuy")]([])
+maxframes = 0
+title = "Holy Wand 2"
+icon = ExtResource("1_7vvba")
+texture = ExtResource("4_ofq17")
+escala = 1.5
+horframe = 10
+verframe = 1
+maxframe = 0

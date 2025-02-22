@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Gold" load_steps=3 format=3 uid="uid://cw85pdytvnp1h"]
+
+[ext_resource type="Texture2D" uid="uid://yxfjq73yr51h" path="res://assets/itens/pickups/saco_de_moedas.png" id="1_tlodh"]
+[ext_resource type="Script" path="res://scenes/gold.gd" id="2_qx8wv"]
+
+[resource]
+script = ExtResource("2_qx8wv")
+gold = 5
+title = "Gold"
+icon = ExtResource("1_tlodh")
+description = "+5 Gold"
+horframe = 1
+scales = 1.0
+weight = 10.0

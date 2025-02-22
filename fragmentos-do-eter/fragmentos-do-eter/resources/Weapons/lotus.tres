@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=5 format=3 uid="uid://cbif7eghcleby"]
+
+[ext_resource type="Texture2D" uid="uid://bv02mg0kdx1o5" path="res://assets/weapons/LOTUS.png" id="1_ap3oc"]
+[ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_3bs53"]
+[ext_resource type="Script" path="res://scenes/DamagingArea.gd" id="3_gvetd"]
+[ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_sxv7t"]
+
+[resource]
+script = ExtResource("3_gvetd")
+angular_speed = 10.0
+area = 0.4
+damage = 1.0
+cooldown = 1.3
+speed = 0.0
+projeto_node = ExtResource("2_3bs53")
+upgrades = Array[ExtResource("4_sxv7t")]([])
+maxframes = 0
+title = "Lotus"
+icon = ExtResource("1_ap3oc")
+texture = ExtResource("1_ap3oc")
+escala = 0.8
+horframe = 0
+verframe = 0
+maxframe = 0

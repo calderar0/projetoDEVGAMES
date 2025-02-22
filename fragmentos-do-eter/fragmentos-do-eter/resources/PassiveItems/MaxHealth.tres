@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://ckadkqoahtslf"]
+
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_8cnyj"]
+[ext_resource type="Texture2D" uid="uid://dscylkvlt7gr" path="res://assets/UI/icones/Buffs/knockback_resistance.png" id="1_ammfx"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_m5ih1"]
+
+[sub_resource type="Resource" id="Resource_b1of8"]
+script = ExtResource("3_m5ih1")
+description = "+25 Health"
+max_health = 25.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_a7aox"]
+script = ExtResource("3_m5ih1")
+description = "+30 Health"
+max_health = 30.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_ist8c"]
+script = ExtResource("3_m5ih1")
+description = "+45 Health"
+max_health = 45.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[resource]
+script = ExtResource("1_8cnyj")
+upgrades = Array[ExtResource("3_m5ih1")]([SubResource("Resource_b1of8"), SubResource("Resource_a7aox"), SubResource("Resource_ist8c")])
+title = "Max Health"
+icon = ExtResource("1_ammfx")
+texture = ExtResource("1_ammfx")
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

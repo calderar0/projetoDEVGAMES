@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://y7o54ebcnl27"]
+
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_p2inj"]
+[ext_resource type="Texture2D" uid="uid://dhfaohk0bqbmb" path="res://assets/UI/icones/Buffs/defense_boost.png" id="1_ymlkj"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_ldo2d"]
+
+[sub_resource type="Resource" id="Resource_ypki2"]
+script = ExtResource("3_ldo2d")
+description = "+1 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 1.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_jwr00"]
+script = ExtResource("3_ldo2d")
+description = "+2 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 2.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_13ayr"]
+script = ExtResource("3_ldo2d")
+description = "+3 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 3.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[resource]
+script = ExtResource("1_p2inj")
+upgrades = Array[ExtResource("3_ldo2d")]([SubResource("Resource_ypki2"), SubResource("Resource_jwr00"), SubResource("Resource_13ayr")])
+title = "Armor"
+icon = ExtResource("1_ymlkj")
+texture = ExtResource("1_ymlkj")
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

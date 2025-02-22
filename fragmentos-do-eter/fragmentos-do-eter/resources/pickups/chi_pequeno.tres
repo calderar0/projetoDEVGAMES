@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Chi" load_steps=3 format=3 uid="uid://dl1nsuh4nc2tu"]
+
+[ext_resource type="Texture2D" uid="uid://cb3434mn47uia" path="res://assets/itens/pickups/Coin_Gems/spr_coin_azu.png" id="1_2qap4"]
+[ext_resource type="Script" path="res://scenes/chi.gd" id="2_eifkl"]
+
+[resource]
+script = ExtResource("2_eifkl")
+XP = 2.0
+title = "chi_pequeno"
+icon = ExtResource("1_2qap4")
+description = "Ganha experiência, no nosso caso, CHI"
+horframe = 4
+scale = 1

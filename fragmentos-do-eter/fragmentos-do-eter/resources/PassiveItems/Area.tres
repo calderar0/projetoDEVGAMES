@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://c4uncytdxluxm"]
+
+[ext_resource type="Texture2D" uid="uid://d37ufj012fxvw" path="res://assets/UI/icones/Buffs/glow.png" id="1_u3fqb"]
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_vivql"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_nh2rl"]
+
+[sub_resource type="Resource" id="Resource_w3nwu"]
+script = ExtResource("3_nh2rl")
+description = "+25 Attack Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 25.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_84pg6"]
+script = ExtResource("3_nh2rl")
+description = "+35 Attack Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 35.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_1m00u"]
+script = ExtResource("3_nh2rl")
+description = "+45 Attack Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 45.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[resource]
+script = ExtResource("1_vivql")
+upgrades = Array[ExtResource("3_nh2rl")]([SubResource("Resource_w3nwu"), SubResource("Resource_84pg6"), SubResource("Resource_1m00u")])
+title = "Area"
+icon = ExtResource("1_u3fqb")
+texture = ExtResource("1_u3fqb")
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

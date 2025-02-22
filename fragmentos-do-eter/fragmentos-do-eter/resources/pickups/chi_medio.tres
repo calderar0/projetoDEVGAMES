@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Chi" load_steps=3 format=3 uid="uid://carj24spnpso5"]
+
+[ext_resource type="Texture2D" uid="uid://dlkk6yecj4fhb" path="res://assets/itens/pickups/Coin_Gems/spr_coin_strip4.png" id="1_ln86v"]
+[ext_resource type="Script" path="res://scenes/chi.gd" id="2_ykft8"]
+
+[resource]
+script = ExtResource("2_ykft8")
+XP = 4.0
+title = "chi_medio"
+icon = ExtResource("1_ln86v")
+description = "Dá experiência
+"
+horframe = 4
+scale = 1

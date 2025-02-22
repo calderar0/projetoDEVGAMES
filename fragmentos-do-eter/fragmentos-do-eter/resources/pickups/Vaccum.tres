@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PickupMagnet" load_steps=3 format=3 uid="uid://8txuk4q0m78e"]
+
+[ext_resource type="Texture2D" uid="uid://cvefie5yvuuhq" path="res://assets/itens/pickups/roxinha.png" id="1_v087b"]
+[ext_resource type="Script" path="res://scenes/Vaccum.gd" id="2_rgpw6"]
+
+[resource]
+script = ExtResource("2_rgpw6")
+title = "Vaccum"
+icon = ExtResource("1_v087b")
+description = "Gets all the gems."
+horframe = 1
+scales = 1.4
+weight = 3.0

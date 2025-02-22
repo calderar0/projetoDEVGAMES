@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2c1dn58qvj72"
+path="res://.godot/imported/Echoes of the Ether1-audio.mp3-d40dc5e81466e8d013df65009b7b68c9.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Echoes of the Ether1-audio.mp3"
+dest_files=["res://.godot/imported/Echoes of the Ether1-audio.mp3-d40dc5e81466e8d013df65009b7b68c9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

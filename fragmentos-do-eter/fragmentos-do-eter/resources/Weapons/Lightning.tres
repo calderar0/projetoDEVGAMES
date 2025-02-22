@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Lightning" load_steps=14 format=3 uid="uid://ctopwagr1s4kw"]
+
+[ext_resource type="Resource" uid="uid://ci6ofhpjkpw6j" path="res://resources/Weapons/Lightning Loop.tres" id="1_o5wu7"]
+[ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_1onjb"]
+[ext_resource type="Texture2D" uid="uid://djpvajblwwdh0" path="res://assets/UI/icones/Spells/lightning_spell.png" id="2_tdnjo"]
+[ext_resource type="Script" path="res://scenes/Lightning.gd" id="3_3mbs5"]
+[ext_resource type="Resource" uid="uid://dcxhypy2wki60" path="res://resources/PassiveItems/Might.tres" id="3_jrkgv"]
+[ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_krg6l"]
+[ext_resource type="Script" path="res://scenes/LightningUpgrade.gd" id="5_afyaq"]
+[ext_resource type="Texture2D" uid="uid://u3hc0bjo7y7k" path="res://assets/weapons/RAIO.png" id="6_2unep"]
+
+[sub_resource type="Resource" id="Resource_45n65"]
+script = ExtResource("5_afyaq")
+amount = 1
+dano = 0.0
+tempesp = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 Strike"
+
+[sub_resource type="Resource" id="Resource_na1cp"]
+script = ExtResource("5_afyaq")
+amount = 0
+dano = 0.0
+tempesp = -1.0
+damage = 0.0
+cooldown = -1.0
+description = "-1 s Cooldown"
+
+[sub_resource type="Resource" id="Resource_ldg4w"]
+script = ExtResource("5_afyaq")
+amount = 1
+dano = 0.0
+tempesp = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 Strike"
+
+[sub_resource type="Resource" id="Resource_88akb"]
+script = ExtResource("5_afyaq")
+amount = 0
+dano = 3.0
+tempesp = 0.0
+damage = 3.0
+cooldown = 0.0
+description = "+3 Damage"
+
+[sub_resource type="Resource" id="Resource_qdgvc"]
+script = ExtResource("5_afyaq")
+amount = 1
+dano = 0.0
+tempesp = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 Strike"
+
+[resource]
+script = ExtResource("3_3mbs5")
+amount = 1
+damage = 2.0
+cooldown = 4.0
+speed = 0.0
+projeto_node = ExtResource("2_1onjb")
+upgrades = Array[ExtResource("4_krg6l")]([SubResource("Resource_45n65"), SubResource("Resource_na1cp"), SubResource("Resource_ldg4w"), SubResource("Resource_88akb"), SubResource("Resource_qdgvc")])
+item_needed = ExtResource("3_jrkgv")
+evolution = ExtResource("1_o5wu7")
+maxframes = 0
+title = "Lightning"
+icon = ExtResource("2_tdnjo")
+texture = ExtResource("6_2unep")
+escala = 2.0
+horframe = 8
+verframe = 1
+maxframe = 0
