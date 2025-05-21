@@ -24,14 +24,10 @@ func _process(delta: float) -> void:
 	if frame_counter >= animation_speed:  # A cada 1 segundo (ajustado pela animation_speed)
 		frame_counter = 0
 		frames = (frames + 1) % maxframe
-		print("Mudando para o frame: ", frames)  # Debug
 		sprite.frame = frames
 
 func _ready():
-	print("DialogueManager: ", DialogueManager)
-	print("Conectando o sinal...")  # Verificando
 	DialogueManager.dialogue_ended.connect(_on_dialogue_end)  # Garantir que está conectando
-	print("Sinal conectado")  # Confirma que a conexão foi feita
 
 func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if resource:
@@ -45,12 +41,10 @@ func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
 	# Conecta ao sinal de remoção do balão
 		balloon.tree_exited.connect(_on_dialogue_end)
 		#DialogueManager.show_dialogue_balloon(resource, "start")
-		print("Iniciando diálogo...")  # Verificação
 
 func _on_dialogue_end():
-	print("Fim do diálogo - Despausando")  # 🛠️ Verificando se chegou aqui
 	get_tree().paused = false  # 🟢 Despausa o jogo
-	print("Jogo pausado? ", get_tree().paused)  # 🛠️ Debug
+
 	queue_free()
 
 	# Reinicia os timers normalmente

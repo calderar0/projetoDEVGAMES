@@ -13,7 +13,7 @@ func save_data():
 	set_data()  # Garante que os dados sejam atualizados antes de salvar
 	var error = config.save(PATH)
 	if error != OK:
-		print("Erro ao salvar os dados:", error)
+		print("erro")
 
 func set_data():
 	config.set_value("Player", "gold", gold)
@@ -26,7 +26,6 @@ func set_and_save():
 func load_data():
 	var error = config.load(PATH)
 	if error != OK:
-		print("Arquivo de save não encontrado ou corrompido. Criando novo.")
 		gold = 0  # Começa do zero se não existir save
 		skill_tree = []
 		set_and_save()
@@ -37,5 +36,4 @@ func load_data():
 # Função para adicionar gold e salvar automaticamente
 func add_gold(amount: int):
 	gold += amount
-	print("Gold atualizado:", gold)
 	set_and_save()

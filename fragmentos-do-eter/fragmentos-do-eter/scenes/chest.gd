@@ -42,10 +42,10 @@ func set_reward():
 	var weight = [9.0,1.0]
 	if chance < get_weighted_chance(weight, 0):
 		upgrade_item(2,3)
-		print("rare")
+
 	else:
 		upgrade_item(0,3)
-		print("legendary")
+
 
 func get_weighted_chance(weight, index):
 	var modified_weight = []

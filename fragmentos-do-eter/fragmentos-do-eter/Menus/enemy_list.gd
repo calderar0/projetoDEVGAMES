@@ -13,7 +13,6 @@ func dir_contents():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			print("Found file: " + file_name)
 			var enemy_resource : Enemy = load(path + file_name)
 			enemies.append(enemy_resource)
  
@@ -23,9 +22,6 @@ func dir_contents():
 			add_child(button)
  
 			file_name = dir.get_next()
-	else:
-		print("An error occurred when trying to access the path.")
-	print(enemies)
 
 func _on_pressed(button : Button):
 	var index = button.get_index()

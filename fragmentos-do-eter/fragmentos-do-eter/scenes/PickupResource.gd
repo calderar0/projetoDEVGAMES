@@ -14,4 +14,3 @@ var player_ref: CharacterBody2D
 
 func activate():
 	SoundManager.play_sfx(sound)
-	print(title + "picked up.")

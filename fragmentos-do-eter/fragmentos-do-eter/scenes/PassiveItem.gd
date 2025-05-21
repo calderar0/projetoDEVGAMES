@@ -3,9 +3,9 @@ class_name PassiveItem
 
 @export var upgrades: Array[Stats]
 var player_ref
+var passiveslot
 
 func is_upgradable() -> bool:
-	print("Verificando se item pode ser upado:", self, "Level:", level, "Upgrades:", upgrades.size())
 	if level <= upgrades.size():
 		return true
 	return false
@@ -26,4 +26,3 @@ func upgrade_item():
 	player_ref.growth += upgrade.growth
 	player_ref.luck += upgrade.luck
 	level += 1
-	print("novo nivel: ", level)

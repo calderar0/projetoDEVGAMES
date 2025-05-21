@@ -97,12 +97,11 @@ func dir_contents(path):
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			print("Found file: " + file_name)
+
 			var item_resource : Item = load(path + file_name)
 			item_resources.append(item_resource)
 			file_name = dir.get_next()
 	else:
-		print("An error occurred when trying to access the path.")
 		return null
 	return item_resources
 
@@ -146,7 +145,10 @@ func add_passive(item):
 	for slot in passive_items.get_children():
 		if slot.item == null:
 			slot.item = item
+			slot.item.player_ref = get_parent().get_parent()
+
 			return
+
 
 func check_item(item):
 	if item in get_available_resource_in(weapons) or item in get_available_resource_in(passive_items):

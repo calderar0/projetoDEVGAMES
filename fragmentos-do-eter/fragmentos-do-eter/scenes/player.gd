@@ -91,7 +91,6 @@ func _physics_process(delta: float) -> void:
 	ajustar_camera()
 	if is_instance_valid(nead_enemy):
 		nead_enemy_distancia = nead_enemy.separacao
-		print(nead_enemy.name)
 	else:
 		nead_enemy_distancia = 150 + area
 		nead_enemy = null
@@ -136,12 +135,10 @@ func _physics_process(delta: float) -> void:
 
 func _on_item_upgraded(upgrade: Stats):
 	max_health += upgrade.max_health
-	print(max_health)
 	recovery += upgrade.recovery
 	armor += upgrade.armor
 	mov_speed += upgrade.mov_speed
 	might += upgrade.might
-	print(might)
 	area += upgrade.area
 	magnet += upgrade.magnet
 	growth += upgrade.growth

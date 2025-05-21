@@ -645,7 +645,6 @@ script = ExtResource("1_wqjev")
 script = ExtResource("2_bcfrs")
 
 [node name="debug" type="VBoxContainer" parent="UI"]
-visible = false
 offset_left = 26.0
 offset_top = 136.0
 offset_right = 66.0
@@ -752,8 +751,9 @@ offset_bottom = -39.0
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
 
-[node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("5_hd8mw")]
+[node name="PassiveSlot" parent="UI/PassiveItems" node_paths=PackedStringArray("player_refe") instance=ExtResource("5_hd8mw")]
 layout_mode = 2
+player_refe = NodePath("../../..")
 
 [node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("5_hd8mw")]
 layout_mode = 2
