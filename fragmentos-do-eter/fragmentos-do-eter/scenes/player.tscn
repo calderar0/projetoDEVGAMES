@@ -38,9 +38,9 @@ gradient = SubResource("Gradient_y5svc")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v8xv6"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(500, 1, 1)
-angle_min = -240.7
-angle_max = 249.0
+emission_box_extents = Vector3(1000, 1, 1)
+angle_min = -208.2
+angle_max = 222.6
 gravity = Vector3(0, 98, 0)
 color_ramp = SubResource("GradientTexture1D_ohd6h")
 
@@ -644,22 +644,6 @@ script = ExtResource("1_wqjev")
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("2_bcfrs")
 
-[node name="debug" type="VBoxContainer" parent="UI"]
-offset_left = 26.0
-offset_top = 136.0
-offset_right = 66.0
-offset_bottom = 186.0
-
-[node name="Armor" type="Label" parent="UI/debug"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "A : 0"
-
-[node name="Might" type="Label" parent="UI/debug"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "M : 1"
-
 [node name="Gold" type="Label" parent="UI"]
 unique_name_in_owner = true
 offset_top = 104.0
@@ -712,11 +696,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -35.8334
-offset_top = 17.9167
-offset_right = 36.1666
-offset_bottom = 40.9167
+offset_left = -53.3333
+offset_top = 39.1667
+offset_right = 57.6667
+offset_bottom = 74.1667
 grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
 text = "LEVEL UP"
 
 [node name="Weapons" type="HBoxContainer" parent="UI"]
@@ -800,13 +785,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -54.0
-offset_top = -38.0
-offset_right = -14.0
-offset_bottom = 2.0
+offset_left = -112.0
+offset_top = -36.0
+offset_right = -72.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.6, 1.6)
 script = ExtResource("7_6k20f")
 weapons = NodePath("../Weapons")
 passive_items = NodePath("../PassiveItems")
@@ -815,16 +800,17 @@ panel = NodePath("../Panel")
 
 [node name="Chest" type="NinePatchRect" parent="UI"]
 process_mode = 3
+visible = false
 custom_minimum_size = Vector2(300, 200)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -100.0
-offset_right = 120.0
-offset_bottom = 100.0
+offset_left = -384.0
+offset_top = -228.0
+offset_right = 256.0
+offset_bottom = 159.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
@@ -837,8 +823,8 @@ patch_margin_bottom = 10
 script = ExtResource("13_u165v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Chest"]
-position = Vector2(150, 95)
-scale = Vector2(3, 3)
+position = Vector2(320, 200)
+scale = Vector2(8.77083, 6.98413)
 sprite_frames = SubResource("SpriteFrames_kddj4")
 animation = &"idle_boss_chest"
 autoplay = "idle_boss_chest"
@@ -850,13 +836,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -26.6667
-offset_top = -60.0
-offset_right = 25.3333
-offset_bottom = -29.0
+offset_left = -73.5
+offset_top = -92.6666
+offset_right = 73.5
+offset_bottom = -21.6666
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("24_3vhc8")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = SubResource("StyleBoxTexture_scrcv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0gpnt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_lghwg")
@@ -870,13 +857,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -25.0
-offset_top = -45.0
-offset_right = 27.0
-offset_bottom = -14.0
+offset_left = -73.0
+offset_top = -94.0
+offset_right = 73.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("24_3vhc8")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/hover = SubResource("StyleBoxTexture_ej1bu")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_pgn8b")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6hu31")
@@ -890,34 +878,35 @@ scale = Vector2(1.2, 1.2)
 
 [node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 75.0
-offset_right = 75.0
-offset_bottom = 115.0
+offset_left = 77.7778
+offset_top = 116.667
+offset_right = 137.778
+offset_bottom = 176.667
 expand_mode = 1
 stretch_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
-offset_left = 177.778
-offset_top = 68.0556
-offset_right = 217.778
-offset_bottom = 108.056
+offset_left = 394.444
+offset_top = 116.667
+offset_right = 454.444
+offset_bottom = 176.667
 expand_mode = 1
 stretch_mode = 5
 
 [node name="TextureRect3" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
-offset_left = 104.861
-offset_top = 16.6667
-offset_right = 144.861
-offset_bottom = 56.6667
+offset_left = 236.528
+offset_top = 22.2222
+offset_right = 296.528
+offset_bottom = 82.2222
 expand_mode = 1
 stretch_mode = 5
 
 [node name="PauseMenu" type="Control" parent="UI"]
 unique_name_in_owner = true
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5

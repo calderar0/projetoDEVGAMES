@@ -1,9 +1,37 @@
-[gd_resource type="Resource" script_class="DamagingArea" load_steps=5 format=3 uid="uid://cbif7eghcleby"]
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=9 format=3 uid="uid://cbif7eghcleby"]
 
 [ext_resource type="Texture2D" uid="uid://bv02mg0kdx1o5" path="res://assets/weapons/LOTUS.png" id="1_ap3oc"]
 [ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_3bs53"]
 [ext_resource type="Script" path="res://scenes/DamagingArea.gd" id="3_gvetd"]
 [ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_sxv7t"]
+[ext_resource type="Script" path="res://scenes/DamagingAreaUpgrade.gd" id="5_ylgvh"]
+
+[sub_resource type="Resource" id="Resource_t8x2u"]
+script = ExtResource("5_ylgvh")
+area = 0.0
+dano = 2.0
+cd = 0.0
+damage = 0.0
+cooldown = 0.0
+description = ""
+
+[sub_resource type="Resource" id="Resource_hfqvr"]
+script = ExtResource("5_ylgvh")
+area = 0.0
+dano = 2.0
+cd = 0.0
+damage = 0.0
+cooldown = 0.0
+description = ""
+
+[sub_resource type="Resource" id="Resource_celnn"]
+script = ExtResource("5_ylgvh")
+area = 0.0
+dano = 2.0
+cd = 0.0
+damage = 0.0
+cooldown = 0.0
+description = ""
 
 [resource]
 script = ExtResource("3_gvetd")
@@ -13,7 +41,7 @@ damage = 1.0
 cooldown = 1.3
 speed = 0.0
 projeto_node = ExtResource("2_3bs53")
-upgrades = Array[ExtResource("4_sxv7t")]([])
+upgrades = Array[ExtResource("4_sxv7t")]([SubResource("Resource_t8x2u"), SubResource("Resource_hfqvr"), SubResource("Resource_celnn")])
 maxframes = 0
 title = "Lotus"
 icon = ExtResource("1_ap3oc")

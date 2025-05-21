@@ -9,44 +9,46 @@ var health: float = 100.0:
 		health = max(value, 0)
 		%Health.value = value
 
-var mov_speed: float = 150.0#:
-		#set(value):
-		#recovery = value
+var mov_speed: float = 150.0:
+		set(value):
+			mov_speed = value
+			
 		#%mov_speed.text = "R: " + str(value)
 
-var max_health: float = 100#:
-	#set(value):
-	#	max_health = value
-	#	%Recovery.text = "R: " + str(value)
-	#	%Health.max_value = value
+var max_health: float = 100:
+		set(value):
+			max_health = value
+			%Health.max_value = value
 
-var recovery: float = 0#:
-	#set(value):
-	#	recovery = value
-	#	%Recovery.text = "R: " + str(value)
+var recovery: float = 0:
+	set(value):
+		recovery = value
+
 var armor: float = 0:
 		set(value):
 			armor = value
-			%Armor.text = "A: " + str(value)
+			
 var might: float = 1.0:
 		set(value):
 			might = value
-			%Might.text = "M: " + str(value)
 			
-var area: float = 0#:
-		#set(value):
-		#recovery = value
-		#%Recovery.text = "R: " + str(value)
+			
+var area: float = 0:
+		set(value):
+			area = value
+			
 var magnet: float = 0:
 	set(value):
 		magnet = value
-		#%Recovery.text = "R: " + str(value)
 		%Magnet.shape.radius = 50 + value
-var growth: float = 1#:
-		#	set(value):
-		#recovery = value
-		#%Recovery.text = "R: " + str(value)
-var luck: float = 1.0
+		
+var growth: float = 1:
+		set(value):
+			growth = value
+
+var luck: float = 1.0:
+		set(value):
+			luck = value
 
 
 
