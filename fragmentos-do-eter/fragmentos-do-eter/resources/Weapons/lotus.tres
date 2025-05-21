@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="DamagingArea" load_steps=9 format=3 uid="uid://cbif7eghcleby"]
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=11 format=3 uid="uid://cbif7eghcleby"]
 
 [ext_resource type="Texture2D" uid="uid://bv02mg0kdx1o5" path="res://assets/weapons/LOTUS.png" id="1_ap3oc"]
+[ext_resource type="Texture2D" uid="uid://dbsn213v67lly" path="res://assets/weapons/Dancadafenix.png" id="1_csvii"]
 [ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_3bs53"]
 [ext_resource type="Script" path="res://scenes/DamagingArea.gd" id="3_gvetd"]
 [ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_sxv7t"]
 [ext_resource type="Script" path="res://scenes/DamagingAreaUpgrade.gd" id="5_ylgvh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwhda"]
+atlas = ExtResource("1_csvii")
+region = Rect2(8, 8, 16, 16)
+margin = Rect2(0.3, 0.2, 0, 0)
 
 [sub_resource type="Resource" id="Resource_t8x2u"]
 script = ExtResource("5_ylgvh")
@@ -44,7 +50,7 @@ projeto_node = ExtResource("2_3bs53")
 upgrades = Array[ExtResource("4_sxv7t")]([SubResource("Resource_t8x2u"), SubResource("Resource_hfqvr"), SubResource("Resource_celnn")])
 maxframes = 0
 title = "Lotus"
-icon = ExtResource("1_ap3oc")
+icon = SubResource("AtlasTexture_cwhda")
 texture = ExtResource("1_ap3oc")
 escala = 0.8
 horframe = 0

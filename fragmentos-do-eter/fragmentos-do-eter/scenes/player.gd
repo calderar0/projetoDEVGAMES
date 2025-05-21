@@ -64,24 +64,25 @@ var XP: int = 0:
 	set(value):
 		XP = value
 		%XP.value = value
-var total_XP: int  = 0
-var level: int =  1:
+		if XP >= get_xp_needed(level):
+			XP -= get_xp_needed(level)
+			level += 1
+		%nnumero.text = "xp" + str(value)
+
+var total_XP: int = 0
+var level: int = 1:
 	set(value):
 		level = value
 		%Level.text = "Lv" + str(value)
 		%Options.show_option()
-		#essa parte é interessante pro balanceamento!!!!
-		#verificar certinho a questão de níveis, xp por nível e etc...
-		if level >= 3:
-			%XP.max_value = 45
-		elif level >= 7:
-			%XP.max_value = 85
-		elif level >= 13:
-			%XP.max_value = 125
-		elif level >= 21:
-			%XP.max_value = 165
-		elif level >= 29:
-			%XP.max_value = 205
+		%XP.max_value = get_xp_needed(level)
+		
+
+func get_xp_needed(level: int) -> int:
+	# Fórmula de progressão: base * (nível ^ fator)
+	var base := 1     # XP necessário no nível 1
+	var fator := 1   # Crescimento exponencial (aumente para deixar mais difícil)
+	return int(base * pow(level, fator))
 			
 
 func ajustar_camera():
