@@ -4,11 +4,46 @@ extends Node2D
 @export var enemy: PackedScene
 @export var destructible: PackedScene
 @export var area_anti_spawn: Area2D
+@export var current_phase_path: String = "res://resources/Enemies/Phase1/"
+var boss_spawned: bool = false
+
 
 var distance: float = 900
 var can_spawn: bool = true
+var actual_phase: int = 1
 
 @export var enemy_type: Array[Enemy]
+
+func _ready():
+	actual_phase = 1
+	load_enemies_from_phase(current_phase_path)
+	
+
+func load_enemies_from_phase(path: String) -> void:
+	print("Carregando inimigos de:", path)
+	enemy_type.clear()
+	var dir = DirAccess.open(path)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if file_name.ends_with(".tres"):
+				var full_path = path + "/" + file_name
+				var enemy_data = load(full_path)
+				if enemy_data:  # Aqui é um recurso, não uma cena
+					enemy_type.append(enemy_data)
+					print("Carregado:", file_name)
+			file_name = dir.get_next()
+		dir.list_dir_end()
+
+
+
+func change_phase():
+	if actual_phase <= 4:
+		actual_phase += 1
+		current_phase_path = "res://resources/Enemies/Phase%d" % actual_phase
+		load_enemies_from_phase(current_phase_path)
+
 
 var minute: int:
 	set(value):
@@ -37,17 +72,35 @@ func  spawner(pos: Vector2, elite: bool = false, boss: bool = false):
 		return
 	if not can_spawn and not elite and not boss:
 		return
-	
+	else:
+		if boss_spawned:
+			return  # se o boss estiver vivo, não spawnar inimigos normais
+		if not can_spawn and not elite:
+			return
+	if enemy_type.is_empty():
+		print("enemy_type está vazio!") # DEBUG
+		return
 		
 	var enemy_inst = enemy.instantiate()
 	enemy_inst.type = enemy_type[minute % enemy_type.size()]
+
 	enemy_inst.position = pos
 
 	enemy_inst.player_ref = player
 	enemy_inst.elite = elite
 	enemy_inst.boss = boss
-	get_tree().current_scene.add_child(enemy_inst)
 	
+	if boss:
+			boss_spawned = true
+			enemy_inst.connect("tree_exited", Callable(self, "_on_boss_defeated"))
+	get_tree().current_scene.add_child(enemy_inst)
+
+func _on_boss_defeated():
+	boss_spawned = false
+	change_phase()
+
+
+
 func get_rand_pos() -> Vector2:
 	var pos: Vector2
 	while true:

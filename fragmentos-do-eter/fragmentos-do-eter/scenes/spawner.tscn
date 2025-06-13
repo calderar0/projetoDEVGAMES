@@ -1,16 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bewps1vv2ug4d"]
+[gd_scene load_steps=7 format=3 uid="uid://bewps1vv2ug4d"]
 
 [ext_resource type="Script" path="res://scenes/spawner.gd" id="1_gegn6"]
-[ext_resource type="PackedScene" uid="uid://bjfj3wvb7ukn6" path="res://scenes/enemy.tscn" id="2_kktn8"]
+[ext_resource type="PackedScene" uid="uid://bjfj3wvb7ukn6" path="res://scenes/enemy.tscn" id="2_4wk10"]
 [ext_resource type="PackedScene" uid="uid://f6jfhogbp3dc" path="res://scenes/destructible.tscn" id="3_lp4uj"]
-[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_pucrq"]
-[ext_resource type="Resource" uid="uid://btqafok2ewqg6" path="res://resources/Enemies/1Slime.tres" id="5_pyl05"]
-[ext_resource type="Resource" uid="uid://76cr7tfjg66y" path="res://resources/Enemies/2Lagartin.tres" id="6_lwke0"]
-[ext_resource type="Resource" uid="uid://ogdf34gn0bpj" path="res://resources/Enemies/3Morquito.tres" id="7_bryjk"]
-[ext_resource type="Resource" uid="uid://cfiom33uxkors" path="res://resources/Enemies/4Sapo.tres" id="8_34frh"]
-[ext_resource type="Resource" uid="uid://ujwrtuwyp8jd" path="res://resources/Enemies/5Fanhoto.tres" id="9_ynqis"]
-[ext_resource type="Resource" uid="uid://b1h4ft4ma2643" path="res://resources/Enemies/7Pedrao.tres" id="10_k7gtn"]
-[ext_resource type="Resource" uid="uid://0a1rew5an4pg" path="res://resources/Enemies/6Planto.tres" id="10_yw5cn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uovsg"]
 size = Vector2(10000, 10000)
@@ -23,10 +15,9 @@ radius = 500.0
 
 [node name="Spawner" type="Node2D" node_paths=PackedStringArray("area_anti_spawn")]
 script = ExtResource("1_gegn6")
-enemy = ExtResource("2_kktn8")
+enemy = ExtResource("2_4wk10")
 destructible = ExtResource("3_lp4uj")
 area_anti_spawn = NodePath("AreaAntiSpawn")
-enemy_type = Array[ExtResource("3_pucrq")]([ExtResource("5_pyl05"), ExtResource("6_lwke0"), ExtResource("7_bryjk"), ExtResource("8_34frh"), ExtResource("9_ynqis"), ExtResource("10_yw5cn"), ExtResource("10_k7gtn")])
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -74,7 +65,7 @@ wait_time = 9.0
 
 [node name="Boss" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 420.0
+wait_time = 10.0
 
 [node name="AreaAntiSpawn" type="Area2D" parent="."]
 visible = false

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjfj3wvb7ukn6"]
 
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_odkc7"]
-[ext_resource type="Resource" uid="uid://di2t24ch2dtxc" path="res://resources/Enemies/AvreBossFinal.tres" id="2_hknoc"]
+[ext_resource type="Resource" uid="uid://di2t24ch2dtxc" path="res://resources/Enemies/Phase1/AvreBossFinal.tres" id="2_hknoc"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cvger"]
 load_path = "res://.godot/imported/1 v1.png-55660175e64405ae65bc809fd22f821e.ctex"

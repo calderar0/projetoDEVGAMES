@@ -13,15 +13,21 @@ func dir_contents():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			var enemy_resource : Enemy = load(path + file_name)
-			enemies.append(enemy_resource)
- 
-			var button = Button.new()
-			button.pressed.connect(_on_pressed.bind(button))
-			button.text = enemy_resource.title
-			add_child(button)
- 
+			if dir.current_is_dir():
+				file_name = dir.get_next()
+				continue  # pula pastas
+
+			if file_name.ends_with(".tres") or file_name.ends_with(".res"):
+				var enemy_resource : Enemy = load(path + file_name)
+				if enemy_resource:
+					enemies.append(enemy_resource)
+
+					var button = Button.new()
+					button.pressed.connect(_on_pressed.bind(button))
+					button.text = enemy_resource.title
+					add_child(button)
 			file_name = dir.get_next()
+
 
 func _on_pressed(button : Button):
 	var index = button.get_index()
