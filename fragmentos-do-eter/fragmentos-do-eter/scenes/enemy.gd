@@ -11,6 +11,8 @@ var damage: float
 var knockback: Vector2
 var separacao: float
 
+var bossCounter: int = 0
+
 var frame_counter = 0
 var frame = 0
 
@@ -49,6 +51,7 @@ var boss: bool = false:
 	set(value):
 		boss = value
 		if value and boss_enemy:
+			bossCounter += 1
 			var capsule_shape = $CollisionShape2D.shape.duplicate(true)  # Cria uma cópia independente
 			$Sprite2D.texture = boss_enemy.texture
 			$Sprite2D.hframes = boss_enemy.hframe
@@ -112,9 +115,23 @@ func checar_separacao(_delta):
 		
 ############################## boss vvvvvvvvvvvvvvvvv ####################
 func usando_habilidade():
-	if habilidades.size() > 0:
-		var habilidade_escolhida = habilidades.pick_random()
-		habilidade_escolhida.call()
+	var distancia = position.distance_to(player_ref.position)
+	# Defina aqui o alcance MÁXIMO em que o chefe pode usar uma habilidade
+	var max_engagement_range = 700.0 
+
+	# Se o jogador estiver fora do alcance máximo, o chefe não faz nada (apenas persegue)
+	if distancia > max_engagement_range:
+		return
+
+	# 1. Habilidade de cura (maior prioridade se a vida estiver baixa)
+	if health < boss_enemy.health * 0.25 and randf() < 0.4:
+		habilidade_cura.call()
+	# 2. Habilidade em área (curto alcance)
+	elif distancia < 500: # Diminuí um pouco para dar mais espaço para o ataque ranged
+		habilidade_area.call()
+	# 3. Habilidade de projétil (médio/longo alcance, mas DENTRO do limite máximo)
+	elif distancia < max_engagement_range:
+		habilidade_projetil.call()
 
 
 func habilidade_projetil():
@@ -132,21 +149,43 @@ func habilidade_area():
 	var shape = CircleShape2D.new()
 	shape.radius = 300
 	col.shape = shape
-	aoe.position = global_position
 	aoe.add_child(col)
-	get_tree().current_scene.add_child(aoe)
 
-	# Sprite visual do efeito
-	var sprite = Sprite2D.new()
-	sprite.texture = preload("res://icon.svg")  # Crie um círculo transparente simples
-	sprite.scale = Vector2(1.5, 1.5)
-	sprite.modulate = Color(1, 0, 0, 0.5)  # Semitransparente vermelho
+	# MUDANÇA 1: Adiciona a área como FILHA do chefe, não da cena.
+	add_child(aoe)
+	
+	# MUDANÇA 2: A posição da área agora é relativa ao chefe. (0,0) significa o centro do chefe.
+	aoe.position = Vector2.ZERO
+
+	# O resto do código permanece o mesmo...
+	var sprite = AnimatedSprite2D.new()
+	var tex = preload("res://assets/enemies/skillsBoss/danoArea.png")
+	var sprite_frames = SpriteFrames.new()
+	sprite_frames.add_animation("explosao")
+
+	var frame_width = tex.get_width() / 14
+	var frame_height = tex.get_height() / 9
+	
+	var linha_desejada = 1
+	for x in range(14):
+		var atlas = AtlasTexture.new()
+		atlas.atlas = tex
+		atlas.region = Rect2(x * frame_width, linha_desejada * frame_height, frame_width, frame_height)
+		sprite_frames.add_frame("explosao", atlas)
+
+	sprite.frames = sprite_frames
+	sprite.animation = "explosao"
+	sprite.play("explosao")
+	sprite.scale = Vector2(10, 10)
+	sprite.position = Vector2(0, 0) # Este offset visual continua útil
+
 	aoe.add_child(sprite)
-
 	aoe.connect("body_entered", Callable(self, "_on_area_dano_boss"))
 
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(1.2).timeout
+	# Como 'aoe' é um filho do chefe, ele será removido corretamente daqui.
 	aoe.queue_free()
+
 
 
 func _on_area_dano_boss(body):
