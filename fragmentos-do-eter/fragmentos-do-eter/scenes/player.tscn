@@ -638,7 +638,7 @@ gradient = SubResource("Gradient_rs64y")
 fill = 1
 fill_from = Vector2(0.50463, 0.50463)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_wqjev")
 
 [node name="UI" type="CanvasLayer" parent="."]

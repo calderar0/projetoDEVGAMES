@@ -14,6 +14,18 @@ var separacao: float
 var frame_counter = 0
 var frame = 0
 
+enum EstadoBoss { IDLE, PERSEGUINDO, ATACANDO, USANDO_HABILIDADE }
+
+var estado: EstadoBoss = EstadoBoss.PERSEGUINDO
+var tempo_entre_habilidades = 4.0
+var cooldown_habilidade = 0.0
+var habilidades = []
+
+func _ready():
+	if boss:
+		habilidades = [habilidade_projetil, habilidade_area, habilidade_cura]
+
+
 var drop = preload("res://scenes/pickups.tscn")
 
 
@@ -69,6 +81,11 @@ var type: Enemy:
 func _physics_process(delta: float) -> void:
 	checar_separacao(delta)
 	knockback_update(delta)
+	if boss:
+		cooldown_habilidade -= delta
+		if cooldown_habilidade <= 0:
+			usando_habilidade()
+			cooldown_habilidade = tempo_entre_habilidades
 	frame_counter += 1
 	if frame_counter >= $Sprite2D.hframes:
 		frame_counter = 0
@@ -92,6 +109,56 @@ func checar_separacao(_delta):
 	if separacao<player_ref.nead_enemy_distancia:
 		player_ref.nead_enemy = self	
 		
+		
+############################## boss vvvvvvvvvvvvvvvvv ####################
+func usando_habilidade():
+	if habilidades.size() > 0:
+		var habilidade_escolhida = habilidades.pick_random()
+		habilidade_escolhida.call()
+
+
+func habilidade_projetil():
+	var cena_proj = preload("res://scenes/projetil_boss.tscn")
+	var proj = cena_proj.instantiate()
+	proj.position = global_position
+	proj.direcao = (player_ref.global_position - global_position).normalized()
+	proj.damage = damage * 1.2
+	get_tree().current_scene.add_child(proj)
+
+
+func habilidade_area():
+	var aoe = Area2D.new()
+	var col = CollisionShape2D.new()
+	var shape = CircleShape2D.new()
+	shape.radius = 300
+	col.shape = shape
+	aoe.position = global_position
+	aoe.add_child(col)
+	get_tree().current_scene.add_child(aoe)
+
+	# Sprite visual do efeito
+	var sprite = Sprite2D.new()
+	sprite.texture = preload("res://icon.svg")  # Crie um círculo transparente simples
+	sprite.scale = Vector2(1.5, 1.5)
+	sprite.modulate = Color(1, 0, 0, 0.5)  # Semitransparente vermelho
+	aoe.add_child(sprite)
+
+	aoe.connect("body_entered", Callable(self, "_on_area_dano_boss"))
+
+	await get_tree().create_timer(1.5).timeout
+	aoe.queue_free()
+
+
+func _on_area_dano_boss(body):
+	if body.is_in_group("player"):
+		body.take_damage(damage * 2)
+
+func habilidade_cura():
+	var cura = damage * 2.0
+	health += cura
+	damage_popup(cura, 1.0, true)
+
+######################################### boss ^^^^^^^^^^ ##################33
 func knockback_update(delta):
 	velocity = (player_ref.position - position).normalized() * speed
 	knockback = knockback.move_toward(Vector2.ZERO, 1)
@@ -101,13 +168,17 @@ func knockback_update(delta):
 		collider.get_collider().knockback = (collider.get_collider().global_position - global_position).normalized() * 50
 
 
-func damage_popup(amount, modifier = 1.0):
+func damage_popup(amount, modifier = 1.0, is_heal := false):
 	var popup = damage_popup_node.instantiate()
-	popup.text = str(amount * modifier)
-	popup.position = position+Vector2(-50,-25)
+	var final_value = amount * modifier
+	popup.text = "+" + str(abs(final_value)) if is_heal else str(final_value)
+	popup.position = position + Vector2(-50, -25)
 	if modifier > 1.0:
 		popup.set("theme_override_colors/font_color", Color.RED)
+	elif is_heal:
+		popup.set("theme_override_colors/font_color", Color.GREEN)
 	get_tree().current_scene.add_child(popup)
+
 	
 	
 func take_damage(amount):

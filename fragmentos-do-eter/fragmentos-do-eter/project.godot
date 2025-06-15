@@ -59,6 +59,10 @@ folder_colors={
 "res://shaders/": "red"
 }
 
+[global_group]
+
+player=""
+
 [input]
 
 left={
