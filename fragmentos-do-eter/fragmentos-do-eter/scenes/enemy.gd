@@ -35,6 +35,8 @@ var health: float:
 	set(value):
 		health = value
 		if health <=0:
+			if boss:
+				Savedata.saveFase()
 			drop_item()
 			queue_free()
 
@@ -196,6 +198,7 @@ func habilidade_cura():
 	var cura = damage * 2.0
 	health += cura
 	damage_popup(cura, 1.0, true)
+
 
 ######################################### boss ^^^^^^^^^^ ##################33
 func knockback_update(delta):

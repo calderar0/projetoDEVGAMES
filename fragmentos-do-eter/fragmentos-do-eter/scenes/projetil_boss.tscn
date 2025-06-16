@@ -1,10 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxjaoyut41lbm"]
+[gd_scene load_steps=9 format=3 uid="uid://cxjaoyut41lbm"]
 
-[ext_resource type="Texture2D" uid="uid://332ssdjgoxfa" path="res://icon.svg" id="1_4pcc3"]
 [ext_resource type="Script" path="res://scenes/projetil_boss.gd" id="1_pm7t1"]
+[ext_resource type="Texture2D" uid="uid://bkb7m51ccwj1s" path="res://assets/enemies/skillsBoss/All_Fire_Bullet_Pixel_16x16_05.png" id="2_j7o0w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1faaa"]
-radius = 162.028
+radius = 18.1108
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dypt"]
+atlas = ExtResource("2_j7o0w")
+region = Rect2(576, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d08xh"]
+atlas = ExtResource("2_j7o0w")
+region = Rect2(592, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51sg8"]
+atlas = ExtResource("2_j7o0w")
+region = Rect2(608, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_515xh"]
+atlas = ExtResource("2_j7o0w")
+region = Rect2(624, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_og6eu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dypt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d08xh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51sg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_515xh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
 
 [node name="ProjetilBoss" type="Area2D"]
 script = ExtResource("1_pm7t1")
@@ -12,9 +48,10 @@ script = ExtResource("1_pm7t1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1faaa")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.999992, -2.00001)
-scale = Vector2(2.00781, 1.45313)
-texture = ExtResource("1_4pcc3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_og6eu")
+autoplay = "default"
+frame_progress = 0.689988
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
