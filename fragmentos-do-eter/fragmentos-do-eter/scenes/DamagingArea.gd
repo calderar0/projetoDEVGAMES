@@ -1,10 +1,8 @@
 extends Weapon
 class_name DamagingArea
  
-@export var angular_speed : float = 10
 @export var area : float = 0.4
  
-var angle : float
 var projectile_reference
  
 func activate(source, _target, _scene_tree):
@@ -14,11 +12,6 @@ func activate(source, _target, _scene_tree):
 	if not projectile_reference:
 		add_to_player(source)
  
-func update(delta):
-	angle += angular_speed * delta
-	if is_instance_valid(projectile_reference):
-		projectile_reference.rotation_degrees = angle
-		projectile_reference.damage = damage
  
 func add_to_player(source):
 	var projectile = projeto_node.instantiate()
@@ -31,9 +24,13 @@ func add_to_player(source):
 	projectile.find_child("Sprite2D").texture = texture
 	projectile.find_child("Sprite2D").scale.x = escala
 	projectile.find_child("Sprite2D").scale.y = escala
+	projectile.find_child("Sprite2D").hframes = horframe
+	projectile.find_child("Sprite2D").vframes = verframe
 	projectile.find_child("CollisionShape2D").shape.radius = 90
 	projectile.knockback = -40
 	projectile_reference = projectile
+	
+	projectile.find_child("Sprite2D").modulate.a = 0.5
  
 	source.call_deferred("add_child",projectile)
  

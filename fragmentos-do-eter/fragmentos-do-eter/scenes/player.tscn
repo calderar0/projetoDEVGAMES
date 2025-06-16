@@ -1,4 +1,4 @@
-[gd_scene load_steps=104 format=3 uid="uid://bvxnxi7u4gv2t"]
+[gd_scene load_steps=105 format=3 uid="uid://bvxnxi7u4gv2t"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_wqjev"]
 [ext_resource type="Texture2D" uid="uid://cuhyxqyfxta5w" path="res://assets/personagens/The Female Adventurer - Free/The Female Adventurer - Free/Idle/Idle.png" id="2_ai06b"]
@@ -27,6 +27,10 @@
 [ext_resource type="Texture2D" uid="uid://b7d0qaadcgusm" path="res://assets/UI/IconsShadow-64.png" id="25_eqv5k"]
 [ext_resource type="AudioStream" uid="uid://c2c1dn58qvj72" path="res://assets/sfx/Echoes of the Ether1-audio.mp3" id="26_78t75"]
 [ext_resource type="Texture2D" uid="uid://06lfygpflkg8" path="res://Menus/arquivos/botoes/botao3.png" id="26_ubomf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eejad"]
+atlas = ExtResource("26_ubomf")
+region = Rect2(135.695, 20.6663, 305.638, 118)
 
 [sub_resource type="Gradient" id="Gradient_y5svc"]
 offsets = PackedFloat32Array(0.0141343, 0.441696, 0.964664)
@@ -640,16 +644,34 @@ fill_from = Vector2(0.50463, 0.50463)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_wqjev")
+metadata/_edit_horizontal_guides_ = [56.0, 122.0, 993.0]
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("2_bcfrs")
 
+[node name="Gold3" type="TextureRect" parent="UI"]
+offset_left = 1728.0
+offset_top = 58.0
+offset_right = 1886.0
+offset_bottom = 119.0
+texture = SubResource("AtlasTexture_eejad")
+expand_mode = 3
+
+[node name="Gold2" type="TextureRect" parent="UI"]
+offset_left = 41.0
+offset_top = 57.0
+offset_right = 199.0
+offset_bottom = 118.0
+texture = SubResource("AtlasTexture_eejad")
+expand_mode = 3
+
 [node name="Gold" type="Label" parent="UI"]
 unique_name_in_owner = true
-offset_top = 104.0
-offset_right = 157.0
-offset_bottom = 127.0
-text = "Gold: 0"
+offset_left = 87.0
+offset_top = 75.0
+offset_right = 149.0
+offset_bottom = 98.0
+text = "Gold:  0"
 horizontal_alignment = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="UI"]
@@ -708,10 +730,10 @@ text = "LEVEL UP"
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 62.0
-offset_top = -148.0
-offset_right = 190.0
-offset_bottom = -108.0
+offset_left = 31.0
+offset_top = -155.0
+offset_right = 159.0
+offset_bottom = -115.0
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
 
@@ -729,10 +751,10 @@ layout_mode = 2
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 63.0
-offset_top = -78.9999
-offset_right = 191.0
-offset_bottom = -39.0
+offset_left = 32.0
+offset_top = -86.0
+offset_right = 160.0
+offset_bottom = -46.0
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
 
@@ -770,15 +792,16 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -65.0
-offset_top = 35.0
-offset_right = -25.0
-offset_bottom = 58.0
+offset_left = -121.0
+offset_top = 62.0
+offset_right = -81.0
+offset_bottom = 85.0
 grow_horizontal = 0
-text = "Lv 1"
+text = "Level 1"
 
 [node name="nnumero" type="Label" parent="UI/XP"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 1852.0
 offset_top = 69.0
@@ -1112,6 +1135,7 @@ shape = SubResource("CapsuleShape2D_ju283")
 [node name="Health" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 modulate = Color(0.996946, 3.39322e-06, 1.92523e-07, 1)
+z_index = 2
 offset_left = -15.0
 offset_top = -46.0
 offset_right = 17.0

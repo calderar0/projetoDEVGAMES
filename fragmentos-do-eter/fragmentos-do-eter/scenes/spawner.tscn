@@ -51,6 +51,10 @@ text = "00"
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
 
+[node name="TextureRect" type="TextureRect" parent="Timer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Pattern" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 20.0
@@ -313,6 +317,10 @@ shape = SubResource("CircleShape2D_j5f7y")
 [node name="CollisionShape2D60" type="CollisionShape2D" parent="AreaAntiSpawn"]
 position = Vector2(336, -2392)
 shape = SubResource("CircleShape2D_j5f7y")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Pattern" to="." method="_on_pattern_timeout"]

@@ -2,7 +2,7 @@ extends Weapon
 class_name SingleShot
 
 func shoot(source, target, scene_tree):
-	if target == null or scene_tree.paused == true:
+	if not is_instance_valid(target) or not target is CharacterBody2D or scene_tree.paused == true:
 		return
 	
 	SoundManager.play_sfx(sound)

@@ -80,7 +80,7 @@ var level: int = 1:
 
 func get_xp_needed(level: int) -> int:
 	# Fórmula de progressão: base * (nível ^ fator)
-	var base := 1     # XP necessário no nível 1
+	var base := 1   # XP necessário no nível 1
 	var fator := 1   # Crescimento exponencial (aumente para deixar mais difícil)
 	return int(base * pow(level, fator))
 			
