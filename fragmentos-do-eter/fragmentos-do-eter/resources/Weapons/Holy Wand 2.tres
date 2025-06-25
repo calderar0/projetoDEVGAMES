@@ -13,7 +13,7 @@ region = Rect2(8.5, 9, 15, 14)
 [resource]
 script = ExtResource("2_4mpi2")
 damage = 12.0
-cooldown = 0.1
+cooldown = 0.3
 speed = 500.0
 projeto_node = ExtResource("1_x00k1")
 upgrades = Array[ExtResource("4_lytuy")]([])

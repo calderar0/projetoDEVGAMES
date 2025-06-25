@@ -6,20 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_ypki2"]
 script = ExtResource("3_ldo2d")
-description = "+1 Armor"
-max_health = 0.0
-recovery = 0.0
-armor = 1.0
-mov_speed = 0.0
-might = 0.0
-area = 0.0
-magnet = 0.0
-growth = 0.0
-luck = 0.0
-
-[sub_resource type="Resource" id="Resource_jwr00"]
-script = ExtResource("3_ldo2d")
-description = "+2 Armor"
+description = "+2 Armadura"
 max_health = 0.0
 recovery = 0.0
 armor = 2.0
@@ -30,9 +17,9 @@ magnet = 0.0
 growth = 0.0
 luck = 0.0
 
-[sub_resource type="Resource" id="Resource_13ayr"]
+[sub_resource type="Resource" id="Resource_jwr00"]
 script = ExtResource("3_ldo2d")
-description = "+3 Armor"
+description = "+3 Armadura"
 max_health = 0.0
 recovery = 0.0
 armor = 3.0
@@ -43,10 +30,23 @@ magnet = 0.0
 growth = 0.0
 luck = 0.0
 
+[sub_resource type="Resource" id="Resource_13ayr"]
+script = ExtResource("3_ldo2d")
+description = "+5 Armadura"
+max_health = 0.0
+recovery = 0.0
+armor = 5.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
 [resource]
 script = ExtResource("1_p2inj")
 upgrades = Array[ExtResource("3_ldo2d")]([SubResource("Resource_ypki2"), SubResource("Resource_jwr00"), SubResource("Resource_13ayr")])
-title = "Armor"
+title = "Pele de Rocha"
 icon = ExtResource("1_ymlkj")
 texture = ExtResource("1_ymlkj")
 escala = 0.0

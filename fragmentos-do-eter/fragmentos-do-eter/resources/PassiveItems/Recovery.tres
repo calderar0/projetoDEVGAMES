@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_l7pyj"]
 script = ExtResource("3_mh6a0")
-description = "+0.2 Health/sec"
+description = "+0.2 Vida/segundo"
 max_health = 0.0
 recovery = 0.2
 armor = 0.0
@@ -19,7 +19,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_n05j0"]
 script = ExtResource("3_mh6a0")
-description = "+0.4 Health/sec"
+description = "+0.4 Vida/segundo"
 max_health = 0.0
 recovery = 0.4
 armor = 0.0
@@ -32,7 +32,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_ewjsg"]
 script = ExtResource("3_mh6a0")
-description = "+0.6 Health/sec"
+description = "+0.6 Vida/segundo"
 max_health = 0.0
 recovery = 0.6
 armor = 0.0
@@ -46,7 +46,7 @@ luck = 0.0
 [resource]
 script = ExtResource("1_e2ntc")
 upgrades = Array[ExtResource("3_mh6a0")]([SubResource("Resource_l7pyj"), SubResource("Resource_n05j0"), SubResource("Resource_ewjsg")])
-title = "Recovery"
+title = "Raizes Curativas"
 icon = ExtResource("1_s4hab")
 texture = ExtResource("1_s4hab")
 escala = 0.0

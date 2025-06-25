@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Spear" load_steps=10 format=3 uid="uid://bif4yaeq4h5qa"]
+[gd_resource type="Resource" script_class="Spear" load_steps=13 format=3 uid="uid://bif4yaeq4h5qa"]
 
 [ext_resource type="Texture2D" uid="uid://dgcgeeurjjgx1" path="res://assets/weapons/spear.png" id="1_7xk1i"]
+[ext_resource type="Resource" uid="uid://cbiuicttkgffw" path="res://resources/Weapons/spear upgraded.tres" id="1_jivpy"]
 [ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_gatel"]
 [ext_resource type="Script" path="res://scenes/spear.gd" id="3_c4lsm"]
 [ext_resource type="Texture2D" uid="uid://dts8yanqycah8" path="res://assets/UI/bastao.png" id="4_xsshq"]
@@ -14,7 +15,7 @@ recarga = 0.0
 angulo = 0.0
 damage = 1.0
 cooldown = 0.0
-description = "+1 Damage"
+description = "+1 Dano de Ataque"
 
 [sub_resource type="Resource" id="Resource_gcn8p"]
 script = ExtResource("6_wg7k4")
@@ -23,7 +24,7 @@ recarga = 0.2
 angulo = 0.0
 damage = 0.0
 cooldown = 0.2
-description = "-0.2 Cooldown"
+description = "+0.2 Velocidade de Ataque"
 
 [sub_resource type="Resource" id="Resource_gygk3"]
 script = ExtResource("6_wg7k4")
@@ -32,7 +33,25 @@ recarga = 0.0
 angulo = 0.0
 damage = 3.0
 cooldown = 0.0
-description = "+3 Damage"
+description = "+3 Dano de Ataque"
+
+[sub_resource type="Resource" id="Resource_lo0yf"]
+script = ExtResource("6_wg7k4")
+dano = 0.0
+recarga = 0.3
+angulo = 0.0
+damage = 0.0
+cooldown = 0.3
+description = "+0.2 Velocidade de Ataque"
+
+[sub_resource type="Resource" id="Resource_3vbiq"]
+script = ExtResource("6_wg7k4")
+dano = 6.0
+recarga = 0.0
+angulo = 0.0
+damage = 6.0
+cooldown = 0.0
+description = "+6 Dano de Ataque"
 
 [resource]
 script = ExtResource("3_c4lsm")
@@ -42,9 +61,10 @@ damage = 2.0
 cooldown = 2.0
 speed = 200.0
 projeto_node = ExtResource("2_gatel")
-upgrades = Array[ExtResource("5_ks37p")]([SubResource("Resource_2jl7l"), SubResource("Resource_gcn8p"), SubResource("Resource_gygk3")])
+upgrades = Array[ExtResource("5_ks37p")]([SubResource("Resource_2jl7l"), SubResource("Resource_gcn8p"), SubResource("Resource_gygk3"), SubResource("Resource_lo0yf"), SubResource("Resource_3vbiq")])
+evolution = ExtResource("1_jivpy")
 maxframes = 0
-title = ""
+title = "Bastão Espiritual"
 icon = ExtResource("1_7xk1i")
 texture = ExtResource("4_xsshq")
 escala = 2.0

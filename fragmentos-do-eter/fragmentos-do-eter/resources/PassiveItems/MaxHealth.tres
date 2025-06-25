@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_b1of8"]
 script = ExtResource("3_m5ih1")
-description = "+25 Health"
+description = "+25 Vida Máxima"
 max_health = 25.0
 recovery = 0.0
 armor = 0.0
@@ -19,7 +19,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_a7aox"]
 script = ExtResource("3_m5ih1")
-description = "+30 Health"
+description = "+30 Vida Máxima"
 max_health = 30.0
 recovery = 0.0
 armor = 0.0
@@ -32,7 +32,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_ist8c"]
 script = ExtResource("3_m5ih1")
-description = "+45 Health"
+description = "+45 Vida Máxima"
 max_health = 45.0
 recovery = 0.0
 armor = 0.0
@@ -46,7 +46,7 @@ luck = 0.0
 [resource]
 script = ExtResource("1_8cnyj")
 upgrades = Array[ExtResource("3_m5ih1")]([SubResource("Resource_b1of8"), SubResource("Resource_a7aox"), SubResource("Resource_ist8c")])
-title = "Max Health"
+title = "Poder Espiritual"
 icon = ExtResource("1_ammfx")
 texture = ExtResource("1_ammfx")
 escala = 0.0

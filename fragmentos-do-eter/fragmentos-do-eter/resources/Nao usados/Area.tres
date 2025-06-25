@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://c4uncytdxluxm"]
 
-[ext_resource type="Texture2D" uid="uid://d37ufj012fxvw" path="res://assets/UI/icones/Buffs/glow.png" id="1_u3fqb"]
-[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_vivql"]
-[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_nh2rl"]
+[ext_resource type="Texture2D" uid="uid://d37ufj012fxvw" path="res://assets/UI/icones/Buffs/glow.png" id="1_nwcaf"]
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="2_s06ya"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_vowst"]
 
 [sub_resource type="Resource" id="Resource_w3nwu"]
-script = ExtResource("3_nh2rl")
+script = ExtResource("3_vowst")
 description = "+25 Attack Range"
 max_health = 0.0
 recovery = 0.0
@@ -18,7 +18,7 @@ growth = 0.0
 luck = 0.0
 
 [sub_resource type="Resource" id="Resource_84pg6"]
-script = ExtResource("3_nh2rl")
+script = ExtResource("3_vowst")
 description = "+35 Attack Range"
 max_health = 0.0
 recovery = 0.0
@@ -31,7 +31,7 @@ growth = 0.0
 luck = 0.0
 
 [sub_resource type="Resource" id="Resource_1m00u"]
-script = ExtResource("3_nh2rl")
+script = ExtResource("3_vowst")
 description = "+45 Attack Range"
 max_health = 0.0
 recovery = 0.0
@@ -44,11 +44,11 @@ growth = 0.0
 luck = 0.0
 
 [resource]
-script = ExtResource("1_vivql")
-upgrades = Array[ExtResource("3_nh2rl")]([SubResource("Resource_w3nwu"), SubResource("Resource_84pg6"), SubResource("Resource_1m00u")])
+script = ExtResource("2_s06ya")
+upgrades = Array[ExtResource("3_vowst")]([SubResource("Resource_w3nwu"), SubResource("Resource_84pg6"), SubResource("Resource_1m00u")])
 title = "Area"
-icon = ExtResource("1_u3fqb")
-texture = ExtResource("1_u3fqb")
+icon = ExtResource("1_nwcaf")
+texture = ExtResource("1_nwcaf")
 escala = 0.0
 horframe = 0
 verframe = 0

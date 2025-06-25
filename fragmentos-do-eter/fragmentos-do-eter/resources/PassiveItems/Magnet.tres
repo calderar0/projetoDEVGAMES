@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_qk3ri"]
 script = ExtResource("3_bjln4")
-description = "+15 Magnet Range"
+description = "+15 Raio de Atração"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -19,7 +19,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_kbrrl"]
 script = ExtResource("3_bjln4")
-description = "+20 Magnet Range"
+description = "+20 Raio de Atração"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -32,7 +32,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_rqlwm"]
 script = ExtResource("3_bjln4")
-description = "+25 Magnet Range"
+description = "+25 Raio de Atração"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -46,7 +46,7 @@ luck = 0.0
 [resource]
 script = ExtResource("1_wm6sw")
 upgrades = Array[ExtResource("3_bjln4")]([SubResource("Resource_qk3ri"), SubResource("Resource_kbrrl"), SubResource("Resource_rqlwm")])
-title = "Magnet"
+title = "Imã"
 icon = ExtResource("1_1choq")
 texture = ExtResource("1_1choq")
 escala = 0.0

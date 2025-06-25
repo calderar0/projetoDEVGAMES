@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_6dm2q"]
 script = ExtResource("3_dbfgi")
-description = "+10% Increased Damage"
+description = "+10% Dano de Ataque"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -19,7 +19,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_kp8af"]
 script = ExtResource("3_dbfgi")
-description = "+20% Damage"
+description = "+20% Dano de Ataque"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -32,7 +32,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_sqr4y"]
 script = ExtResource("3_dbfgi")
-description = "+30% Damage"
+description = "+30% Dano de Ataque"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -46,7 +46,7 @@ luck = 0.0
 [resource]
 script = ExtResource("1_ff7on")
 upgrades = Array[ExtResource("3_dbfgi")]([SubResource("Resource_6dm2q"), SubResource("Resource_kp8af"), SubResource("Resource_sqr4y")])
-title = "Might"
+title = "Chamas Crescentes"
 icon = ExtResource("1_apdnb")
 texture = ExtResource("1_apdnb")
 escala = 0.0

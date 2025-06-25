@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_joy6p"]
 script = ExtResource("3_kpy20")
-description = "+15 Movement Speed"
+description = "+15 Velocidade movimento"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -19,7 +19,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_tki3h"]
 script = ExtResource("3_kpy20")
-description = "+20 Movement Speed"
+description = "+20 Velocidade movimento"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -32,7 +32,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_epvnf"]
 script = ExtResource("3_kpy20")
-description = "+25 Movement Speed"
+description = "+25 Velocidade movimento"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -46,7 +46,7 @@ luck = 0.0
 [resource]
 script = ExtResource("1_mv805")
 upgrades = Array[ExtResource("3_kpy20")]([SubResource("Resource_joy6p"), SubResource("Resource_tki3h"), SubResource("Resource_epvnf")])
-title = "Movement Speed"
+title = "Correnteza Ágil"
 icon = ExtResource("1_vlp3y")
 texture = ExtResource("1_vlp3y")
 escala = 0.0

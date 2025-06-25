@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://uuw66wgmar5d"]
 
-[ext_resource type="Texture2D" uid="uid://nwa6amffm6pj" path="res://assets/UI/icones/Buffs/negative_status_resistance.png" id="1_dkueo"]
-[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="1_or24p"]
-[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_bwixv"]
+[ext_resource type="Texture2D" uid="uid://nwa6amffm6pj" path="res://assets/UI/icones/Buffs/negative_status_resistance.png" id="1_u5xfg"]
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="2_cnhb3"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_nexj8"]
 
 [sub_resource type="Resource" id="Resource_em0bn"]
-script = ExtResource("3_bwixv")
+script = ExtResource("3_nexj8")
 description = "+10% Growth"
 max_health = 0.0
 recovery = 0.0
@@ -18,7 +18,7 @@ growth = 0.1
 luck = 0.0
 
 [sub_resource type="Resource" id="Resource_gmqad"]
-script = ExtResource("3_bwixv")
+script = ExtResource("3_nexj8")
 description = "+20% Growth"
 max_health = 0.0
 recovery = 0.0
@@ -31,7 +31,7 @@ growth = 0.2
 luck = 0.0
 
 [sub_resource type="Resource" id="Resource_d13y5"]
-script = ExtResource("3_bwixv")
+script = ExtResource("3_nexj8")
 description = "+30% Growth"
 max_health = 0.0
 recovery = 0.0
@@ -44,11 +44,11 @@ growth = 0.0
 luck = 0.0
 
 [resource]
-script = ExtResource("1_or24p")
-upgrades = Array[ExtResource("3_bwixv")]([SubResource("Resource_em0bn"), SubResource("Resource_gmqad"), SubResource("Resource_d13y5")])
+script = ExtResource("2_cnhb3")
+upgrades = Array[ExtResource("3_nexj8")]([SubResource("Resource_em0bn"), SubResource("Resource_gmqad"), SubResource("Resource_d13y5")])
 title = "Growth"
-icon = ExtResource("1_dkueo")
-texture = ExtResource("1_dkueo")
+icon = ExtResource("1_u5xfg")
+texture = ExtResource("1_u5xfg")
 escala = 0.0
 horframe = 0
 verframe = 0
