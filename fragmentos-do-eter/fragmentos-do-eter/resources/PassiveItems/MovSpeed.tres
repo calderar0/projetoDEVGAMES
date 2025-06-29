@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_joy6p"]
 script = ExtResource("3_kpy20")
-description = "+15 Velocidade movimento"
+description = "+15 Vel. movimento"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -19,7 +19,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_tki3h"]
 script = ExtResource("3_kpy20")
-description = "+20 Velocidade movimento"
+description = "+20 Vel. movimento"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -32,7 +32,7 @@ luck = 0.0
 
 [sub_resource type="Resource" id="Resource_epvnf"]
 script = ExtResource("3_kpy20")
-description = "+25 Velocidade movimento"
+description = "+25 Vel. movimento"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0

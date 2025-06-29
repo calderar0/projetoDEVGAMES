@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DamagingArea" load_steps=11 format=3 uid="uid://cbif7eghcleby"]
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=13 format=3 uid="uid://cbif7eghcleby"]
 
 [ext_resource type="Texture2D" uid="uid://dbsn213v67lly" path="res://assets/weapons/Dancadafenix.png" id="1_csvii"]
 [ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_3bs53"]
@@ -15,29 +15,47 @@ margin = Rect2(0.3, 0.2, 0, 0)
 [sub_resource type="Resource" id="Resource_t8x2u"]
 script = ExtResource("5_ylgvh")
 area = 0.0
-dano = 2.0
+dano = 1.0
 cd = 0.0
-damage = 0.0
+damage = 1.0
 cooldown = 0.0
-description = "+ Damage Area"
+description = "+1 Dano"
 
 [sub_resource type="Resource" id="Resource_hfqvr"]
 script = ExtResource("5_ylgvh")
 area = 0.0
 dano = 2.0
 cd = 0.0
-damage = 0.0
+damage = 2.0
 cooldown = 0.0
-description = "+2 Damage"
+description = "+2 Dano"
 
 [sub_resource type="Resource" id="Resource_celnn"]
 script = ExtResource("5_ylgvh")
 area = 0.0
-dano = 2.0
-cd = 0.0
+dano = 0.0
+cd = 0.2
 damage = 0.0
+cooldown = 0.2
+description = "+0.2 Vel. Ataque"
+
+[sub_resource type="Resource" id="Resource_saaqb"]
+script = ExtResource("5_ylgvh")
+area = 0.0
+dano = 4.0
+cd = 0.0
+damage = 4.0
 cooldown = 0.0
-description = "+2 Damage"
+description = "+4 Dano"
+
+[sub_resource type="Resource" id="Resource_f05k8"]
+script = ExtResource("5_ylgvh")
+area = 0.0
+dano = 0.0
+cd = 0.3
+damage = 0.0
+cooldown = 0.3
+description = "+0.3 Vel. Ataque"
 
 [resource]
 script = ExtResource("3_gvetd")
@@ -46,7 +64,7 @@ damage = 1.0
 cooldown = 1.3
 speed = 0.0
 projeto_node = ExtResource("2_3bs53")
-upgrades = Array[ExtResource("4_sxv7t")]([SubResource("Resource_t8x2u"), SubResource("Resource_hfqvr"), SubResource("Resource_celnn")])
+upgrades = Array[ExtResource("4_sxv7t")]([SubResource("Resource_t8x2u"), SubResource("Resource_hfqvr"), SubResource("Resource_celnn"), SubResource("Resource_saaqb"), SubResource("Resource_f05k8")])
 maxframes = 0
 title = "Lotus"
 icon = SubResource("AtlasTexture_cwhda")
