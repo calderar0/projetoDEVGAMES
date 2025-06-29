@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://uuw66wgmar5d"]
+
+[ext_resource type="Texture2D" uid="uid://nwa6amffm6pj" path="res://assets/UI/icones/Buffs/negative_status_resistance.png" id="1_8mi0l"]
+[ext_resource type="Script" path="res://scenes/PassiveItem.gd" id="2_pmhde"]
+[ext_resource type="Script" path="res://scenes/Stats.gd" id="3_rgboo"]
+
+[sub_resource type="Resource" id="Resource_em0bn"]
+script = ExtResource("3_rgboo")
+description = "+10% Growth"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.1
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_gmqad"]
+script = ExtResource("3_rgboo")
+description = "+20% Growth"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.2
+luck = 0.0
+
+[sub_resource type="Resource" id="Resource_d13y5"]
+script = ExtResource("3_rgboo")
+description = "+30% Growth"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+mov_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+
+[resource]
+script = ExtResource("2_pmhde")
+upgrades = Array[ExtResource("3_rgboo")]([SubResource("Resource_em0bn"), SubResource("Resource_gmqad"), SubResource("Resource_d13y5")])
+title = "Growth"
+icon = ExtResource("1_8mi0l")
+texture = ExtResource("1_8mi0l")
+escala = 0.0
+horframe = 0
+verframe = 0
+maxframe = 0

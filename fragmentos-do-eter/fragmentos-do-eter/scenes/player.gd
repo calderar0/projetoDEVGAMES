@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 
-@onready var morreu = $AudioStreamPlayer2D
+
 var is_dead: bool = false
 var health: float = 100.0:
 	set(value):

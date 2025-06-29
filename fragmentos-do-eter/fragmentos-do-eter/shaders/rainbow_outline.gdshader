@@ -1,4 +1,4 @@
-/* 
+/*
 Rainbow outline by @Farfalk and @ThePadDev, July 2021
 
 Apply to canvas items with transparent backgrounds.
@@ -16,7 +16,7 @@ uniform float light_offset : hint_range(0.0, 1.0) = 0.5;   // this offsets all c
 
 void fragment() {
 	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
-	
+
 	float outline = texture(TEXTURE, UV + vec2(-size.x, 0)).a;
 	outline += texture(TEXTURE, UV + vec2(0, size.y)).a;
 	outline += texture(TEXTURE, UV + vec2(size.x, 0)).a;
@@ -26,12 +26,12 @@ void fragment() {
 	outline += texture(TEXTURE, UV + vec2(-size.x, -size.y)).a;
 	outline += texture(TEXTURE, UV + vec2(size.x, -size.y)).a;
 	outline = min(outline, 1.0);
-	
+
 	vec4 animated_line_color = vec4(light_offset + sin(2.0*3.14*sin_frequency*TIME),
 							   light_offset + sin(2.0*3.14*sin_frequency*TIME + radians(120.0)),
 							   light_offset + sin(2.0*3.14*sin_frequency*TIME + radians(240.0)),
 							   1.0);
-	
+
 	vec4 color = texture(TEXTURE, UV);
 	COLOR = mix(color, animated_line_color, outline - color.a);
 }

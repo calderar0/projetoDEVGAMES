@@ -97,12 +97,22 @@ func _physics_process(delta: float) -> void:
 		frame = (frame + 1) % $Sprite2D.hframes
 		$Sprite2D.frame = frame  # Atualiza o frame do Sprite2D
 	if velocity.x > 0 :
-		$Sprite2D.frame_coords.y = $Sprite2D.get_meta("velxd")
+		var linha = int($Sprite2D.get_meta("velxd"))
+		if linha < $Sprite2D.vframes:
+			$Sprite2D.frame_coords.y = linha
+		else:
+			$Sprite2D.frame_coords.y = 0  # Fallback seguro
+
 		if $Sprite2D.get_meta("velxd") == $Sprite2D.get_meta("velxe"):
 			$Sprite2D.flip_h = false
 			boss_enemy.flip = false
 	elif velocity.x < 0:
-		$Sprite2D.frame_coords.y = $Sprite2D.get_meta("velxe")
+		var linha = int($Sprite2D.get_meta("velxe"))
+		if linha < $Sprite2D.vframes:
+			$Sprite2D.frame_coords.y = linha
+		else:
+			$Sprite2D.frame_coords.y = 0
+
 		if $Sprite2D.get_meta("velxd") == $Sprite2D.get_meta("velxe"):
 			$Sprite2D.flip_h = true	
 		

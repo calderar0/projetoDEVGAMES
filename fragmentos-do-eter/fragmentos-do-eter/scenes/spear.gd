@@ -30,7 +30,7 @@ func add_to_player(source):
 		sprite.scale = Vector2(escala, escala)
 		sprite.hframes = horframe
 		sprite.vframes = verframe
-		sprite.frame = 50  # Começa na linha correta
+
 	
 	current_projectile = projectile
 	source.call_deferred("add_child", projectile)

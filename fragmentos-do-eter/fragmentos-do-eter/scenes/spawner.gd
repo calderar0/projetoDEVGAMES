@@ -20,7 +20,6 @@ func _ready():
 	
 
 func load_enemies_from_phase(path: String) -> void:
-	print("Carregando inimigos de:", path)
 	enemy_type.clear()
 	var dir = DirAccess.open(path)
 	if dir:
@@ -32,7 +31,6 @@ func load_enemies_from_phase(path: String) -> void:
 				var enemy_data = load(full_path)
 				if enemy_data:  # Aqui é um recurso, não uma cena
 					enemy_type.append(enemy_data)
-					print("Carregado:", file_name)
 			file_name = dir.get_next()
 		dir.list_dir_end()
 
@@ -78,7 +76,6 @@ func  spawner(pos: Vector2, elite: bool = false, boss: bool = false):
 		if not can_spawn and not elite:
 			return
 	if enemy_type.is_empty():
-		print("enemy_type está vazio!") # DEBUG
 		return
 		
 	var enemy_inst = enemy.instantiate()
