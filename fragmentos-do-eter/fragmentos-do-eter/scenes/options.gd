@@ -10,6 +10,7 @@ var OptionSlot = preload("res://scenes/option_slot.tscn")
 const weapon_path: String = "res://resources/Weapons/"
 const passive_item_path: String = "res://resources/PassiveItems/"
 
+
 var every_item
 var every_weapon
 var every_passive
@@ -109,7 +110,6 @@ func dir_contents(path):
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-
 			var item_resource : Item = load(path + file_name)
 			item_resources.append(item_resource)
 			file_name = dir.get_next()
