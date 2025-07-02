@@ -12,6 +12,9 @@ region = Rect2(205, 16, 34, 30)
 [resource]
 script = ExtResource("3_m7d5s")
 title = "Slime Moss"
+is_boss = false
+uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("4_w554r")
 hframe = 8
 vframe = 4

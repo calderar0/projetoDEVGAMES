@@ -21,6 +21,7 @@ func _ready() -> void:
 	panel.hide()
 	get_all_item()
 
+
 func close_option():
 	hide()
 	particles.hide()
@@ -49,40 +50,52 @@ func add_option(item) -> int:
 			#weapon_resource.append(weapon.weapon)
 	#return weapon_resource
 
+# Cole esta versão corrigida da função show_option no seu script.
+# O resto do seu código não precisa mudar.
+
 func show_option():
-	var weapons_available = get_available_resource_in(weapons)
-	var passive_item_available = get_available_resource_in(passive_items)
-	if weapons_available.size() == 0 and passive_item_available.size() == 0:
+	# --- INÍCIO DAS MUDANÇAS ---
+
+	# 1. Primeiro, pegamos TODOS os itens que o jogador possui. Esta será nossa lista de "itens a ignorar".
+	var owned_items = get_available_resource_in(weapons)
+	owned_items.append_array(get_available_resource_in(passive_items))
+
+	# Se o jogador não tem nenhum item, não há o que mostrar. (Mantido do seu código original)
+	if owned_items.size() == 0:
 		return
 	
 	for slot in get_children():
 		slot.queue_free()
 		
+	# 2. A lista 'available' agora começa com os upgrades dos itens que já temos.
+	#    Sua função get_equipped_item() já faz isso corretamente.
 	var available = get_equipped_item()
+
+	# 3. Agora, usamos a lista 'owned_items' para filtrar e adicionar APENAS itens novos.
 	if slot_available(weapons):
-		available.append_array(get_upgradable(every_weapon, get_equipped_item()))
+		# Em vez de get_equipped_item(), passamos a lista completa 'owned_items' como flag.
+		available.append_array(get_upgradable(every_weapon, owned_items))
 	if slot_available(passive_items):
-		available.append_array(get_upgradable(every_passive, get_equipped_item()))
+		# O mesmo aqui.
+		available.append_array(get_upgradable(every_passive, owned_items))
+	
+	# --- FIM DAS MUDANÇAS ---
+
+	# O resto da função continua exatamente como você escreveu.
 	available.shuffle()
 	var option_size = 0
 	var chance = randf()
 	var modifier : int = 1 if (chance < (1.0 - (1.0/owner.luck))) else 0
-	for i in range(3 + modifier):
+	
+	# Um pequeno ajuste para evitar erro se 'available' tiver menos itens que o solicitado.
+	var options_to_show_count = min(3 + modifier, available.size())
+
+	for i in range(options_to_show_count):
 		if available.size() > 0:
 			option_size += add_option(available.pop_front())
-	#for weapon in weapons_available:
-		#option_size += add_option(weapon)
-		#
-		#if weapon.max_level_reached() and weapon.item_needed in passive_item_available:
-			#var option_slot = OptionSlot.instantiate()
-			#option_slot.item = weapon
-			#add_child(option_slot)
-			#option_size +=1
-	#
-	#for passive_items in passive_item_available:
-		#option_size += add_option(passive_items)
 	
 	if option_size == 0:
+		close_option() # Apenas fecha a tela se nenhuma opção foi realmente adicionada
 		return
 	
 	show()

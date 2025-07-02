@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bu1p2pm0hb2h"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_65xae"]
+[ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_hisy5"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_wkem7"]
+[ext_resource type="Texture2D" uid="uid://dtdjy8hjpal0k" path="res://assets/enemies/slimes/Slime3/Walk/Slime3_Walk_full.png" id="3_42rib"]
+
+[resource]
+script = ExtResource("2_wkem7")
+title = "slimefogo"
+is_boss = false
+uses_skills = false
+texture = ExtResource("3_42rib")
+hframe = 8
+vframe = 4
+scalesx = 1.3
+scalesy = 1.3
+flip = false
+velxd = 3
+velxe = 2
+health = 10.0
+damage = 2.0
+drops = Array[ExtResource("1_65xae")]([ExtResource("2_hisy5")])
+coll_rad = 10
+coll_height = 20
+about = ""

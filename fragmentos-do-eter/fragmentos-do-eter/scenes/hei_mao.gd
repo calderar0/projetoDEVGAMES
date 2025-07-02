@@ -11,7 +11,7 @@ extends Node
 
 var frame_counter: int = 0
 var frames: int = 0
-var maxframe: int = 3
+var maxframe: int = 8
 var animation_speed: int = 10  # Controla a velocidade da animação
 
 func _process(delta: float) -> void:

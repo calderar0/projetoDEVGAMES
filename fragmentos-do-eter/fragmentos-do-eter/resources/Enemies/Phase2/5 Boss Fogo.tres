@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=4 format=3 uid="uid://c7bdv76cdkutp"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_idcwd"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_bnvpv"]
+[ext_resource type="Texture2D" uid="uid://bang3wg58n2w" path="res://assets/enemies/mage_guardian_free_creativekind/mage_guardian-red.png" id="3_opd0q"]
+
+[resource]
+script = ExtResource("2_bnvpv")
+title = "Boss fogo loco"
+is_boss = true
+uses_skills = false
+texture = ExtResource("3_opd0q")
+hframe = 14
+vframe = 1
+scalesx = 1.0
+scalesy = 1.0
+flip = false
+velxd = 0
+velxe = 0
+health = 400.0
+damage = 20.0
+drops = Array[ExtResource("1_idcwd")]([])
+coll_rad = 10
+coll_height = 20
+about = ""

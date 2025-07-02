@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://hk5npupy6n0y"]
 
-[ext_resource type="Texture2D" uid="uid://ccymsjqynh55j" path="res://assets/personagens/Cat Sprite Sheet.png" id="1_ojd2d"]
+[ext_resource type="Texture2D" uid="uid://c2y0mep43iwm0" path="res://assets/personagens/CAT 1.png" id="1_ibkst"]
 [ext_resource type="Script" path="res://scenes/hei_mao.gd" id="2_xh2k8"]
 [ext_resource type="Resource" uid="uid://d2fnvswrj4185" path="res://dialogos/dialogue.dialogue" id="3_ghu1f"]
 
@@ -9,10 +9,9 @@ radius = 25.0
 
 [node name="HeiMao" type="Sprite2D" node_paths=PackedStringArray("sprite")]
 process_mode = 3
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_ojd2d")
-hframes = 8
-vframes = 8
+scale = Vector2(2, 2)
+texture = ExtResource("1_ibkst")
+hframes = 16
 script = ExtResource("2_xh2k8")
 resource = ExtResource("3_ghu1f")
 sprite = NodePath(".")

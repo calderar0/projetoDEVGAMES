@@ -13,6 +13,8 @@ region = Rect2(-17, 1, 74, 62)
 [resource]
 script = ExtResource("3_p1652")
 title = "Purple Carnivore"
+is_boss = false
+uses_skills = false
 texture = ExtResource("4_b065u")
 hframe = 6
 vframe = 4

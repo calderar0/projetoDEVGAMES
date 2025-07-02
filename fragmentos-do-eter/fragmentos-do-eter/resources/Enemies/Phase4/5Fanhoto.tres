@@ -12,6 +12,8 @@ region = Rect2(-11, -8, 44, 45)
 [resource]
 script = ExtResource("3_3qwth")
 title = "Corrupted Mantis"
+is_boss = false
+uses_skills = false
 texture = ExtResource("4_d4mkg")
 hframe = 4
 vframe = 4

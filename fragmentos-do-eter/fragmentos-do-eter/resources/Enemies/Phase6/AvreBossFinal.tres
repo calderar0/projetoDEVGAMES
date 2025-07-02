@@ -1,17 +1,19 @@
 [gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://di2t24ch2dtxc"]
 
-[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_ox6h0"]
-[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_l4rs0"]
-[ext_resource type="Texture2D" uid="uid://b4hsil41ve7cs" path="res://assets/enemies/Agis.png" id="3_2m8km"]
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_d34ok"]
+[ext_resource type="Texture2D" uid="uid://b4hsil41ve7cs" path="res://assets/enemies/Agis.png" id="2_73f3f"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="3_3l5b4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6r4pj"]
-atlas = ExtResource("3_2m8km")
+atlas = ExtResource("2_73f3f")
 region = Rect2(-80, 0, 304, 256)
 
 [resource]
-script = ExtResource("2_l4rs0")
+script = ExtResource("3_3l5b4")
 title = "Xuan Zhi"
-texture = ExtResource("3_2m8km")
+is_boss = true
+uses_skills = true
+texture = ExtResource("2_73f3f")
 hframe = 15
 vframe = 1
 scalesx = 2.0
@@ -21,7 +23,7 @@ velxd = 0
 velxe = 0
 health = 200.0
 damage = 12.0
-drops = Array[ExtResource("1_ox6h0")]([])
+drops = Array[ExtResource("1_d34ok")]([])
 coll_rad = 80
 coll_height = 300
 about = "A cosmic entity in the form of a black hole, consuming everything around it. Its dark, ethereal body, like an endless abyss, has multiple spectral arms. It absorbs the player's energy, slowly pulling them into the inevitable darkness."

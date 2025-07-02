@@ -2,6 +2,9 @@ extends Resource
 class_name Enemy
 
 @export var title: String
+@export var is_boss: bool = false
+@export var uses_skills: bool = false
+@export var knockback_recovery: float = 150.0 
 @export var texture: Texture2D
 @export var hframe: int = 1
 @export var vframe: int = 1
