@@ -21,7 +21,6 @@ func _ready() -> void:
 	panel.hide()
 	get_all_item()
 
-
 func close_option():
 	hide()
 	particles.hide()
