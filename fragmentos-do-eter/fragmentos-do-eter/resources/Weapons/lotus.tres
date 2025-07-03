@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DamagingArea" load_steps=13 format=3 uid="uid://cbif7eghcleby"]
 
-[ext_resource type="Texture2D" uid="uid://dbsn213v67lly" path="res://assets/weapons/Dancadafenix.png" id="1_csvii"]
+[ext_resource type="Texture2D" uid="uid://dxpgy4i52dhej" path="res://assets/UI/Pixel UI pack 3/Dancadafenix.png" id="1_inovc"]
 [ext_resource type="PackedScene" uid="uid://fy743fav5pcv" path="res://scenes/projeto.tscn" id="2_3bs53"]
 [ext_resource type="Script" path="res://scenes/DamagingArea.gd" id="3_gvetd"]
 [ext_resource type="Script" path="res://scenes/Upgrade.gd" id="4_sxv7t"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scenes/DamagingAreaUpgrade.gd" id="5_ylgvh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cwhda"]
-atlas = ExtResource("1_csvii")
+atlas = ExtResource("1_inovc")
 region = Rect2(8, 8, 16, 16)
 margin = Rect2(0.3, 0.2, 0, 0)
 
