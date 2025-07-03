@@ -15,6 +15,7 @@ script = ExtResource("2_aw5d3")
 title = "Lethal Frog"
 is_boss = false
 uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("3_2rde0")
 hframe = 7
 vframe = 1

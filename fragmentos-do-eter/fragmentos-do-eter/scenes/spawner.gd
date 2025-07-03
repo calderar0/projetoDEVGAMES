@@ -13,7 +13,7 @@ var can_spawn: bool = true
 var boss_spawned: bool = false
 var is_miniboss_active: bool = false # <-- NOVA FLAG: Verdadeira quando o miniboss da fase está vivo.
 var miniboss_index: int = 4 # O 5º inimigo da lista (índice 4).
-
+var past_phase: int
 # --- Variáveis de estado da fase ---
 var actual_phase: int = 1
 
@@ -64,6 +64,16 @@ func load_enemies_from_phase(path: String) -> void:
 func change_phase():
 	is_miniboss_active = false
 	actual_phase += 1
+	past_phase = actual_phase - 1
+	var nome_mundo_atual = "../MUNDO%d" % actual_phase
+	var nome_mundo_anterior = "../MUNDO%d" % past_phase
+	var no_do_mundo = get_node(nome_mundo_atual)
+	var no_do_mundo_A = get_node(nome_mundo_anterior)
+	
+	no_do_mundo_A.visible = false
+	no_do_mundo.visible = true
+	self.seconds = 0
+	self.minute = 0
 
 	if actual_phase == FINAL_BOSS_PHASE:
 		# CHEGOU A HORA DO CHEFE FINAL!
@@ -84,7 +94,7 @@ func spawn_final_boss():
 	# Limpa quaisquer inimigos restantes na tela
 	get_tree().call_group("Enemy", "queue_free")
 
-	var boss_resource = load("res://resources/Enemies/Phase6/AvreBossFinal.tres") # Exemplo de caminho
+	var boss_resource = load("res://resources/Enemies/Phase6/0AvreBossFinal.tres") # Exemplo de caminho
 	var enemy_inst = enemy.instantiate()
 	enemy_inst.type = boss_resource
 	enemy_inst.player_ref = player

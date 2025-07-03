@@ -10,6 +10,7 @@ script = ExtResource("2_wkem7")
 title = "slimefogo"
 is_boss = false
 uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("3_42rib")
 hframe = 8
 vframe = 4

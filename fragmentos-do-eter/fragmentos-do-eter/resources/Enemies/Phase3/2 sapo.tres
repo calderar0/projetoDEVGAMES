@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://dp25l6rhvdg47"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_x6p8u"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_0k53i"]
+
+[resource]
+script = ExtResource("2_0k53i")
+title = "sapo terra"
+is_boss = false
+uses_skills = false
+knockback_recovery = 150.0
+hframe = 7
+vframe = 1
+scalesx = 1.3
+scalesy = 1.3
+flip = false
+velxd = 0
+velxe = 0
+health = 30.0
+damage = 4.0
+drops = Array[ExtResource("1_x6p8u")]([])
+coll_rad = 10
+coll_height = 20
+about = ""

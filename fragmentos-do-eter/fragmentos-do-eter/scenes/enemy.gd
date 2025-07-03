@@ -126,6 +126,11 @@ func _physics_process(delta: float) -> void:
 # que agora é configurada corretamente para todos os tipos de chefes.
 
 # O único cuidado é na função drop_item:
+func die_from_screen_wipe():
+	if type.is_boss == true:
+		return
+	drop_item()
+
 func drop_item():
 	if type == null or type.drops.size() == 0:
 		queue_free() # Certifique-se de que o inimigo seja removido mesmo sem drop

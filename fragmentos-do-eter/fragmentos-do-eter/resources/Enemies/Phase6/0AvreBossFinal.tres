@@ -13,6 +13,7 @@ script = ExtResource("3_3l5b4")
 title = "Xuan Zhi"
 is_boss = true
 uses_skills = true
+knockback_recovery = 150.0
 texture = ExtResource("2_73f3f")
 hframe = 15
 vframe = 1

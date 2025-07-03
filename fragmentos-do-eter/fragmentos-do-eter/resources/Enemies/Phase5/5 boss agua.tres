@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=4 format=3 uid="uid://batofcjo0bkdj"]
+
+[ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_vrtkb"]
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_06uxp"]
+[ext_resource type="Texture2D" uid="uid://dxkr2calwb5ft" path="res://assets/enemies/mage_guardian_free_creativekind/mage_guardian-blue.png" id="3_vhath"]
+
+[resource]
+script = ExtResource("2_06uxp")
+title = "boss agua"
+is_boss = true
+uses_skills = false
+knockback_recovery = 150.0
+texture = ExtResource("3_vhath")
+hframe = 14
+vframe = 1
+scalesx = 1.0
+scalesy = 1.0
+flip = false
+velxd = 0
+velxe = 0
+health = 600.0
+damage = 20.0
+drops = Array[ExtResource("1_vrtkb")]([])
+coll_rad = 10
+coll_height = 20
+about = ""
