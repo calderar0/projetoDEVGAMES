@@ -45,7 +45,6 @@ func _ready():
 
 
 func setup_for_phase(phase_number: int):
-	print("Spawner preparando para a fase ", phase_number)
 	actual_phase = phase_number
 	is_miniboss_active = false
 	boss_spawned = false
@@ -139,7 +138,6 @@ func spawner(pos: Vector2, elite: bool = false, is_main_boss: bool = false):
 	if enemy_type.size() > miniboss_index and current_enemy_index == miniboss_index:
 		is_miniboss_active = true
 		enemy_to_spawn_data = enemy_type[miniboss_index]
-		print("Miniboss da Fase ", actual_phase, " apareceu!")
 		
 		var enemy_inst = enemy.instantiate()
 		enemy_inst.type = enemy_to_spawn_data
@@ -177,6 +175,7 @@ func spawner(pos: Vector2, elite: bool = false, is_main_boss: bool = false):
 # --- FUNÇÃO PARA QUANDO O MINIBOSS É DERROTADO ---
 func _on_miniboss_defeated():
 	# Em vez de chamar a antiga change_phase, agora ele solicita a mudança.
+	Savedata.saveFase()
 	request_phase_change()
 
 

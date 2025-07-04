@@ -62,12 +62,7 @@ var health: float:
 	set(value):
 		health = value
 		if health <= 0:
-			# A lógica agora é simples: se era um chefe (qualquer um), faça a ação.
-			if boss:
-				bossCounter += 1 # É uma boa prática decrementar o contador
-				print("Um chefe foi derrotado! Chefes restantes: ", bossCounter)
-				Savedata.saveFase()
-			
+			# A lógica agora é simples: se era um chefe (qualquer um), faça a ação.			
 			drop_item()
 			queue_free() #é chamado dentro de drop_item, então talvez não precise aqui.
 			# Se drop_item não chama queue_free(), descomente a linha abaixo.
@@ -160,7 +155,7 @@ func checar_separacao(_delta):
 
 func usando_habilidade():
 	var distancia = position.distance_to(player_ref.position)
-	var max_engagement_range = 700.0
+	var max_engagement_range = 650.0
 	if distancia > max_engagement_range:
 		return
 	if health < type.health * 0.25 and randf() < 0.4:

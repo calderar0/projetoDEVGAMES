@@ -192,8 +192,6 @@ func get_available_upgrades()-> Array[Item]:
 
 
 func reset_inventory():
-	print("UI: Resetando inventário de armas e passivas.")
-	
 	# 1. Limpa todos os slots de armas.
 	#    Iteramos por cada slot no HBoxContainer e definimos seu item como nulo.
 	for slot in weapons.get_children():
@@ -211,6 +209,3 @@ func reset_inventory():
 		# A sua função 'check_item' ou 'add_weapon' já deve cuidar do resto.
 		# Vamos usar check_item, que parece ser a mais completa.
 		check_item(spear_resource)
-		print("Lança básica adicionada ao inventário.")
-	else:
-		printerr("ERRO: Falha ao carregar o recurso da lança em: ", SPEAR_RESOURCE_PATH)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chtrnjknx46w0"
-path="res://.godot/imported/lotus.png-9c71bc5de4a094ac48d0dda2790d7daa.ctex"
+uid="uid://dxxb1tfo8p7lx"
+path="res://.godot/imported/menu fases.png-4573e42c6a8b2ee8bde78ca8f750e147.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lotus.png"
-dest_files=["res://.godot/imported/lotus.png-9c71bc5de4a094ac48d0dda2790d7daa.ctex"]
+source_file="res://assets/UI/menu fases.png"
+dest_files=["res://.godot/imported/menu fases.png-4573e42c6a8b2ee8bde78ca8f750e147.ctex"]
 
 [params]
 

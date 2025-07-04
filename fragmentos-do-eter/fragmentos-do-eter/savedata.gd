@@ -44,10 +44,9 @@ func add_gold(amount: int):
 
 
 func saveFase():
-	if fase <= 5:
+	if fase < 5:
 		fase += 1
 		set_and_save()
-		print("matou 1 boss, atual: ", fase)
 	else:
-		print("cabo doido para de joga")
+		pass
 	

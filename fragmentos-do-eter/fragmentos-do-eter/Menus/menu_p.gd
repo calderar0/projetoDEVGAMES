@@ -8,9 +8,38 @@ func _ready():
 func _on_play_pressed() -> void:
 	#%musicaMenu.playing = false
 	#get_tree().change_scene_to_file("res://scenes/test_scene.tscn")
+	load_phases()
 	$Menu.hide()
 	$Fases.show()
-	
+
+func load_phases():
+	if Savedata.fase == 1:
+		return
+	elif Savedata.fase <= 2:
+		$"Fases/TextureRect/Fase2/Fase 2".visible = true
+		$Fases/TextureRect/Fase2.color = Color("#00000000")
+	elif Savedata.fase <= 3:
+		$"Fases/TextureRect/Fase2/Fase 2".visible = true
+		$Fases/TextureRect/Fase2.color = Color("#00000000")
+		$"Fases/TextureRect/Fase 3/Fase 3".visible = true
+		$"Fases/TextureRect/Fase 3".color = Color("#00000000")
+	elif Savedata.fase <= 4:
+		$"Fases/TextureRect/Fase2/Fase 2".visible = true
+		$Fases/TextureRect/Fase2.color = Color("#00000000")
+		$"Fases/TextureRect/Fase 3/Fase 3".visible = true
+		$"Fases/TextureRect/Fase 3".color = Color("#00000000")
+		$"Fases/TextureRect/Fase 4/Fase 4".visible = true
+		$"Fases/TextureRect/Fase 4".color = Color("#00000000")
+	elif Savedata.fase <= 5:
+		$"Fases/TextureRect/Fase2/Fase 2".visible = true
+		$Fases/TextureRect/Fase2.color = Color("#00000000")
+		$"Fases/TextureRect/Fase 3/Fase 3".visible = true
+		$"Fases/TextureRect/Fase 3".color = Color("#00000000")
+		$"Fases/TextureRect/Fase 4/Fase 4".visible = true
+		$"Fases/TextureRect/Fase 4".color = Color("#00000000")
+		$"Fases/TextureRect/Fase 5/Fase 5".visible = true
+		$"Fases/TextureRect/Fase 5".color = Color("#00000000")
+
 
 func _on_back_pressed() -> void:
 	menu()
@@ -58,7 +87,7 @@ func menu():
 	$fundo.show()
 	%OptionsMenu.hide()
 	$Credits.hide()
-	
+	$Fases.hide()
 	$Bestiary.hide()
 	$SkillTree.hide()
 	

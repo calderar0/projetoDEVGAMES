@@ -9,6 +9,7 @@ script = ExtResource("2_q1kjo")
 title = "Boss Mato doido"
 is_boss = true
 uses_skills = false
+knockback_recovery = 400.0
 texture = ExtResource("3_gxf02")
 hframe = 14
 vframe = 1

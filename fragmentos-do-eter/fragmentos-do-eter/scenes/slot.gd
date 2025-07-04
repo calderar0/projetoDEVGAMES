@@ -21,14 +21,14 @@ extends PanelContainer
 			$Cooldown.call_deferred("start")
 			item.slot = self
 			
-			print("Slot recebeu a arma: ", item.resource_name)
+
 		else:
 			# O slot está sendo esvaziado (item é nulo).
 			# Limpa a UI e para a lógica.
 			$TextureRect.texture = null
 			$Cooldown.stop() # Para o timer, já que não há mais arma.
 			
-			print("Slot foi esvaziado.")
+
 		
 		
 func  _physics_process(delta):

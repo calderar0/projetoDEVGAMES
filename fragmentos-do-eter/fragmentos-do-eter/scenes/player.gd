@@ -136,7 +136,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("walk_down")
 		
 		
-	move_and_collide(velocity * delta)
+	move_and_slide()
 	check_XP()
 	health += recovery * delta
 

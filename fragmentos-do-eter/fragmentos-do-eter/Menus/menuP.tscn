@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://bk4lce7b8agyt"]
+[gd_scene load_steps=67 format=3 uid="uid://bk4lce7b8agyt"]
 
 [ext_resource type="Texture2D" uid="uid://b8id671o2tpwy" path="res://Menus/arquivos/fundo menu.jpeg" id="1_jsagm"]
 [ext_resource type="Script" path="res://Menus/menu_p.gd" id="2_50r3a"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://c8i0re6yqfwnf" path="res://assets/UI/icones/Buffs/lucky_boost.png" id="18_frkpt"]
 [ext_resource type="Script" path="res://Menus/enemy_list.gd" id="19_sig4s"]
 [ext_resource type="Script" path="res://Menus/UI_gold.gd" id="19_uu6gk"]
+[ext_resource type="Texture2D" uid="uid://dxxb1tfo8p7lx" path="res://assets/UI/menu fases.png" id="21_3p5gb"]
 [ext_resource type="Texture2D" uid="uid://332ssdjgoxfa" path="res://icon.svg" id="21_38oxm"]
 [ext_resource type="PackedScene" uid="uid://bpv4tlfrp7qlq" path="res://options_menu.tscn" id="25_pj2kn"]
 [ext_resource type="AudioStream" uid="uid://dqdyghge36wex" path="res://assets/sfx/Echoes of the Ether2-audio.mp3" id="27_qms56"]
@@ -446,6 +447,12 @@ region_rect = Rect2(16, 32, 96, 48)
 texture = ExtResource("12_tdken")
 region_rect = Rect2(721, 17, 46, 46)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vchn"]
+bg_color = Color(0, 0, 0, 0.701961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m80kw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsgbl"]
 atlas = ExtResource("4_vxb63")
 region = Rect2(1460, 1290, 120, 140)
@@ -510,6 +517,7 @@ script = ExtResource("2_50r3a")
 metadata/_edit_use_anchors_ = true
 
 [node name="fundo" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -524,6 +532,7 @@ texture = ExtResource("1_jsagm")
 expand_mode = 1
 
 [node name="Menu" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -1005,7 +1014,7 @@ text = "About:"
 autowrap_mode = 3
 
 [node name="Fases" type="Panel" parent="."]
-visible = false
+z_index = 20
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1013,85 +1022,150 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Fase1" type="Button" parent="Fases"]
+[node name="TextureRect" type="TextureRect" parent="Fases"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -608.0
-offset_top = -116.0
-offset_right = -496.0
-offset_bottom = -12.0
+offset_left = -508.0
+offset_top = -500.0
+offset_right = 442.0
+offset_bottom = 450.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("21_3p5gb")
+
+[node name="Fase1" type="Polygon2D" parent="Fases/TextureRect"]
+process_mode = 3
+clip_children = 2
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(91, 439, 91, 359, 99, 359, 99, 343, 115, 343, 115, 319, 131, 319, 131, 311, 147, 311, 147, 303, 163, 303, 163, 287, 227, 287, 227, 303, 251, 303, 251, 311, 267, 311, 267, 319, 275, 319, 275, 327, 283, 327, 283, 343, 291, 343, 291, 351, 299, 351, 299, 407, 299, 431, 291, 431, 291, 439, 275, 439, 275, 447, 283, 455, 291, 463, 291, 471, 299, 471, 307, 463, 315, 463, 315, 503, 299, 503, 299, 511, 275, 511, 275, 527, 227, 527, 187, 527, 187, 511, 155, 511, 155, 503, 131, 503, 131, 495, 115, 495, 115, 479, 107, 479, 107, 471, 99, 471, 99, 439)
+
+[node name="Fase1" type="Button" parent="Fases/TextureRect/Fase1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = 247.0
+offset_right = 411.0
+offset_bottom = 551.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_4vchn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_m80kw")
 text = "Fase 1"
 icon = ExtResource("21_38oxm")
 
-[node name="Fase 2" type="Button" parent="Fases"]
-layout_mode = 1
+[node name="Fase2" type="Polygon2D" parent="Fases/TextureRect"]
+clip_children = 2
+color = Color(0, 0, 0, 0.490196)
+polygon = PackedVector2Array(425, 340, 410, 340, 396, 340, 396, 330, 384, 330, 384, 320, 374, 320, 374, 310, 364, 310, 364, 290, 354, 290, 354, 278, 344, 278, 344, 188, 354, 188, 354, 166, 364, 166, 364, 156, 374, 156, 374, 146, 384, 146, 384, 126, 406, 126, 406, 116, 426, 116, 426, 106, 524, 106, 524, 116, 544, 116, 544, 126, 554, 126, 554, 136, 564, 136, 564, 146, 574, 146, 574, 156, 586, 156, 586, 166, 596, 166, 596, 198, 606, 198, 606, 258, 596, 258, 596, 288, 584, 288, 584, 298, 574, 298, 574, 308, 564, 308, 564, 320, 544, 320, 544, 330, 534, 330, 534, 340, 427, 340)
+
+[node name="Fase 2" type="Button" parent="Fases/TextureRect/Fase2"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -344.0
-offset_top = -132.0
-offset_right = -155.0
-offset_bottom = 4.0
+offset_left = 343.0
+offset_top = 92.0
+offset_right = 604.0
+offset_bottom = 332.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Fase 2"
 icon = ExtResource("21_38oxm")
 
-[node name="Fase 3" type="Button" parent="Fases"]
-layout_mode = 1
+[node name="Fase 3" type="Polygon2D" parent="Fases/TextureRect"]
+color = Color(0, 0, 0, 0.490196)
+polygon = PackedVector2Array(616, 424, 616, 422, 608, 422, 608, 382, 618, 382, 618, 362, 628, 362, 628, 350, 638, 350, 638, 340, 648, 340, 648, 330, 660, 330, 660, 320, 670, 320, 670, 310, 680, 310, 680, 300, 700, 300, 700, 288, 724, 288, 724, 278, 786, 278, 786, 290, 808, 290, 808, 300, 818, 300, 818, 310, 830, 310, 830, 320, 840, 320, 840, 330, 850, 330, 850, 340, 860, 340, 860, 360, 870, 360, 870, 442, 860, 442, 860, 474, 850, 474, 850, 484, 840, 484, 840, 494, 828, 494, 828, 504, 820, 504, 820, 514, 808, 514, 808, 524, 786, 524, 786, 534, 734, 534, 734, 524, 712, 524, 712, 514, 690, 514, 690, 504, 680, 504, 680, 494, 670, 494, 670, 474, 660, 474, 660, 455, 658, 455, 658, 412, 648, 412, 648, 452, 628, 452, 628, 442, 618, 442, 618, 424)
+
+[node name="Fase 3" type="Button" parent="Fases/TextureRect/Fase 3"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -144.0
-offset_top = -356.0
-offset_right = -4.0
-offset_bottom = -212.0
+offset_left = 562.0
+offset_top = 267.0
+offset_right = 951.0
+offset_bottom = 549.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "fase 3"
 icon = ExtResource("21_38oxm")
 
-[node name="Fase 4" type="Button" parent="Fases"]
-layout_mode = 1
+[node name="Fase 4" type="Polygon2D" parent="Fases/TextureRect"]
+color = Color(0, 0, 0, 0.490196)
+polygon = PackedVector2Array(578, 618, 578, 616, 576, 616, 576, 609, 578, 609.014, 578, 606, 588, 606, 588, 596, 596, 596, 596, 586, 602, 586, 602, 584, 606, 584, 606, 576, 680, 576, 680, 578, 702, 578, 702, 586, 722, 587, 722, 595, 732, 595, 732, 605, 744, 605, 744, 616, 756, 616, 756, 638, 766, 638, 766, 648, 776, 648, 776, 688, 784, 688, 784, 730, 776, 730, 776, 746, 766, 746, 766, 762, 756, 762, 756, 772, 744, 772, 744, 784, 734, 784, 734, 794, 724, 794, 724, 804, 713, 804, 694, 804, 694, 812, 638, 812, 638, 804, 628, 804, 628, 794, 596, 794, 596, 782, 584, 782, 584, 762, 574, 762, 574, 740, 564, 740, 564, 678, 574, 678, 574, 668, 584, 668, 584, 658, 596, 658, 606, 658, 606, 648, 640, 648, 640, 660, 650, 660, 650, 668, 658, 668, 658, 709, 638, 710, 638, 702, 627, 702, 627, 731, 638, 731, 638, 740, 680, 740, 680, 733, 690, 733, 690, 721, 699, 721, 699, 717, 702, 717, 702, 707, 701, 659, 691, 659, 691, 638, 680, 638, 680, 628, 658, 628, 658, 616, 596, 616, 596, 618)
+
+[node name="Fase 4" type="Button" parent="Fases/TextureRect/Fase 4"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 136.0
-offset_top = -268.0
-offset_right = 326.0
-offset_bottom = -132.0
+offset_left = 526.0
+offset_top = 562.0
+offset_right = 810.0
+offset_bottom = 825.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "fase 4"
 icon = ExtResource("21_38oxm")
 
-[node name="Fase 5" type="Button" parent="Fases"]
-layout_mode = 1
+[node name="Fase 5" type="Polygon2D" parent="Fases/TextureRect"]
+color = Color(0, 0, 0, 0.490196)
+polygon = PackedVector2Array(374, 762, 396, 762, 396, 742, 406, 742, 406, 720, 416, 720, 416, 660, 406, 660, 406, 638, 397, 638, 396, 638, 396, 628, 386, 628, 386, 618, 376, 618, 376, 606, 364, 606, 364, 598, 354, 598, 354, 586, 334, 586, 334, 576, 302, 576, 302, 566, 236, 566, 236, 576, 214, 576, 214, 586, 204, 586, 204, 596, 194, 596, 194, 606, 184, 606, 184, 618, 174, 618, 174, 638, 164, 638, 164, 660, 154, 660, 154, 730, 164, 730, 164, 752, 174, 752, 174, 772, 184, 772, 184, 784, 194, 784, 194, 794, 216, 794, 216, 804, 236, 804, 236, 814, 290, 814, 290, 804, 302, 804, 312, 804, 312, 794, 322, 794, 322, 782, 332, 782, 332, 772, 342, 772, 342, 742, 354, 742, 354, 690, 344, 690, 344, 678, 334, 678, 334, 668, 324, 668, 324, 658, 288, 658, 288, 668, 279, 668, 279, 678, 268, 678, 268, 711, 278, 712, 278, 722, 300, 720, 300, 710, 312, 710, 312, 730, 300, 730, 300, 739, 258, 740, 258, 732, 248, 732, 248, 720, 238, 720, 238, 670, 248, 670, 248, 650, 258, 650, 258, 638, 272, 638, 272, 630, 278, 630, 278, 628, 322, 628, 322, 638, 344, 638, 344, 648, 354, 648, 354, 660, 366, 660, 366, 680, 374, 680)
+
+[node name="Fase 5" type="Button" parent="Fases/TextureRect/Fase 5"]
+visible = false
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = -44.0
-offset_right = 384.0
-offset_bottom = 92.0
+offset_left = 133.0
+offset_top = 557.0
+offset_right = 433.0
+offset_bottom = 835.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "fase 5"
 icon = ExtResource("21_38oxm")
+
+[node name="Back" type="Button" parent="Fases"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1880.0
+offset_top = -1048.0
+offset_right = -1745.0
+offset_bottom = -913.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.65, 0.65)
+focus_mode = 0
+theme_override_constants/icon_max_width = 60
+theme_override_icons/icon = SubResource("AtlasTexture_nsgbl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wosbt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n18y7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qewpi")
+icon_alignment = 1
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 1
@@ -1298,11 +1372,12 @@ icon_alignment = 1
 [connection signal="pressed" from="Menu/menu/Abilities" to="." method="_on_abilities_pressed"]
 [connection signal="pressed" from="Menu/menu/album" to="." method="_on_album_pressed"]
 [connection signal="pressed" from="Menu/menu/Créditos" to="." method="_on_créditos_pressed"]
-[connection signal="pressed" from="Fases/Fase1" to="." method="_on_fase_1_pressed"]
-[connection signal="pressed" from="Fases/Fase 2" to="." method="_on_fase_2_pressed"]
-[connection signal="pressed" from="Fases/Fase 3" to="." method="_on_fase_3_pressed"]
-[connection signal="pressed" from="Fases/Fase 4" to="." method="_on_fase_4_pressed"]
-[connection signal="pressed" from="Fases/Fase 5" to="." method="_on_fase_5_pressed"]
+[connection signal="pressed" from="Fases/TextureRect/Fase1/Fase1" to="." method="_on_fase_1_pressed"]
+[connection signal="pressed" from="Fases/TextureRect/Fase2/Fase 2" to="." method="_on_fase_2_pressed"]
+[connection signal="pressed" from="Fases/TextureRect/Fase 3/Fase 3" to="." method="_on_fase_3_pressed"]
+[connection signal="pressed" from="Fases/TextureRect/Fase 4/Fase 4" to="." method="_on_fase_4_pressed"]
+[connection signal="pressed" from="Fases/TextureRect/Fase 5/Fase 5" to="." method="_on_fase_5_pressed"]
+[connection signal="pressed" from="Fases/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Close" to="Close" method="_on_pressed"]
 [connection signal="pressed" from="Config" to="." method="_on_config_pressed"]
