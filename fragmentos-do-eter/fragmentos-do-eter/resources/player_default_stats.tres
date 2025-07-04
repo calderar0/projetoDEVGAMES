@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PlayerDefaultStats" load_steps=2 format=3 uid="uid://doe7suaqvntwj"]
+
+[ext_resource type="Script" path="res://scenes/PlayerDefaultStats.gd" id="1_oe4ll"]
+
+[resource]
+script = ExtResource("1_oe4ll")
+max_health = 100.0
+mov_speed = 150.0
+recovery = 0.0
+armor = 0.0
+might = 1.0
+area = 0.0
+magnet = 0.0
+growth = 1.0
+luck = 1.0

@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvdj2tq4vs4xn"]
+
+[ext_resource type="Texture2D" uid="uid://dsijbdncydli8" path="res://assets/enemies/SlimeTerra_Idle_full.png" id="1_7c4st"]
+[ext_resource type="Texture2D" uid="uid://ctxqlt7cikldh" path="res://assets/enemies/slimes/Slime1/Walk/Slime1_Walk_full.png" id="2_1hwgb"]
+[ext_resource type="Texture2D" uid="uid://podsswimbv1v" path="res://assets/enemies/slimes/Slime2/Walk/Slime2_Walk_full.png" id="3_3uya1"]
+[ext_resource type="Texture2D" uid="uid://bhph11euadttl" path="res://assets/enemies/bat_and_snake/bat_and_snake/bat_spritesheet(80x80).png" id="4_cua8s"]
+[ext_resource type="Texture2D" uid="uid://cmsdbvlclvegd" path="res://assets/enemies/ToxicFrog/BlueBlue/ToxicFrogBlueBlue_Hop.png" id="5_ya050"]
+[ext_resource type="Texture2D" uid="uid://cip18oyewqw2n" path="res://assets/enemies/ToxicFrogbrown_Hop (1).png" id="6_e050l"]
+[ext_resource type="Texture2D" uid="uid://crcyox5lsp7c6" path="res://assets/enemies/bat_and_snake/bat_and_snake/snake_spritesheet(64x64).png" id="7_wvw04"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="SlimeTerraIdleFull" type="Sprite2D" parent="."]
+position = Vector2(624, 184)
+texture = ExtResource("1_7c4st")
+hframes = 6
+vframes = 4
+frame = 17
+
+[node name="Slime1WalkFull" type="Sprite2D" parent="."]
+position = Vector2(1016, 232)
+texture = ExtResource("2_1hwgb")
+
+[node name="Slime2WalkFull" type="Sprite2D" parent="."]
+position = Vector2(1728, 248)
+texture = ExtResource("3_3uya1")
+hframes = 8
+
+[node name="BatSpritesheet(80x80)" type="Sprite2D" parent="."]
+position = Vector2(184, 312)
+texture = ExtResource("4_cua8s")
+hframes = 6
+vframes = 4
+frame = 5
+
+[node name="ToxicFrogBlueBlueHop" type="Sprite2D" parent="."]
+position = Vector2(344, 632)
+texture = ExtResource("5_ya050")
+
+[node name="ToxicFrogbrownHop(1)" type="Sprite2D" parent="."]
+position = Vector2(328, 712)
+texture = ExtResource("6_e050l")
+
+[node name="BatSpritesheet(80x80)2" type="Sprite2D" parent="."]
+position = Vector2(80, 208)
+texture = ExtResource("4_cua8s")
+
+[node name="ToxicFrogbrownHop(1)2" type="Sprite2D" parent="."]
+position = Vector2(280, 784)
+texture = ExtResource("6_e050l")
+hframes = 7
+frame = 6
+
+[node name="SnakeSpritesheet(64x64)" type="Sprite2D" parent="."]
+position = Vector2(1400, 760)
+texture = ExtResource("7_wvw04")
+hframes = 6
+vframes = 6
+frame = 30

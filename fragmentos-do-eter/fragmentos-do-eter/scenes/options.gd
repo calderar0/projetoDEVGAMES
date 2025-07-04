@@ -10,6 +10,8 @@ var OptionSlot = preload("res://scenes/option_slot.tscn")
 const weapon_path: String = "res://resources/Weapons/"
 const passive_item_path: String = "res://resources/PassiveItems/"
 
+const SPEAR_RESOURCE_PATH = "res://resources/Weapons/spear.tres"
+
 
 var every_item
 var every_weapon
@@ -21,6 +23,7 @@ func _ready() -> void:
 	particles.hide()
 	panel.hide()
 	get_all_item()
+	reset_inventory()
 
 func close_option():
 	hide()
@@ -185,3 +188,29 @@ func get_available_upgrades()-> Array[Item]:
 			upgrades.append(passive_item)
  
 	return upgrades
+
+
+
+func reset_inventory():
+	print("UI: Resetando inventário de armas e passivas.")
+	
+	# 1. Limpa todos os slots de armas.
+	#    Iteramos por cada slot no HBoxContainer e definimos seu item como nulo.
+	for slot in weapons.get_children():
+		slot.item = null # O seu sistema parece usar essa propriedade para gerenciar o slot.
+
+	# 2. Limpa todos os slots de itens passivos.
+	for slot in passive_items.get_children():
+		slot.item = null
+	
+	# 3. Adiciona a lança básica de volta ao inventário.
+	#    Vamos reutilizar sua função `add_weapon` para isso.
+	var spear_resource = load(SPEAR_RESOURCE_PATH)
+	
+	if spear_resource:
+		# A sua função 'check_item' ou 'add_weapon' já deve cuidar do resto.
+		# Vamos usar check_item, que parece ser a mais completa.
+		check_item(spear_resource)
+		print("Lança básica adicionada ao inventário.")
+	else:
+		printerr("ERRO: Falha ao carregar o recurso da lança em: ", SPEAR_RESOURCE_PATH)

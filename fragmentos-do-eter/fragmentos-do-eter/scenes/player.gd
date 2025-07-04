@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@export var default_stats: PlayerDefaultStats
 
 
 var is_dead: bool = false
@@ -64,25 +64,30 @@ var XP: int = 0:
 	set(value):
 		XP = value
 		%XP.value = value
-		if XP >= get_xp_needed(level):
+		while XP >= get_xp_needed(level):
 			XP -= get_xp_needed(level)
-			level += 1
+			self.level += 1
 		%nnumero.text = "xp" + str(value)
 
 var total_XP: int = 0
 var level: int = 1:
 	set(value):
+		if value > level:
+			%Options.show_option()
 		level = value
 		%Level.text = "Lv" + str(value)
-		%Options.show_option()
 		%XP.max_value = get_xp_needed(level)
 		
 
 func get_xp_needed(level: int) -> int:
-	# Fórmula de progressão: base * (nível ^ fator)
-	var base := 1   # XP necessário no nível 1
-	var fator := 1   # Crescimento exponencial (aumente para deixar mais difícil)
-	return int(base * pow(level, fator))
+	# Fórmula de progressão mais robusta
+	var base_xp := 1  # XP necessário para ir do Nv 1 para o 2
+	var factor := 1   # A cada nível, a necessidade de XP aumenta em 20%
+	
+	if level <= 0: return base_xp # Apenas uma segurança
+	
+	# A fórmula calcula a necessidade exponencialmente
+	return int(base_xp * pow(factor, level - 1))
 			
 
 func ajustar_camera():
@@ -148,6 +153,7 @@ func _on_item_upgraded(upgrade: Stats):
 	luck += upgrade.luck
 
 func _ready() -> void:
+	reset_state()
 	%Morreu.hide()
 	%musica.playing = true
 	Persistence.gain_bonus_stats(self)
@@ -182,3 +188,36 @@ func gain_gold(amount):
 
 func open_chest():
 	$UI/Chest.open()
+
+
+func reset_state():
+	print("Resetando status do jogador.")
+	
+	if not default_stats:
+		printerr("ERRO: Recurso 'default_stats' não foi atribuído ao jogador no Inspetor!")
+		return
+	
+	# 1. RESETAR STATUS PARA OS VALORES PADRÃO DO RECURSO
+	self.max_health = default_stats.max_health
+	self.mov_speed = default_stats.mov_speed
+	self.recovery = default_stats.recovery
+	self.armor = default_stats.armor
+	self.might = default_stats.might
+	self.area = default_stats.area
+	self.magnet = default_stats.magnet
+	self.growth = default_stats.growth
+	self.luck = default_stats.luck
+
+	
+	# 2. REAPLICAR BÔNUS PERMANENTES
+	if Persistence:
+		Persistence.gain_bonus_stats(self)
+	
+	# 3. RESETAR ESTADO DE JOGO (Level, XP, Vida)
+	self.level = 1
+	self.XP = 0
+	self.health = self.max_health
+	
+	is_dead = false
+	%Morreu.hide()
+	get_tree().paused = false

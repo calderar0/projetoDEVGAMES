@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bk4lce7b8agyt"]
+[gd_scene load_steps=64 format=3 uid="uid://bk4lce7b8agyt"]
 
 [ext_resource type="Texture2D" uid="uid://b8id671o2tpwy" path="res://Menus/arquivos/fundo menu.jpeg" id="1_jsagm"]
 [ext_resource type="Script" path="res://Menus/menu_p.gd" id="2_50r3a"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://c8i0re6yqfwnf" path="res://assets/UI/icones/Buffs/lucky_boost.png" id="18_frkpt"]
 [ext_resource type="Script" path="res://Menus/enemy_list.gd" id="19_sig4s"]
 [ext_resource type="Script" path="res://Menus/UI_gold.gd" id="19_uu6gk"]
+[ext_resource type="Texture2D" uid="uid://332ssdjgoxfa" path="res://icon.svg" id="21_38oxm"]
 [ext_resource type="PackedScene" uid="uid://bpv4tlfrp7qlq" path="res://options_menu.tscn" id="25_pj2kn"]
 [ext_resource type="AudioStream" uid="uid://dqdyghge36wex" path="res://assets/sfx/Echoes of the Ether2-audio.mp3" id="27_qms56"]
 
@@ -509,7 +510,6 @@ script = ExtResource("2_50r3a")
 metadata/_edit_use_anchors_ = true
 
 [node name="fundo" type="TextureRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -524,7 +524,6 @@ texture = ExtResource("1_jsagm")
 expand_mode = 1
 
 [node name="Menu" type="Panel" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -886,6 +885,7 @@ vertical_alignment = 1
 script = ExtResource("19_uu6gk")
 
 [node name="Bestiary" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1004,6 +1004,94 @@ theme_override_colors/font_color = Color(0.227451, 0.211765, 0.211765, 1)
 text = "About:"
 autowrap_mode = 3
 
+[node name="Fases" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fase1" type="Button" parent="Fases"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -608.0
+offset_top = -116.0
+offset_right = -496.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fase 1"
+icon = ExtResource("21_38oxm")
+
+[node name="Fase 2" type="Button" parent="Fases"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -344.0
+offset_top = -132.0
+offset_right = -155.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fase 2"
+icon = ExtResource("21_38oxm")
+
+[node name="Fase 3" type="Button" parent="Fases"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -356.0
+offset_right = -4.0
+offset_bottom = -212.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "fase 3"
+icon = ExtResource("21_38oxm")
+
+[node name="Fase 4" type="Button" parent="Fases"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 136.0
+offset_top = -268.0
+offset_right = 326.0
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "fase 4"
+icon = ExtResource("21_38oxm")
+
+[node name="Fase 5" type="Button" parent="Fases"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 248.0
+offset_top = -44.0
+offset_right = 384.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "fase 5"
+icon = ExtResource("21_38oxm")
+
 [node name="Back" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 3
@@ -1084,6 +1172,7 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Credits" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1208,6 +1297,11 @@ icon_alignment = 1
 [connection signal="pressed" from="Menu/menu/Abilities" to="." method="_on_abilities_pressed"]
 [connection signal="pressed" from="Menu/menu/album" to="." method="_on_album_pressed"]
 [connection signal="pressed" from="Menu/menu/Créditos" to="." method="_on_créditos_pressed"]
+[connection signal="pressed" from="Fases/Fase1" to="." method="_on_fase_1_pressed"]
+[connection signal="pressed" from="Fases/Fase 2" to="." method="_on_fase_2_pressed"]
+[connection signal="pressed" from="Fases/Fase 3" to="." method="_on_fase_3_pressed"]
+[connection signal="pressed" from="Fases/Fase 4" to="." method="_on_fase_4_pressed"]
+[connection signal="pressed" from="Fases/Fase 5" to="." method="_on_fase_5_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Close" to="Close" method="_on_pressed"]
 [connection signal="pressed" from="Config" to="." method="_on_config_pressed"]

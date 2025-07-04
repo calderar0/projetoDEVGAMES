@@ -21,6 +21,7 @@ SoundManager="*res://scenes/sound_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Savedata="*res://scenes/savedata.tscn"
 Persistence="*res://scenes/persistence.tscn"
+LevelManager="*res://scenes/LevelManager.gd"
 
 [dialogue_manager]
 

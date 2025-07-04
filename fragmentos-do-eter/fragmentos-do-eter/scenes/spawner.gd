@@ -1,5 +1,8 @@
 extends Node2D
 
+
+signal phase_completed(next_phase_number: int)
+
 @export var player: CharacterBody2D
 @export var enemy: PackedScene
 @export var destructible: PackedScene
@@ -26,19 +29,47 @@ var minute: int:
 var seconds: int:
 	set(value):
 		seconds = value
-		if seconds >= 60:
-			seconds -= 60
+		if seconds >= 10:
+			seconds -= 10
 			minute += 1
 		%Second.text = str(seconds).lpad(2,'0')
 
 
 func _ready():
-	actual_phase = 1
-	# Zera o contador de chefes do script do inimigo ao iniciar uma nova partida.
-	# Substitua 'EnemyScript' pelo nome real do arquivo do seu script de inimigo.
-	# Ex: load("res://enemy.gd").bossCounter = 0
-	load_enemies_from_phase(current_phase_path)
+	#actual_phase = 1
+	## Zera o contador de chefes do script do inimigo ao iniciar uma nova partida.
+	## Substitua 'EnemyScript' pelo nome real do arquivo do seu script de inimigo.
+	## Ex: load("res://enemy.gd").bossCounter = 0
+	#load_enemies_from_phase(current_phase_path)
+	setup_for_phase(1)
+
+
+func setup_for_phase(phase_number: int):
+	print("Spawner preparando para a fase ", phase_number)
+	actual_phase = phase_number
+	is_miniboss_active = false
+	boss_spawned = false
 	
+	# Reseta os timers se necessário
+	self.seconds = 0
+	self.minute = 0
+	
+	if actual_phase < FINAL_BOSS_PHASE:
+		var path = "res://resources/Enemies/Phase%d/" % actual_phase
+		load_enemies_from_phase(path)
+		# Garante que o spawner está ativo para a nova fase
+		set_physics_process(true)
+	elif actual_phase == FINAL_BOSS_PHASE:
+		# Lógica para a fase final. Desativa spawns normais e prepara para o chefe.
+		print("Spawner em modo CHEFE FINAL. Spawns normais desativados.")
+		set_physics_process(false)
+		spawn_final_boss()
+	else:
+		# O jogo foi vencido
+		print("Spawner: Jogo vencido.")
+		set_physics_process(false)
+
+
 
 func load_enemies_from_phase(path: String) -> void:
 	enemy_type.clear()
@@ -61,34 +92,10 @@ func load_enemies_from_phase(path: String) -> void:
 
 # No seu script do Spawner (Spawner.gd)
 
-func change_phase():
-	is_miniboss_active = false
-	actual_phase += 1
-	past_phase = actual_phase - 1
-	var nome_mundo_atual = "../MUNDO%d" % actual_phase
-	var nome_mundo_anterior = "../MUNDO%d" % past_phase
-	var no_do_mundo = get_node(nome_mundo_atual)
-	var no_do_mundo_A = get_node(nome_mundo_anterior)
-	
-	no_do_mundo_A.visible = false
-	no_do_mundo.visible = true
-	self.seconds = 0
-	self.minute = 0
-
-	if actual_phase == FINAL_BOSS_PHASE:
-		# CHEGOU A HORA DO CHEFE FINAL!
-		print("A FASE FINAL COMEÇOU!")
-		# Para todos os spawners normais
-		set_physics_process(false) # Desativa _physics_process para parar spawns
-		spawn_final_boss() # Chama uma nova função para invocar o chefe
-	elif actual_phase < FINAL_BOSS_PHASE:
-		# Continua para a próxima fase normal
-		current_phase_path = "res://resources/Enemies/Phase%d/" % actual_phase
-		load_enemies_from_phase(current_phase_path)
-	else:
-		# O jogo acabou, o chefe foi derrotado!
-		# Aqui você pode chamar a tela de vitória, etc.
-		get_tree().quit() # Exemplo: fecha o jogo
+func request_phase_change():
+	var next_phase = actual_phase + 1
+	print("Spawner solicitando mudança para a fase ", next_phase)
+	emit_signal("phase_completed", next_phase)
 
 func spawn_final_boss():
 	# Limpa quaisquer inimigos restantes na tela
@@ -171,9 +178,9 @@ func spawner(pos: Vector2, elite: bool = false, is_main_boss: bool = false):
 
 # --- FUNÇÃO PARA QUANDO O MINIBOSS É DERROTADO ---
 func _on_miniboss_defeated():
-	print("Miniboss da Fase ", actual_phase, " derrotado! Mudando de fase.")
-	change_phase()
-	# is_miniboss_active é resetado dentro de change_phase()
+	print("Miniboss da Fase ", actual_phase, " derrotado! Solicitando mudança de fase.")
+	# Em vez de chamar a antiga change_phase, agora ele solicita a mudança.
+	request_phase_change()
 
 
 func _on_boss_defeated():

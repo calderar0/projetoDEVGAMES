@@ -1,6 +1,7 @@
-[gd_scene load_steps=105 format=3 uid="uid://bvxnxi7u4gv2t"]
+[gd_scene load_steps=106 format=3 uid="uid://bvxnxi7u4gv2t"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_wqjev"]
+[ext_resource type="Resource" uid="uid://doe7suaqvntwj" path="res://resources/player_default_stats.tres" id="2_2uaug"]
 [ext_resource type="Texture2D" uid="uid://cuhyxqyfxta5w" path="res://assets/personagens/The Female Adventurer - Free/The Female Adventurer - Free/Idle/Idle.png" id="2_ai06b"]
 [ext_resource type="Script" path="res://scenes/ui.gd" id="2_bcfrs"]
 [ext_resource type="Texture2D" uid="uid://cb3434mn47uia" path="res://assets/itens/pickups/Coin_Gems/spr_coin_azu.png" id="2_gc20x"]
@@ -644,6 +645,7 @@ fill_from = Vector2(0.50463, 0.50463)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_wqjev")
+default_stats = ExtResource("2_2uaug")
 metadata/_edit_horizontal_guides_ = [56.0, 122.0, 993.0]
 
 [node name="UI" type="CanvasLayer" parent="."]

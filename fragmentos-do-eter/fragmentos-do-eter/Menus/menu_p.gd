@@ -6,8 +6,10 @@ func _ready():
 
 
 func _on_play_pressed() -> void:
-	%musicaMenu.playing = false
-	get_tree().change_scene_to_file("res://scenes/test_scene.tscn")
+	#%musicaMenu.playing = false
+	#get_tree().change_scene_to_file("res://scenes/test_scene.tscn")
+	$Menu.hide()
+	$Fases.show()
 	
 
 func _on_back_pressed() -> void:
@@ -151,3 +153,35 @@ func _on_config_pressed() -> void:
 		child.hide() 
 	tween_pop($Bestiary)
 	
+
+
+func _on_fase_1_pressed() -> void:
+	#get_tree().change_scene_to_file("res://scenes/test_scene.tscn")
+	#get_tree().get_child(testscene)
+	LevelManager.proximo_level_path = "res://scenes/mundo_1.tscn"
+	LevelManager.proximo_level_numero = 1
+	get_tree().change_scene_to_file("res://scenes/game_main.tscn")
+
+
+func _on_fase_2_pressed() -> void:
+	LevelManager.proximo_level_path = "res://scenes/mundo_2.tscn"
+	LevelManager.proximo_level_numero = 2
+	get_tree().change_scene_to_file("res://scenes/game_main.tscn")
+
+
+func _on_fase_3_pressed() -> void:
+	LevelManager.proximo_level_path = "res://scenes/mundo_3.tscn"
+	LevelManager.proximo_level_numero = 3
+	get_tree().change_scene_to_file("res://scenes/game_main.tscn")
+
+
+func _on_fase_4_pressed() -> void:
+	LevelManager.proximo_level_path = "res://scenes/mundo_4.tscn"
+	LevelManager.proximo_level_numero = 4
+	get_tree().change_scene_to_file("res://scenes/game_main.tscn")
+
+
+func _on_fase_5_pressed() -> void:
+	LevelManager.proximo_level_path = "res://scenes/mundo_5.tscn"
+	LevelManager.proximo_level_numero = 5
+	get_tree().change_scene_to_file("res://scenes/game_main.tscn")

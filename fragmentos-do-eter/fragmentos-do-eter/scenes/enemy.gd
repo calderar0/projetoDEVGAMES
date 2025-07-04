@@ -88,8 +88,9 @@ var elite: bool = false:
 		if value:
 			$Sprite2D.material = load("res://shaders/rainbow.tres")
 			scale = Vector2(1.5,1.5)
-			health *= 8
-			damage *= 1.8
+			if not boss:
+				health *= 8
+				damage *= 1.8
 
 func _physics_process(delta: float) -> void:
 	checar_separacao(delta)
