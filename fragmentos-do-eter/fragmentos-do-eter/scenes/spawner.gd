@@ -61,7 +61,6 @@ func setup_for_phase(phase_number: int):
 		set_physics_process(true)
 	elif actual_phase == FINAL_BOSS_PHASE:
 		# Lógica para a fase final. Desativa spawns normais e prepara para o chefe.
-		print("Spawner em modo CHEFE FINAL. Spawns normais desativados.")
 		set_physics_process(false)
 		spawn_final_boss()
 	else:
@@ -94,7 +93,6 @@ func load_enemies_from_phase(path: String) -> void:
 
 func request_phase_change():
 	var next_phase = actual_phase + 1
-	print("Spawner solicitando mudança para a fase ", next_phase)
 	emit_signal("phase_completed", next_phase)
 
 func spawn_final_boss():
@@ -178,7 +176,6 @@ func spawner(pos: Vector2, elite: bool = false, is_main_boss: bool = false):
 
 # --- FUNÇÃO PARA QUANDO O MINIBOSS É DERROTADO ---
 func _on_miniboss_defeated():
-	print("Miniboss da Fase ", actual_phase, " derrotado! Solicitando mudança de fase.")
 	# Em vez de chamar a antiga change_phase, agora ele solicita a mudança.
 	request_phase_change()
 

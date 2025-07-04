@@ -13,7 +13,7 @@ var drop_node = preload("res://scenes/pickups.tscn")
 @export var drops: Array[Pickups]
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	frame_counter +=1
 	if frame_counter>=6:
 		frame_counter=0

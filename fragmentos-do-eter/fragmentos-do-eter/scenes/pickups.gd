@@ -42,6 +42,6 @@ func follow(_target: CharacterBody2D, gem_flag= false):
 		return
 	can_follow = true
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	type.activate()
 	queue_free()

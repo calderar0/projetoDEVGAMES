@@ -14,7 +14,7 @@ var frames: int = 0
 var maxframe: int = 8
 var animation_speed: int = 10  # Controla a velocidade da animação
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !sprite:  # Verificação de segurança
 		return
 		
@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 func _ready():
 	DialogueManager.dialogue_ended.connect(_on_dialogue_end)  # Garantir que está conectando
 
-func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
+func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
 	if resource:
 		
 		var animated_sprite = get_node("../Player/AnimatedSprite2D")

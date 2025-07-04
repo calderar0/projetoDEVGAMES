@@ -8,7 +8,7 @@ func _ready() -> void:
 	$VBoxContainer/HSlider3.value = db_to_linear(AudioServer.get_bus_volume_db(2))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 

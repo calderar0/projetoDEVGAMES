@@ -13,7 +13,7 @@ var current_frame = 0
 @export var animation_speed = 1
 @export var frame_count = 9
 
-func activate(source, target, scene_tree):
+func activate(source, _target, _scene_tree):
 	reset()
 	add_to_player(source)
 

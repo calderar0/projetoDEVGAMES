@@ -20,7 +20,7 @@ func testEsc():
 	elif Input.is_action_just_pressed("sair") and get_tree().paused:
 		resume()
 
-func _process(delta):
+func _process(_delta):
 	testEsc()
 
 

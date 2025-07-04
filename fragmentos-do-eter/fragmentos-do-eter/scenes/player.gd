@@ -191,10 +191,8 @@ func open_chest():
 
 
 func reset_state():
-	print("Resetando status do jogador.")
 	
 	if not default_stats:
-		printerr("ERRO: Recurso 'default_stats' não foi atribuído ao jogador no Inspetor!")
 		return
 	
 	# 1. RESETAR STATUS PARA OS VALORES PADRÃO DO RECURSO

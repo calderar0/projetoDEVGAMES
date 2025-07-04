@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_0kx8u"]
 [ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_5u0d7"]
-[ext_resource type="Texture2D" uid="uid://crcyox5lsp7c6" path="res://assets/enemies/bat_and_snake/bat_and_snake/snake_spritesheet(64x64).png" id="3_sqllr"]
+[ext_resource type="Texture2D" uid="uid://djtocaoggadg6" path="res://assets/enemies/bat_and_snake/snake_spritesheet(64x64).png" id="3_usiax"]
 
 [resource]
 script = ExtResource("2_5u0d7")
@@ -10,14 +10,14 @@ title = "cobrinha"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0
-texture = ExtResource("3_sqllr")
+texture = ExtResource("3_usiax")
 hframe = 6
-vframe = 6
+vframe = 1
 scalesx = 1.4
 scalesy = 1.4
 flip = false
 velxd = 0
-velxe = 5
+velxe = 0
 health = 30.0
 damage = 5.0
 drops = Array[ExtResource("1_0kx8u")]([])
