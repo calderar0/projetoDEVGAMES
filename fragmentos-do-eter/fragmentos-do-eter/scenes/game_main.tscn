@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3kvfgeg7ogsx"]
+[gd_scene load_steps=7 format=3 uid="uid://c3kvfgeg7ogsx"]
 
 [ext_resource type="Script" path="res://scenes/game_main.gd" id="1_qo20a"]
 [ext_resource type="Texture2D" uid="uid://fpvoanc05qre" path="res://assets/map/Space Background.png" id="1_uq21m"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://bvxnxi7u4gv2t" path="res://scenes/player.tscn" id="8_idl6g"]
 [ext_resource type="PackedScene" uid="uid://f6jfhogbp3dc" path="res://scenes/destructible.tscn" id="9_5g2lt"]
 [ext_resource type="PackedScene" uid="uid://hk5npupy6n0y" path="res://scenes/hei_mao.tscn" id="10_a4n6p"]
-[ext_resource type="PackedScene" uid="uid://giap8ck6f0wv" path="res://ovo.tscn" id="11_6f2cg"]
 
 [node name="GameMain" type="Node2D"]
 script = ExtResource("1_qo20a")
@@ -51,71 +50,3 @@ position = Vector2(819, 135)
 
 [node name="HeiMao" parent="." instance=ExtResource("10_a4n6p")]
 position = Vector2(364, 421)
-
-[node name="óvos" type="Node2D" parent="."]
-
-[node name="ovo" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-1040, -464)
-
-[node name="ovo22" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(0, 1792)
-
-[node name="ovo21" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(4320, -1888)
-
-[node name="ovo20" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(1952, -1872)
-
-[node name="ovo18" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-2288, -224)
-
-[node name="ovo19" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(0, -2128)
-
-[node name="ovo11" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(2848, 3728)
-
-[node name="ovo12" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(768, 3712)
-
-[node name="ovo13" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-896, 3760)
-
-[node name="ovo14" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-2160, 3536)
-
-[node name="ovo15" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-2208, 2160)
-
-[node name="ovo16" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-1984, -2032)
-
-[node name="ovo17" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-2016, -1472)
-
-[node name="ovo2" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(256, 640)
-
-[node name="ovo3" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(-704, 2224)
-
-[node name="ovo4" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(1632, 2256)
-
-[node name="ovo5" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(2912, 1472)
-
-[node name="ovo6" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(3040, -16)
-
-[node name="ovo7" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(1328, -1056)
-
-[node name="ovo8" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(4960, 576)
-
-[node name="ovo9" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(4864, 2496)
-
-[node name="ovo10" parent="óvos" instance=ExtResource("11_6f2cg")]
-position = Vector2(4640, 3312)

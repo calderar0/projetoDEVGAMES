@@ -30,7 +30,7 @@ func load_phases():
 		$"Fases/TextureRect/Fase 3".color = Color("#00000000")
 		$"Fases/TextureRect/Fase 4/Fase 4".visible = true
 		$"Fases/TextureRect/Fase 4".color = Color("#00000000")
-	elif Savedata.fase <= 5:
+	elif Savedata.fase <= 6:
 		$"Fases/TextureRect/Fase2/Fase 2".visible = true
 		$Fases/TextureRect/Fase2.color = Color("#00000000")
 		$"Fases/TextureRect/Fase 3/Fase 3".visible = true

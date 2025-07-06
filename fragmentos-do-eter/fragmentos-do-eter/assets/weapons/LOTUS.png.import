@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv02mg0kdx1o5"
-path="res://.godot/imported/lotus.png-e5e7ebe845d4ce2f925fab240ae1df20.ctex"
+path="res://.godot/imported/LOTUS.png-51b155ab8f0aa5b6fe63a36afbf2bea2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/weapons/lotus.png"
-dest_files=["res://.godot/imported/lotus.png-e5e7ebe845d4ce2f925fab240ae1df20.ctex"]
+source_file="res://assets/weapons/LOTUS.png"
+dest_files=["res://.godot/imported/LOTUS.png-51b155ab8f0aa5b6fe63a36afbf2bea2.ctex"]
 
 [params]
 

@@ -34,24 +34,32 @@ func carregar_level_atual() -> void:
 
 
 
+# No seu script GameMain.gd
+
+# No seu script GameMain.gd
+
 func _on_spawner_phase_completed(next_phase_number: int):
-	# PASSO 2: ATUALIZAR O LEVELMANAGER
-	LevelManager.proximo_level_path = "res://scenes/mundo_%d.tscn" % next_phase_number
+	# Atualiza o estado do jogo
 	LevelManager.proximo_level_numero = next_phase_number
 
-	# PASSO 3: CARREGAR O NOVO MAPA
-	if next_phase_number > 5:
-		return
-	carregar_level_atual()
+	# Condição para carregar o mapa. Só carrega se NÃO for a fase do chefe.
+	if next_phase_number < spawner.FINAL_BOSS_PHASE:
+		LevelManager.proximo_level_path = "res://scenes/mundo_%d.tscn" % next_phase_number
+		carregar_level_atual()
+	else:
+		# Na fase do chefe, apenas limpa o mapa atual para criar uma arena limpa.
+		for child in level_container.get_children():
+			child.queue_free()
 
-	# PASSO 4: RESETAR O JOGADOR
-	if player:
-		player.reset_state()
+	# --- NOVA LÓGICA AQUI ---
+	# Só reseta o estado do jogador e o inventário se a próxima fase NÃO for a do chefe.
+	if next_phase_number < spawner.FINAL_BOSS_PHASE:
+		if player:
+			player.reset_state()
+		if inventory_ui:
+			inventory_ui.reset_inventory()
+	# -------------------------
 
-	# PASSO 5: RESETAR O INVENTÁRIO
-	if inventory_ui:
-		inventory_ui.reset_inventory()
-
-	# PASSO 6: CONFIGURAR O SPAWNER
+	# O setup do spawner sempre acontece, para iniciar a próxima fase/chefe.
 	if spawner:
 		spawner.setup_for_phase(next_phase_number)
