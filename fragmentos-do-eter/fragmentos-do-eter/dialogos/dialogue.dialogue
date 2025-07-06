@@ -1,30 +1,30 @@
 ~ start
-Hei Mao: Oh, little lady finally you're here!
-Bai Hua: HeiHei? What's happening, where we are? And wait.[wait=1].[wait=1].[wait=1], [wave]YOU'RE TALKING?[/wave]
-Hei Mao: Calm down little lady, we need you to focus! Do you remember what happened?
-- Yes => END
-- No => cutscene
+Hei Mao: Oh, Baizinha, finalmente você está aqui!
+Bai Hua: HeiHei? O que está acontecendo, onde estamos? E espere.[wait=1].[wait=1].[wait=1], [wave]VOCÊ ESTÁ FALANDO?[/wave]
+Hei Mao: Calma, Baizinha, precisamos que você se concentre! Você se lembra do que aconteceu?
+- Sim => END
+- Não => cutscene
 ~ cutscene
 
 ~ noCutscene
-Hei Mao: Oh great, I don't have time to explain, in short, you'll have to fight.
-Bai Hua: What? What are you talking about? Where are we? Why I'm here? Why do you know how to talk??
-Hei Mao: Sorry little lady, I was supposed to explain this better for you...
-Hei Mao: Right now we are running out of time. He is going to take control of everything if we don't hurry.
-Bai Hua: He? Who is he? What are you talking about?
-Hei Mao: Sorry... Let me tell you a little of what is happening.
-Hei Mao: I've been looking for someone capable to fight [wave]Xuan Zhi[/wave], I've traveled different planets and dimensions for thousand and thousand years trying to find someone but I've failed...
-Hei Mao: I went to Earth without any expectations, but I've found you! You have the purest soul that I've ever seen, you're a smart little lady and a strong one too.
-Hei Mao: Sorry to put you in this type of situation but I didn't have any choice...
-Bai Hua: HeiHei, I'm scared, please top this...
-Hei Mao: Hear me little lady, You'll have to be really strong from here on. I know that this is very strange and scary but the destiny of the universe is in your hands.
-Hei Mao: I don't have much time lasting, here take this.
-Hei Mao: It will help you to get stronger and if you take good care of him it will become stronger with you.
-Hei Mao: I'll open your meridians too, so you'll be able to grow and learn how to use your natural powers.
-Bai Hua: Wait, what are you doing? What do you mean by natural powers?
-Hei Mao: Oh, he is coming, I'll try to stop him as much as possible, so please, little lady, train, grow and become stronger, I'm counting on you.
-Hei Mao: And little lady, thanks... Thanks for taking care of me all this time, Hope I can see you one more time...
+Hei Mao: Ah, ótimo, não tenho tempo para explicar, em resumo, você terá que lutar.
+Bai Hua: O quê? Do que você está falando? Onde estamos? Por que estou aqui? Por que você sabe falar??
+Hei Mao: Desculpe, Baizinha, eu deveria ter explicado isso melhor para você...
+Hei Mao: Neste momento, estamos ficando sem tempo. Ele vai assumir o controle de tudo se não nos apressarmos.
+Bai Hua: Ele? Quem é ele? Do que você está falando?
+Hei Mao: Desculpe... Deixe-me contar um pouco do que está acontecendo.
+Hei Mao: Eu estive procurando por alguém capaz de lutar contra [wave]Xuan Zhi[/wave], viajei por diferentes planetas e dimensões por milhares e milhares de anos tentando encontrar alguém, mas falhei...
+Hei Mao: Eu fui para a Terra sem nenhuma expectativa, mas encontrei você! Você tem a alma mais pura que eu já vi, você é uma Baizinha esperta e forte também.
+Hei Mao: Desculpe por te colocar nesse tipo de situação, mas eu não tive escolha...
+Bai Hua: HeiHei, estou com medo, por favor, pare com isso...
+Hei Mao: Ouça-me, Baizinha, você terá que ser muito forte a partir de agora. Eu sei que isso é muito estranho e assustador, mas o destino do universo está em suas mãos.
+Hei Mao: Não me resta muito tempo, aqui, pegue isto.
+Hei Mao: Isso vai te ajudar a ficar mais forte e, se você cuidar bem dele, ele se tornará mais forte com você.
+Hei Mao: Eu também vou abrir seus meridianos, para que você possa crescer e aprender a usar seus poderes naturais.
+Bai Hua: Espere, o que você está fazendo? O que você quer dizer com poderes naturais?
+Hei Mao: Oh, ele está vindo, vou tentar detê-lo o máximo possível, então, por favor, Baizinha, treine, cresça e se torne mais forte, estou contando com você.
+Hei Mao: E Baizinha, obrigado... Obrigado por cuidar de mim todo esse tempo, espero poder te ver mais uma vez...
 Bai Hua: HeiHei? Heihei!
 Bai Hua: Sob sob, sob sob...
-Bai Hua: Ok HeiHei, I'll become stronger, I'll find you, wait for me.
+Bai Hua: Ok HeiHei, eu vou ficar mais forte, vou te encontrar, me espere.
 => END

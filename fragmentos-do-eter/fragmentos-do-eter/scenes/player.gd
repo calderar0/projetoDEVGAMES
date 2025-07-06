@@ -81,8 +81,8 @@ var level: int = 1:
 
 func get_xp_needed(level: int) -> int:
 	# Fórmula de progressão mais robusta
-	var base_xp := 1  # XP necessário para ir do Nv 1 para o 2
-	var factor := 1   # A cada nível, a necessidade de XP aumenta em 20%
+	var base_xp := 10  # XP necessário para ir do Nv 1 para o 2
+	var factor := 1.5   # A cada nível, a necessidade de XP aumenta em 20%
 	
 	if level <= 0: return base_xp # Apenas uma segurança
 	
