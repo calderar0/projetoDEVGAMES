@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=4 format=3 uid="uid://6l1ll7ki6ehy"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://6l1ll7ki6ehy"]
 
 [ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_64hw1"]
 [ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_w7k67"]
+[ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_wwiwq"]
 [ext_resource type="Texture2D" uid="uid://bhph11euadttl" path="res://assets/enemies/bat_and_snake/bat_and_snake/bat_spritesheet(80x80).png" id="3_d8755"]
+[ext_resource type="Resource" uid="uid://carj24spnpso5" path="res://resources/pickups/chi_medio.tres" id="3_jkb00"]
 
 [resource]
 script = ExtResource("2_w7k67")
@@ -20,7 +22,7 @@ velxd = 0
 velxe = 0
 health = 20.0
 damage = 4.0
-drops = Array[ExtResource("1_64hw1")]([])
+drops = Array[ExtResource("1_64hw1")]([ExtResource("2_wwiwq"), ExtResource("3_jkb00")])
 coll_rad = 10
 coll_height = 20
 about = ""

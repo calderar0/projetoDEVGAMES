@@ -14,6 +14,7 @@ script = ExtResource("3_3qwth")
 title = "Corrupted Mantis"
 is_boss = false
 uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("4_d4mkg")
 hframe = 4
 vframe = 4

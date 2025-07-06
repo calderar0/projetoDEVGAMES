@@ -12,6 +12,9 @@ region = Rect2(-5, 2, 33, 27)
 [resource]
 script = ExtResource("3_fwlyi")
 title = "Black Mosquito"
+is_boss = false
+uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("4_3bqwy")
 hframe = 4
 vframe = 4

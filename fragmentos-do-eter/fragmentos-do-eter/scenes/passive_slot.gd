@@ -17,13 +17,11 @@ extends PanelContainer
 			if player_refe != null:
 				item.player_ref = player_refe
 			
-			print("Slot passivo recebeu o item: ", item.resource_name)
 		else:
 			# O slot está sendo esvaziado (item é nulo).
 			# Limpa a UI.
 			$TextureRect.texture = null
 			
-			print("Slot passivo foi esvaziado.")
 
 @export var player_refe: CharacterBody2D
 

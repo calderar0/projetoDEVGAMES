@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=4 format=3 uid="uid://duvo7nypp37cu"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://duvo7nypp37cu"]
 
 [ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_8w1mq"]
+[ext_resource type="Resource" uid="uid://carj24spnpso5" path="res://resources/pickups/chi_medio.tres" id="2_10n58"]
 [ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_cp14m"]
+[ext_resource type="Resource" uid="uid://tmv03w47s6ag" path="res://resources/pickups/chi_alto.tres" id="3_jai11"]
 [ext_resource type="Texture2D" uid="uid://265s2ib6fncn" path="res://assets/enemies/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/6/Walk.png" id="3_s22jm"]
 
 [resource]
@@ -20,7 +22,7 @@ velxd = 0
 velxe = 0
 health = 50.0
 damage = 7.0
-drops = Array[ExtResource("1_8w1mq")]([])
+drops = Array[ExtResource("1_8w1mq")]([ExtResource("2_10n58"), ExtResource("3_jai11")])
 coll_rad = 10
 coll_height = 20
 about = ""

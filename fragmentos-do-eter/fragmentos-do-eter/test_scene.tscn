@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvdj2tq4vs4xn"]
+[gd_scene load_steps=27 format=3 uid="uid://bvdj2tq4vs4xn"]
 
 [ext_resource type="Texture2D" uid="uid://dsijbdncydli8" path="res://assets/enemies/SlimeTerra_Idle_full.png" id="1_7c4st"]
 [ext_resource type="Texture2D" uid="uid://ctxqlt7cikldh" path="res://assets/enemies/slimes/Slime1/Walk/Slime1_Walk_full.png" id="2_1hwgb"]
@@ -9,6 +9,23 @@
 [ext_resource type="Texture2D" uid="uid://crcyox5lsp7c6" path="res://assets/enemies/bat_and_snake/bat_and_snake/snake_spritesheet(64x64).png" id="7_wvw04"]
 [ext_resource type="Texture2D" uid="uid://djtocaoggadg6" path="res://assets/enemies/bat_and_snake/snake_spritesheet(64x64).png" id="8_cpiad"]
 [ext_resource type="Texture2D" uid="uid://cop2aqtofyx4u" path="res://assets/UI/UI books & more.png" id="9_6ne17"]
+[ext_resource type="Texture2D" uid="uid://ikrfhin3n0nq" path="res://assets/map/Free-Top-Down-Pixel-Art-Cave-Objects/PNG/Cave_objects_source.png" id="10_fqdqy"]
+[ext_resource type="Texture2D" uid="uid://d3dmfs27yofia" path="res://assets/map/Free-Cursed-Land-Top-Down-Pixel-Art-Tileset/Tiled_files/Objects.png" id="11_va5lb"]
+[ext_resource type="Texture2D" uid="uid://b06cff4q8du7i" path="res://assets/map/craftpix-net-974061-free-rocks-and-stones-top-down-pixel-art/PNG/Rocks_source_texture_shadow_dark.png" id="12_u7dnn"]
+[ext_resource type="Texture2D" uid="uid://kuofdmodsjtd" path="res://assets/map/craftpix-net-934618-free-top-down-ruins-pixel-art/PNG/Assets_shadows_source.png" id="13_5y3w7"]
+[ext_resource type="Texture2D" uid="uid://jvc22dgm502a" path="res://assets/map/craftpix-net-639143-free-rocky-area-objects-pixel-art/PNG/Objects.png" id="14_4koo4"]
+[ext_resource type="Texture2D" uid="uid://dc224ogtl3sq1" path="res://assets/map/craftpix-net-974061-free-rocks-and-stones-top-down-pixel-art/PNG/Rocks_source.png" id="15_oxk1v"]
+[ext_resource type="Texture2D" uid="uid://dsgpk1m8thf2m" path="res://assets/map/Free-Undead-Tileset-Top-Down-Pixel-Art/Tiled_files/details.png" id="16_44xyv"]
+[ext_resource type="Texture2D" uid="uid://bguj3n8gjiqb4" path="res://assets/map/Free-Undead-Tileset-Top-Down-Pixel-Art/Tiled_files/Objects.png" id="17_yhxf1"]
+[ext_resource type="Texture2D" uid="uid://cn5iq0ctdet74" path="res://assets/map/Free-Undead-Tileset-Top-Down-Pixel-Art/Tiled_files/Objects_animated2.png" id="18_iw6nb"]
+[ext_resource type="Texture2D" uid="uid://cyme43akcldhu" path="res://assets/map/Flying-Islands-Pixel-Art-Top-Down-Tileset/Tiled_files/flying_flower_animation.png" id="19_5gv01"]
+[ext_resource type="Texture2D" uid="uid://cy27o453ivo2a" path="res://assets/map/Flying-Islands-Pixel-Art-Top-Down-Tileset/Tiled_files/Objects.png" id="20_bsh2s"]
+[ext_resource type="Texture2D" uid="uid://djut4iydmotra" path="res://assets/map/Flying-Islands-Pixel-Art-Top-Down-Tileset/Tiled_files/Shadow_gradients.png" id="21_c1d5h"]
+[ext_resource type="Texture2D" uid="uid://d15guiw2nmqpq" path="res://assets/map/Flying-Islands-Pixel-Art-Top-Down-Tileset/Tiled_files/Statues_animation1.png" id="22_kq4tn"]
+[ext_resource type="Texture2D" uid="uid://dhac3en1pu62l" path="res://assets/map/Flying-Islands-Pixel-Art-Top-Down-Tileset/Tiled_files/Statues_animation2.png" id="23_h5vlv"]
+[ext_resource type="Texture2D" uid="uid://cm7lmdouau4kf" path="res://assets/map/Flying-Islands-Pixel-Art-Top-Down-Tileset/Tiled_files/Tree_animation.png" id="24_mnvu3"]
+[ext_resource type="Texture2D" uid="uid://chd6kt3ebkcca" path="res://assets/map/Seabed-Pixel-Art-Top-Down-Tileset/PNG/Objects.png" id="25_xo2q0"]
+[ext_resource type="Texture2D" uid="uid://dph7ixjrmrcjq" path="res://assets/map/craftpix-net-694865-free-top-down-seabed-objects-pixel-art/PNG/Seabed_ objects.png" id="26_iehnw"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -69,3 +86,71 @@ frame = 5
 [node name="UiBooks&More" type="Sprite2D" parent="."]
 position = Vector2(400, 1192)
 texture = ExtResource("9_6ne17")
+
+[node name="CaveObjectsSource" type="Sprite2D" parent="."]
+position = Vector2(288, 1944)
+texture = ExtResource("10_fqdqy")
+
+[node name="Objects" type="Sprite2D" parent="."]
+position = Vector2(1128, 2008)
+texture = ExtResource("11_va5lb")
+
+[node name="RocksSourceTextureShadowDark" type="Sprite2D" parent="."]
+position = Vector2(2016, 2032)
+texture = ExtResource("12_u7dnn")
+
+[node name="AssetsShadowsSource" type="Sprite2D" parent="."]
+position = Vector2(1832, 2416)
+texture = ExtResource("13_5y3w7")
+
+[node name="Objects2" type="Sprite2D" parent="."]
+position = Vector2(2440, 2520)
+texture = ExtResource("14_4koo4")
+
+[node name="RocksSource" type="Sprite2D" parent="."]
+position = Vector2(1744, 2864)
+texture = ExtResource("15_oxk1v")
+
+[node name="Details" type="Sprite2D" parent="."]
+position = Vector2(1248, 2856)
+texture = ExtResource("16_44xyv")
+
+[node name="Objects3" type="Sprite2D" parent="."]
+position = Vector2(1520, 3904)
+texture = ExtResource("17_yhxf1")
+
+[node name="ObjectsAnimated2" type="Sprite2D" parent="."]
+position = Vector2(2696, 3848)
+texture = ExtResource("18_iw6nb")
+
+[node name="FlyingFlowerAnimation" type="Sprite2D" parent="."]
+position = Vector2(3352, 1704)
+texture = ExtResource("19_5gv01")
+
+[node name="Objects4" type="Sprite2D" parent="."]
+position = Vector2(3496, 2416)
+texture = ExtResource("20_bsh2s")
+
+[node name="ShadowGradients" type="Sprite2D" parent="."]
+position = Vector2(4136, 2280)
+texture = ExtResource("21_c1d5h")
+
+[node name="StatuesAnimation1" type="Sprite2D" parent="."]
+position = Vector2(4408, 2600)
+texture = ExtResource("22_kq4tn")
+
+[node name="StatuesAnimation2" type="Sprite2D" parent="."]
+position = Vector2(4272, 2824)
+texture = ExtResource("23_h5vlv")
+
+[node name="TreeAnimation" type="Sprite2D" parent="."]
+position = Vector2(4496, 3056)
+texture = ExtResource("24_mnvu3")
+
+[node name="Objects5" type="Sprite2D" parent="."]
+position = Vector2(3464, 3400)
+texture = ExtResource("25_xo2q0")
+
+[node name="SeabedObjects" type="Sprite2D" parent="."]
+position = Vector2(4352, 3712)
+texture = ExtResource("26_iehnw")

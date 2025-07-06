@@ -1,16 +1,18 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://dhl0snren8cxx"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=7 format=3 uid="uid://dhl0snren8cxx"]
 
 [ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_7eads"]
 [ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_7tna0"]
 [ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_t082c"]
 [ext_resource type="Resource" uid="uid://carj24spnpso5" path="res://resources/pickups/chi_medio.tres" id="3_535ea"]
 [ext_resource type="Texture2D" uid="uid://cixa8qsyc5leu" path="res://assets/enemies/Fire Worm/Fire Worm/Sprites/Worm/Walk.png" id="3_dd35l"]
+[ext_resource type="Resource" uid="uid://tmv03w47s6ag" path="res://resources/pickups/chi_alto.tres" id="4_aue5m"]
 
 [resource]
 script = ExtResource("2_t082c")
 title = "minhoca uhaha"
 is_boss = false
 uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("3_dd35l")
 hframe = 9
 vframe = 1
@@ -21,7 +23,7 @@ velxd = 0
 velxe = 0
 health = 20.0
 damage = 5.0
-drops = Array[ExtResource("1_7eads")]([ExtResource("2_7tna0"), ExtResource("3_535ea")])
+drops = Array[ExtResource("1_7eads")]([ExtResource("2_7tna0"), ExtResource("3_535ea"), ExtResource("4_aue5m")])
 coll_rad = 10
 coll_height = 20
 about = ""

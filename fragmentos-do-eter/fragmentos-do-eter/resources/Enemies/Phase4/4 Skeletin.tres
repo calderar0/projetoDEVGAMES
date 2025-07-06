@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=4 format=3 uid="uid://dvs6ydxmpxe8w"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://dvs6ydxmpxe8w"]
 
 [ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_fre3c"]
+[ext_resource type="Resource" uid="uid://carj24spnpso5" path="res://resources/pickups/chi_medio.tres" id="2_1jtus"]
 [ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_1k06m"]
+[ext_resource type="Resource" uid="uid://tmv03w47s6ag" path="res://resources/pickups/chi_alto.tres" id="3_8s6ko"]
 [ext_resource type="Texture2D" uid="uid://da1ml1cjtt5y6" path="res://assets/enemies/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Skeleton/Walk.png" id="3_xwhl5"]
 
 [resource]
@@ -20,7 +22,7 @@ velxd = 0
 velxe = 0
 health = 50.0
 damage = 6.0
-drops = Array[ExtResource("1_fre3c")]([])
+drops = Array[ExtResource("1_fre3c")]([ExtResource("2_1jtus"), ExtResource("3_8s6ko")])
 coll_rad = 10
 coll_height = 20
 about = ""

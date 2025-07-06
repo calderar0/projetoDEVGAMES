@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=4 format=3 uid="uid://dp25l6rhvdg47"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://dp25l6rhvdg47"]
 
 [ext_resource type="Script" path="res://scenes/PickupResource.gd" id="1_x6p8u"]
 [ext_resource type="Script" path="res://scenes/EnemyType.gd" id="2_0k53i"]
+[ext_resource type="Resource" uid="uid://dl1nsuh4nc2tu" path="res://resources/pickups/chi_pequeno.tres" id="2_4twco"]
 [ext_resource type="Texture2D" uid="uid://cip18oyewqw2n" path="res://assets/enemies/ToxicFrogbrown_Hop (1).png" id="3_wby3x"]
 
 [resource]
@@ -20,7 +21,7 @@ velxd = 0
 velxe = 0
 health = 30.0
 damage = 4.0
-drops = Array[ExtResource("1_x6p8u")]([])
+drops = Array[ExtResource("1_x6p8u")]([ExtResource("2_4twco")])
 coll_rad = 10
 coll_height = 20
 about = ""
