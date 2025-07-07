@@ -96,7 +96,8 @@ func request_phase_change():
 
 func spawn_final_boss():
 	# Limpa quaisquer inimigos restantes na tela
-	get_tree().call_group("Enemy", "queue_free")
+	if get_tree().get_nodes_in_group("Enemy"):
+		get_tree().call_group("Enemy", "queue_free")
 
 	var boss_resource = load("res://resources/Enemies/Phase6/0AvreBossFinal.tres") # Exemplo de caminho
 	var enemy_inst = enemy.instantiate()

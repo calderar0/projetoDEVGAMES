@@ -34,8 +34,6 @@ func dir_contents():
 func _on_pressed(button : Button):
 	var index = button.get_index()
 	%Name.text = "Name : " + enemies[index].title
-	%Health.text = "Health : " + str(enemies[index].health)
-	%Damage.text = "Damage : " + str(enemies[index].damage)
 	%About.text = "About : " + str(enemies[index].about)
 	%Texture.texture = enemies[index].icon
 	SoundManager.play_sfx(load("res://assets/sfx/Piano_Ui (2).wav"))

@@ -218,4 +218,3 @@ func reset_state():
 	
 	is_dead = false
 	%Morreu.hide()
-	get_tree().paused = false

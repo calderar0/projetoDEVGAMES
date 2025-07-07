@@ -155,12 +155,12 @@ func checar_separacao(_delta):
 
 func usando_habilidade():
 	var distancia = position.distance_to(player_ref.position)
-	var max_engagement_range = 650.0
+	var max_engagement_range = 750.0
 	if distancia > max_engagement_range:
 		return
 	if health < type.health * 0.25 and randf() < 0.4:
 		habilidade_cura.call()
-	elif distancia < 500:
+	elif distancia < 450:
 		habilidade_area.call()
 	elif distancia < max_engagement_range:
 		habilidade_projetil.call()
