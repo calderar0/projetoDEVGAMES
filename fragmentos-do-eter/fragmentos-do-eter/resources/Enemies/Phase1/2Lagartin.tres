@@ -11,7 +11,10 @@ region = Rect2(-1, 12, 25, 26)
 
 [resource]
 script = ExtResource("3_60u3a")
-title = "Venomous Larva"
+title = "Larva Venenosa"
+is_boss = false
+uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("4_htl2u")
 hframe = 4
 vframe = 4
@@ -25,5 +28,6 @@ damage = 2.0
 drops = Array[ExtResource("1_so2lc")]([ExtResource("2_x2cut")])
 coll_rad = 10
 coll_height = 20
-about = "A crawling creature with a segmented body in earthy tones. Its mouth contains a corrosive venom capable of weakening its enemies. Agile and treacherous, it moves silently. Its toxin-resistant body allows it to survive in hostile environments, making it a persistent threat to any unsuspecting adventurer."
+about = "Uma criatura rastejante com corpo segmentado em tons terrosos. Sua boca contem um veneno corrosivo capaz de enfraquecer seus inimigos. Agil e traicoeiro, move-se silenciosamente. Seu corpo resistente a toxinas lhe permite sobreviver em ambientes hostis, tornando-o uma ameaça persistente a qualquer aventureiro desavisado.
+"
 icon = SubResource("AtlasTexture_t6s07")

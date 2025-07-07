@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("2_cp14m")
-title = "polvin"
+title = "Polvo Gigante"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

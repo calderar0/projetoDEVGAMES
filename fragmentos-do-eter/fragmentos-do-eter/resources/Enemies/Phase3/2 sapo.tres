@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("2_0k53i")
-title = "sapo terra"
+title = "Sapo terroso"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

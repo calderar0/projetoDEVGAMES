@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_bcxr6")
-title = "boss metal"
+title = "Mago do Metal"
 is_boss = true
 uses_skills = false
 knockback_recovery = 400.0

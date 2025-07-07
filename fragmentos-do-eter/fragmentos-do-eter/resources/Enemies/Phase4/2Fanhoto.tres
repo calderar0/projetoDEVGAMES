@@ -11,7 +11,7 @@ region = Rect2(-11, -8, 44, 45)
 
 [resource]
 script = ExtResource("3_3qwth")
-title = "Corrupted Mantis"
+title = "Gafanhotos corrompidos"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

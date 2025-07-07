@@ -12,7 +12,7 @@ region = Rect2(128, 64, 104, 64)
 
 [resource]
 script = ExtResource("2_x06q6")
-title = "Stone Titan"
+title = "Tita de pedra"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

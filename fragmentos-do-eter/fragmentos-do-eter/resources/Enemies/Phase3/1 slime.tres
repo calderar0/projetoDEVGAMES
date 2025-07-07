@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("2_08sar")
-title = "slime terra"
+title = "Slime de lama"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

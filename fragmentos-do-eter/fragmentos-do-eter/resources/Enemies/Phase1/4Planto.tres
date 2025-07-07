@@ -12,9 +12,10 @@ region = Rect2(-17, 1, 74, 62)
 
 [resource]
 script = ExtResource("3_p1652")
-title = "Purple Carnivore"
+title = "Planta carnivora"
 is_boss = false
 uses_skills = false
+knockback_recovery = 150.0
 texture = ExtResource("4_b065u")
 hframe = 6
 vframe = 4
@@ -28,5 +29,5 @@ damage = 6.0
 drops = Array[ExtResource("1_ymk8r")]([ExtResource("2_xlcgv"), ExtResource("3_mxkvj")])
 coll_rad = 10
 coll_height = 20
-about = "A predatory plant with vibrant purple petals and a mouth full of sharp teeth. It has poison in its flexible stem, which allows for quick movements, making it an unpredictable threat."
+about = "Uma planta predadora com petalas roxas vibrantes e uma boca cheia de dentes afiados. Possui veneno em seu caule flexivel, o que permite movimentos rapidos, tornando-a uma ameaca imprevisivel."
 icon = SubResource("AtlasTexture_xmtdn")

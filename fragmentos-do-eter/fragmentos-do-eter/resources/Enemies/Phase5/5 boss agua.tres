@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_06uxp")
-title = "boss agua"
+title = "Mago da Agua"
 is_boss = true
 uses_skills = false
 knockback_recovery = 400.0

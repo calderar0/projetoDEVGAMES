@@ -11,7 +11,7 @@ region = Rect2(-5, 2, 33, 27)
 
 [resource]
 script = ExtResource("3_fwlyi")
-title = "Black Mosquito"
+title = "Mosquito"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

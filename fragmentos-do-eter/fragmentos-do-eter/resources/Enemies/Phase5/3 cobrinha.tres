@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("2_5u0d7")
-title = "cobrinha"
+title = "Enguia Malefica"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

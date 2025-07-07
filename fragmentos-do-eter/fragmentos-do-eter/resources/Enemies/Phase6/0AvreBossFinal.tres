@@ -27,5 +27,5 @@ damage = 12.0
 drops = Array[ExtResource("1_d34ok")]([])
 coll_rad = 80
 coll_height = 300
-about = "A cosmic entity in the form of a black hole, consuming everything around it. Its dark, ethereal body, like an endless abyss, has multiple spectral arms. It absorbs the player's energy, slowly pulling them into the inevitable darkness."
+about = "Uma entidade cosmica em forma de buraco negro, consumindo tudo ao seu redor. Seu corpo escuro e etéreo, como um abismo sem fim, possui multiplos braços espectrais. Ele absorve a energia do jogador, puxando-o lentamente para a escuridão inevitável."
 icon = SubResource("AtlasTexture_6r4pj")

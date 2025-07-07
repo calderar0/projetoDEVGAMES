@@ -9,7 +9,7 @@
 
 [resource]
 script = ExtResource("2_t082c")
-title = "minhoca uhaha"
+title = "Minhoca flamejante"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

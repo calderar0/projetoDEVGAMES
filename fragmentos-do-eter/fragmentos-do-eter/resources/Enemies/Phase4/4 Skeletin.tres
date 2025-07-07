@@ -8,7 +8,7 @@
 
 [resource]
 script = ExtResource("2_1k06m")
-title = "squeletin"
+title = "Guerreiro caido"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0

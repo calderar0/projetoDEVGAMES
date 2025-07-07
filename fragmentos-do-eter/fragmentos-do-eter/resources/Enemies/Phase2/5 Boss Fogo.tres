@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_bnvpv")
-title = "Boss fogo loco"
+title = "Mago do Fogo"
 is_boss = true
 uses_skills = false
 knockback_recovery = 400.0

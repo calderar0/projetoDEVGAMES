@@ -12,7 +12,7 @@ region = Rect2(-16, 8, 56, 32)
 
 [resource]
 script = ExtResource("2_aw5d3")
-title = "Lethal Frog"
+title = "Sapo Letal"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0
@@ -29,5 +29,5 @@ damage = 4.0
 drops = Array[ExtResource("1_3djbl")]([ExtResource("2_8wej2"), ExtResource("3_5oegi")])
 coll_rad = 10
 coll_height = 20
-about = "A poisonous purple-skinned amphibian with bright blue spots, a sign of its lethal toxicity. Its black, empty eyes stalk its prey before attacking, damaging the player."
+about = "Um anfibio venenoso de pele roxa com manchas azuis brilhantes, sinal de sua toxicidade letal. Seus olhos negros e vazios perseguem a presa antes de atacar, causando dano ao jogador."
 icon = SubResource("AtlasTexture_q8ki4")

@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_q1kjo")
-title = "Boss Mato doido"
+title = "Mago da Madeira"
 is_boss = true
 uses_skills = false
 knockback_recovery = 400.0
@@ -23,4 +23,4 @@ damage = 20.0
 drops = Array[ExtResource("1_osml2")]([])
 coll_rad = 10
 coll_height = 20
-about = "boss do mato ele é doidao pacarai"
+about = "boss do mato ele eh doidao pacarai"

@@ -11,7 +11,7 @@ region = Rect2(205, 16, 34, 30)
 
 [resource]
 script = ExtResource("3_m7d5s")
-title = "Slime Moss"
+title = "Slime Musgo"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0
@@ -28,5 +28,5 @@ damage = 1.0
 drops = Array[ExtResource("1_inkho")]([ExtResource("2_b777k")])
 coll_rad = 10
 coll_height = 20
-about = "A gelatinous creature with a bluish-green hue, featuring a translucent, rounded body that resembles a living droplet. Its large, bright eyes give it an innocent look, but they hide a hint of mischief. It has a strong connection to nature and moisture."
+about = "Uma criatura gelatinosa de tonalidade verde-azulada, com um corpo translucido e arredondado que lembra uma gota viva. Seus olhos grandes e brilhantes lhe conferem uma aparencia inocente, mas escondem um toque de travessura. Possui uma forte conexao com a natureza e a umidade."
 icon = SubResource("AtlasTexture_vrack")

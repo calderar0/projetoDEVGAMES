@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("2_wkem7")
-title = "slimefogo"
+title = "Silme de fogo"
 is_boss = false
 uses_skills = false
 knockback_recovery = 150.0
