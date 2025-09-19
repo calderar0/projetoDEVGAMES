@@ -29,8 +29,8 @@ var minute: int:
 var seconds: int:
 	set(value):
 		seconds = value
-		if seconds >= 10:
-			seconds -= 10
+		if seconds >= 60:
+			seconds -= 60
 			minute += 1
 		%Second.text = str(seconds).lpad(2,'0')
 

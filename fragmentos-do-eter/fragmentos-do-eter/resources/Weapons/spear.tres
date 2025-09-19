@@ -20,10 +20,10 @@ description = "+1 Dano de Ataque"
 [sub_resource type="Resource" id="Resource_gcn8p"]
 script = ExtResource("6_wg7k4")
 dano = 0.0
-recarga = 0.2
+recarga = -0.2
 angulo = 0.0
 damage = 0.0
-cooldown = 0.2
+cooldown = -0.2
 description = "+0.2 Velocidade de Ataque"
 
 [sub_resource type="Resource" id="Resource_gygk3"]
@@ -38,10 +38,10 @@ description = "+3 Dano de Ataque"
 [sub_resource type="Resource" id="Resource_lo0yf"]
 script = ExtResource("6_wg7k4")
 dano = 0.0
-recarga = 0.3
+recarga = -0.3
 angulo = 0.0
 damage = 0.0
-cooldown = 0.3
+cooldown = -0.3
 description = "+0.2 Velocidade de Ataque"
 
 [sub_resource type="Resource" id="Resource_3vbiq"]
@@ -57,7 +57,7 @@ description = "+6 Dano de Ataque"
 script = ExtResource("3_c4lsm")
 animation_speed = 1
 frame_count = 9
-damage = 50.0
+damage = 3.0
 cooldown = 1.0
 speed = 200.0
 projeto_node = ExtResource("2_gatel")

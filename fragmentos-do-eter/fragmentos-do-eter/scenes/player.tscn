@@ -781,7 +781,6 @@ offset_right = 957.0
 offset_bottom = 38.0
 grow_horizontal = 2
 size_flags_horizontal = 4
-max_value = 20.0
 nine_patch_stretch = true
 texture_under = ExtResource("4_gembj")
 texture_over = ExtResource("5_3sv51")
